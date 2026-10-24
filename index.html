@@ -44,8 +44,8 @@
     </script>
     <!-- Chart.js CDN for Radar & Trend Visualizations -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script type="module" crossorigin src="./assets/index-BAmTHVR_.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-Be1TlduJ.css">
+    <script type="module" crossorigin src="./assets/index-BTX7ljgu.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-B2zxWTuT.css">
   </head>
   <body class="bg-slate-50 text-slate-800 font-sans antialiased min-h-screen flex flex-col">
     <!-- 頂部校務系統橫幅 -->
@@ -53,10 +53,14 @@
     
     <section id="system-notice" class="system-notice" aria-labelledby="system-notice-title">
       <div class="system-notice-inner">
-        <span class="notice-label">服務公告</span>
+        <div class="notice-badge-container">
+          <span class="notice-label">
+            <span aria-hidden="true">📢</span> 重要公告
+          </span>
+        </div>
         <div class="notice-copy">
-          <h2 id="system-notice-title">系統開發測試中</h2>
-          <p>本系統由本校<strong>教務處註冊組獨立開發</strong>，目前尚在測試與功能調整階段。系統成績與分析資訊<strong>僅供查詢及學習參考</strong>，正式成績以學校公告及核定紀錄為準。如有登入、資料或操作疑問，請洽教務處註冊組。</p>
+          <h2 id="system-notice-title" class="notice-title">系統開發測試中</h2>
+          <p class="notice-text">本系統由本校<strong class="notice-tag notice-tag-indigo">教務處註冊組獨立開發</strong>，目前尚在<strong class="notice-tag notice-tag-amber">測試與功能調整階段</strong>。系統成績與分析資訊<strong class="notice-tag notice-tag-sky">僅供查詢及學習參考</strong>，<strong class="notice-tag notice-tag-rose">正式成績以學校公告及核定紀錄為準</strong>。如有登入、資料或操作疑問，請洽<strong class="notice-tag notice-tag-emerald">教務處註冊組</strong>。</p>
         </div>
       </div>
     </section>
