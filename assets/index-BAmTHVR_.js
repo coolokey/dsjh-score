@@ -670,8 +670,8 @@
         </td>
       `:"",Ne=m(x.classRankInterval||(x.classRank?x.classRank+"名":"-")),Le=m(x.schoolRankInterval||(x.schoolRank?x.schoolRank+"名":"-"));let z='<span class="text-slate-300 text-xs">-</span>';return x.identity==="體育班"?z='<span class="text-[10px] px-1 py-0.5 rounded bg-blue-100 text-blue-800 font-bold border border-blue-200">體育</span>':x.identity==="學中"?z='<span class="text-[10px] px-1 py-0.5 rounded bg-amber-100 text-amber-800 font-bold border border-amber-200">學中</span>':x.identity&&x.identity!=="*"&&(z=`<span class="text-[10px] px-1 py-0.5 rounded bg-slate-100 text-slate-700 border border-slate-200">${m(x.identity)}</span>`),`
         <tr class="group hover:bg-slate-50/90 transition ${x.isFailing?"bg-rose-50/30":""}">
-          <td class="roster-sticky-col-1 bg-white group-hover:bg-slate-50 text-center font-mono font-bold text-slate-800 border-r border-slate-200 px-2 py-2 text-xs sm:text-sm">${x.seatNo}</td>
-          <td class="roster-sticky-col-2 bg-white group-hover:bg-slate-50 font-medium text-slate-900 border-r border-slate-300 roster-sticky-shadow px-3 py-2 whitespace-nowrap text-xs sm:text-sm">
+          <td class="roster-sticky-col-1 bg-white group-hover:bg-slate-50 text-center font-mono font-bold text-slate-800 border-r border-slate-200 px-1 py-1.5 text-xs sm:text-sm">${x.seatNo}</td>
+          <td class="roster-sticky-col-2 bg-white group-hover:bg-slate-50 font-medium text-slate-900 border-r border-slate-300 roster-sticky-shadow px-2 py-1.5 whitespace-nowrap text-xs sm:text-sm">
             <span>${m(x.name)}</span>
           </td>
           <td class="px-1.5 py-2 text-center border-r border-slate-200">${z}</td>
@@ -697,9 +697,9 @@
             ${x.schoolRank?`<div class="text-[10px] text-slate-400 font-normal">第${x.schoolRank}名 (PR ${x.schoolPR})</div>`:""}
           </td>
           <td class="px-2 py-2 text-center whitespace-nowrap">
-            <button class="btn-print-single px-2.5 py-1 text-xs font-semibold bg-emerald-50 text-emerald-700 hover:bg-emerald-100 border border-emerald-300 rounded-lg transition inline-flex items-center gap-1 shadow-xs" data-seat="${x.seatNo}" title="預覽或列印 ${x.seatNo}號 ${m(x.name)} 成績單">
+            <button class="btn-print-single px-2 py-1 text-xs font-semibold bg-emerald-50 text-emerald-700 hover:bg-emerald-100 border border-emerald-300 rounded-lg transition inline-flex items-center gap-0.5 shadow-xs" data-seat="${x.seatNo}" title="預覽或列印 ${x.seatNo}號 ${m(x.name)} 成績單">
               <span>🖨️</span>
-              <span>印成績單</span>
+              <span>列印</span>
             </button>
           </td>
         </tr>
@@ -852,23 +852,23 @@
               </tr>
               <!-- 第二層：各科目與欄位項目 -->
               <tr class="bg-slate-50 text-slate-600 text-xs font-semibold border-b border-slate-200">
-                <th class="roster-sticky-header-1 bg-slate-50 w-[48px] px-2 py-2.5 text-center border-r border-slate-200">座號</th>
-                <th class="roster-sticky-header-2 bg-slate-50 w-[84px] px-3 py-2.5 text-left border-r border-slate-300 roster-sticky-shadow">姓名</th>
-                <th class="w-[48px] px-1.5 py-2.5 text-center border-r border-slate-200">身分</th>
+                <th class="roster-sticky-header-1 bg-slate-50 w-[42px] px-1 py-2 text-center border-r border-slate-200">座號</th>
+                <th class="roster-sticky-header-2 bg-slate-50 w-[74px] px-2 py-2 text-left border-r border-slate-300 roster-sticky-shadow">姓名</th>
+                <th class="w-[42px] px-1 py-2 text-center border-r border-slate-200">身分</th>
                 ${I.map(x=>`
-                  <th class="w-[58px] px-1.5 py-2.5 text-center ${x==="數學"?"border-r border-slate-200":""} ${["地理","歷史","公民"].includes(x)?"bg-amber-50/30 text-amber-950":""}">${m(x)}</th>
+                  <th class="w-[48px] px-1 py-2 text-center ${x==="數學"?"border-r border-slate-200":""} ${["地理","歷史","公民"].includes(x)?"bg-amber-50/30 text-amber-950":""}">${m(x)}</th>
                 `).join("")}
-                <th class="w-[66px] px-1.5 py-2.5 text-center font-bold bg-amber-100 text-amber-950 border-r border-amber-200" title="社會領域平均 (地理/歷史/公民)">社平</th>
+                <th class="w-[52px] px-1 py-2 text-center font-bold bg-amber-100 text-amber-950 border-r border-amber-200" title="社會領域平均 (地理/歷史/公民)">社平</th>
                 ${C.map((x,A)=>`
-                  <th class="w-[58px] px-1.5 py-2.5 text-center bg-cyan-50/30 text-cyan-950 ${A===C.length-1&&!f?"border-r border-slate-200":""}">${m(x)}</th>
+                  <th class="w-[48px] px-1 py-2 text-center bg-cyan-50/30 text-cyan-950 ${A===C.length-1&&!f?"border-r border-slate-200":""}">${m(x)}</th>
                 `).join("")}
-                ${f?'<th class="w-[66px] px-1.5 py-2.5 text-center font-bold bg-cyan-100 text-cyan-950 border-r border-cyan-200" title="自然領域平均 (理化3/地科2/生物1)">自平</th>':""}
-                <th class="w-[68px] px-1.5 py-2.5 text-center font-bold bg-slate-50">總分</th>
-                <th class="w-[68px] px-1.5 py-2.5 text-center font-bold bg-slate-50">平均</th>
-                <th class="w-[52px] px-1.5 py-2.5 text-center">等第</th>
-                <th class="w-[84px] px-1.5 py-2.5 text-center" title="5人班級序位區間">班級序位</th>
-                <th class="w-[94px] px-1.5 py-2.5 text-center border-r border-slate-200" title="10人年級序位區間">年級序位</th>
-                <th class="w-[92px] px-1.5 py-2.5 text-center">個人成績單</th>
+                ${f?'<th class="w-[52px] px-1 py-2 text-center font-bold bg-cyan-100 text-cyan-950 border-r border-cyan-200" title="自然領域平均 (理化3/地科2/生物1)">自平</th>':""}
+                <th class="w-[56px] px-1 py-2 text-center font-bold bg-slate-50">總分</th>
+                <th class="w-[52px] px-1 py-2 text-center font-bold bg-slate-50">平均</th>
+                <th class="w-[46px] px-1 py-2 text-center">等第</th>
+                <th class="w-[74px] px-1 py-2 text-center" title="5人班級序位區間">班級序位</th>
+                <th class="w-[84px] px-1 py-2 text-center border-r border-slate-200" title="10人年級序位區間">年級序位</th>
+                <th class="w-[72px] px-1 py-2 text-center">成績單</th>
               </tr>
             </thead>
             <tbody class="divide-y divide-slate-100">
