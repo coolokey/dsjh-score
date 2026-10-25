@@ -44,14 +44,15 @@
         <p class="text-slate-600 text-sm">【${g(n.className)}】目前試算表尚無開放查詢之成績，請靜候學校教務處公告。</p>
       </div>
     `;return}let c=o.length-1;function l(){const t=o[c],r=Object.keys(t.subjects||{}),i=t.classStats||{},p=i.fiveBenchmarks||{},N=i.subjectBenchmarks||{},b=t.benchmarks||{},m=b.cohortLabel||t.schoolCohortLabel||(/(?:^|[^\d])9班|(?:\d09)$/.test(n.className)?"含體育班":"不含體育班"),x=f=>f==null||isNaN(f)?"-":Number(f).toFixed(2),$=/[九9]/.test(t.gradeSheet||"")||/^([九9])\s*年|^9\d{2}$/.test(String(t.className||"").trim())||r.includes("地科");e.innerHTML=`
+      <div class="student-print-sheet">
       <!-- A4 列印頁首 (列印時才顯現) -->
-      <div class="hidden print:block mb-6 border-b-2 border-slate-800 pb-4">
+      <div class="student-print-header hidden print:block mb-6 border-b-2 border-slate-800 pb-4">
         <div class="flex justify-between items-center">
           <div>
             <h1 class="text-2xl font-serif font-bold text-slate-900">市立大溪國民中學 學生定期學習評量成績通知單</h1>
             <p class="text-sm text-slate-600 mt-1">
               評量次別：${g(t.academicYear)} ${g(t.semester)} ${g(t.examName)} ｜ 
-              班級：${g(n.className)} ｜ 座號：${g(n.seatNo)} 號 ｜ 姓名：${g(n.name)}（學號：${g(n.studentId)}）
+              班級：${g(t.className||n.className)} ｜ 座號：${g(n.seatNo)} 號 ｜ 姓名：${g(n.name)}（學號：${g(n.studentId)}）
             </p>
           </div>
           <div class="border-2 border-emerald-800 px-3 py-1 rounded text-emerald-800 font-bold text-sm">
@@ -91,7 +92,7 @@
 
       <p class="calculation-note print:hidden">${g(t.calculationNote||"社會採地理、歷史、公民平均；各科折算依本次評量規則計算。")}</p>
       <!-- 核心成績指標概覽 (Cards) -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+      <div class="student-print-cards grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
         <!-- 總分與平均 -->
         <div class="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm flex flex-col justify-between">
           <div class="flex justify-between items-start">
@@ -181,17 +182,17 @@
       </div>
 
       <!-- 各領域詳細成績表 -->
-      <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden mb-6">
-        <div class="px-6 py-4 bg-slate-50 border-b border-slate-200 flex flex-wrap justify-between items-center gap-2">
+      <div class="student-print-table-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden mb-6">
+        <div class="student-print-table-header px-6 py-4 bg-slate-50 border-b border-slate-200 flex flex-wrap justify-between items-center gap-2">
           <div class="flex items-center gap-2">
             <h3 class="font-bold text-slate-800 text-sm">各領域學科學習評量成績表</h3>
             <span class="text-[11px] bg-slate-200/80 text-slate-700 px-2 py-0.5 rounded font-medium">年標參照：${g(m)}</span>
           </div>
           <span class="text-xs text-slate-500">丙等 (60分) 以上為及格基準</span>
         </div>
-        <p class="table-scroll-hint">表格可左右滑動，查看完整科目與六大指標（班/年 平均、高標、低標）。</p>
+        <p class="table-scroll-hint print:hidden">表格可左右滑動，查看完整科目與六大指標（班/年 平均、高標、低標）。</p>
         <div class="overflow-x-auto" tabindex="0" role="region" aria-label="各科成績表，可左右捲動">
-          <table class="w-full text-left text-sm text-slate-700">
+          <table class="student-print-table w-full text-left text-sm text-slate-700">
             <thead class="bg-slate-100/70 text-slate-600 text-xs font-semibold uppercase">
               <tr>
                 <th class="px-4 py-3.5">領域學科</th>
@@ -324,6 +325,7 @@
           </div>
         </div>
       </div>
+      </div>
     `,document.getElementById("exam-selector")?.addEventListener("change",f=>{c=Number(f.target.value)||0,l()}),document.getElementById("btn-print-report")?.addEventListener("click",()=>{window.print()}),s(t,o,r,N)}function s(t,r,i,p){if(typeof Chart>"u")return;J&&(J.destroy(),J=null),Q&&(Q.destroy(),Q=null);const N=document.getElementById("chart-radar");if(N){const m=i.map($=>t.subjects[$]||0),x=i.map($=>p[$]&&p[$].average||70);J=new Chart(N,{type:"radar",data:{labels:i,datasets:[{label:"個人得分",data:m,fill:!0,backgroundColor:"rgba(13, 122, 95, 0.2)",borderColor:"#0D7A5F",pointBackgroundColor:"#0D7A5F",pointBorderColor:"#fff",pointHoverBackgroundColor:"#fff",pointHoverBorderColor:"#0D7A5F"},{label:"班級平均",data:x,fill:!0,backgroundColor:"rgba(71, 85, 105, 0.1)",borderColor:"#64748B",borderDash:[4,4],pointBackgroundColor:"#64748B"}]},options:{responsive:!0,maintainAspectRatio:!1,scales:{r:{suggestedMin:30,suggestedMax:100,ticks:{stepSize:20}}},plugins:{legend:{position:"bottom",labels:{boxWidth:12}}}}})}const b=document.getElementById("chart-trend");if(b){const m=r.map(f=>f.examName),x=r.map(f=>f.averageScore),$=r.map(f=>{const w=f.classStats||{};return w.fiveBenchmarks&&w.fiveBenchmarks.jun||70});Q=new Chart(b,{type:"line",data:{labels:m,datasets:[{label:"個人平均分",data:x,borderColor:"#1D4ED8",backgroundColor:"#1D4ED8",tension:.3,borderWidth:3,pointRadius:5},{label:"班級均標 (P50)",data:$,borderColor:"#94A3B8",backgroundColor:"#94A3B8",borderDash:[5,5],tension:.2,pointRadius:3}]},options:{responsive:!0,maintainAspectRatio:!1,scales:{y:{suggestedMin:40,suggestedMax:100,ticks:{stepSize:10}}},plugins:{legend:{position:"bottom",labels:{boxWidth:12}}}}})}}l()}function re(){const e=new Date,a=e.getFullYear(),d=String(e.getMonth()+1).padStart(2,"0"),n=String(e.getDate()).padStart(2,"0");return`${a}年${d}月${n}日`}function Te(e){if(e.identity==="學中")return"該生平時上課積極配合特教資源班適性課程，學習態度認真努力，各領域評量皆展現正向學習動機，期勉維持良好學習步調，持續突破自我！";if(e.identity==="體育班")return"該生兼顧體育專項訓練與學業課程，展現堅毅抗壓之運動員精神，學習態度專注踏實，期勉在競賽與課業雙軌上精益求精、為校爭光！";const a=e.averageScore||0;return a>=90?"該生本階段學習態度主動嚴謹，各領域核心素養精熟扎實，邏輯思維與學科探究能力俱佳，表現卓越非凡，值得高度嘉許！期勉持之以恆、勇於探索新知！":a>=80?"該生在校品學兼優、學習態度專注穩定，已確實掌握各領域核心概念，表現十分良好！若能在弱項科目更深入鑽研錯題盲點，必定能再攀高峰！":a>=70?"該生具備良好之學科基礎能力，上課規矩良好、能按時完成作業。建議課後多花時間統整觀念脈絡，主動向師長請教，學習成效必能大幅躍進！":a>=60?"該生各領域皆已達到法定及格基準，學習態度和善。建議妥善規劃每日課後複習時間，建立規律筆記習慣，循序漸進加強熟練度，期待更優異的表現！":"該生部分學科概念尚待強化，請家長毋須過度焦慮，建議與導師共同配合，落實課後錯題訂正並善用校內學習扶助輔導資源，攜手協助孩子重拾信心與成就感！"}function He(e,a){const d=a.ding||90,n=a.qian||80,o=a.jun||70,c=a.hou||60,l=a.di||50,s=Math.max(0,Math.min(100,e||0)),t=s;let r="均標附近";return s>=d?r="【頂標以上 (前12%)】表現精熟卓越":s>=n?r="【前標與頂標之間】表現良好":s>=o?r="【均標與前標之間】表現尚可":s>=c?r="【後標與均標之間】建議加強複習":s>=l?r="【底標與後標之間】需重點關懷":r="【底標以下】需積極參與補強扶助",`
     <div class="my-1.5 px-1">
       <div class="relative w-full h-5 bg-slate-100 rounded border border-slate-300 flex overflow-hidden">
@@ -343,7 +345,7 @@
       </div>
     </div>
   `}function qe(e){return["國文"].includes(e)?"語文領域":["英文","英語"].includes(e)?"英語文領域":["數學"].includes(e)?"數學領域":["地理","歷史","公民"].includes(e)?"社會領域":["生物","理化","地科"].includes(e)?"自然科學領域":"專業學科"}function ve(e,a,d,n,o={}){const{includeRank:c=!0,includeTeacherNote:l=!0,printDate:s=re(),customNote:t=""}=o,r=a.subjects||[],i=a.fiveBenchmarks||{},p=a.totalStudents||(a.students?a.students.length:0),N=t||Te(e),b=a.className||d||"",m=/[九9]/.test(a.gradeSheet||"")||/[九9]/.test(a.gradeLevelLabel||"")||!a.gradeSheet&&/^([九9])\s*年|^9\d{2}$/.test(String(b).trim())||r.includes("地科");let x="一般生";return e.identity==="體育班"?x="體育班專項生":e.identity==="學中"?x="學習中心適性生":e.identity&&e.identity!=="*"&&(x=e.identity),`
-    <div class="a4-report-card-page font-sans text-slate-900 bg-white flex flex-col justify-between" style="page-break-after: always; break-after: page; width: 100%; box-sizing: border-box;">
+    <div class="a4-report-card-page font-sans text-slate-900 bg-white flex flex-col justify-between" style="width: 100%; box-sizing: border-box;">
       
       <div>
         <!-- 1. 學校標頭與基本資料 -->
