@@ -1,49 +1,49 @@
-(function(){const a=document.createElement("link").relList;if(a&&a.supports&&a.supports("modulepreload"))return;for(const t of document.querySelectorAll('link[rel="modulepreload"]'))i(t);new MutationObserver(t=>{for(const b of t)if(b.type==="childList")for(const l of b.addedNodes)l.tagName==="LINK"&&l.rel==="modulepreload"&&i(l)}).observe(document,{childList:!0,subtree:!0});function d(t){const b={};return t.integrity&&(b.integrity=t.integrity),t.referrerPolicy&&(b.referrerPolicy=t.referrerPolicy),t.crossOrigin==="use-credentials"?b.credentials="include":t.crossOrigin==="anonymous"?b.credentials="omit":b.credentials="same-origin",b}function i(t){if(t.ep)return;t.ep=!0;const b=d(t);fetch(t.href,b)}})();const G={GAS_URL:"daxi_grade_sys_gas_url",SESSION:"daxi_grade_sys_session_v4",LOCAL_DB:"daxi_grade_sys_local_mock_v4"},Te="https://script.google.com/macros/s/AKfycby0G1hk9Z3OxFq7uR5leRMZqHhNqYypZRzvByvQlYcV_0AoE-Y9fPnHoTsPcu9IJw_1yQ/exec";function ae(){if(typeof window<"u"&&window.location&&window.location.hostname.includes("script.google.com"))return window.location.href.split("?")[0].split("#")[0];const e=localStorage.getItem(G.GAS_URL);return e!==null?e:Te}function ne(e){const a=String(e||"").trim();a?localStorage.setItem(G.GAS_URL,a):localStorage.removeItem(G.GAS_URL)}function ue(){try{const e=sessionStorage.getItem(G.SESSION);return e?JSON.parse(e):null}catch{return null}}function fe(e){sessionStorage.setItem(G.SESSION,JSON.stringify(e))}function ke(){sessionStorage.removeItem(G.SESSION)}function he(e){if(!e||typeof e!="number"||e<1)return null;const a=Math.floor((e-1)/5)*5+1,d=(Math.floor((e-1)/5)+1)*5;return a+"~"+d+"名"}function ve(e){if(!e||typeof e!="number"||e<1)return null;const a=Math.floor((e-1)/10)*10+1,d=(Math.floor((e-1)/10)+1)*10;return a+"~"+d+"名"}function De(){const e=[{studentId:"11470101",name:"余子瀚",className:"7年1班",seatNo:1,idLast4:"1234",birthdayMMDD:"0101",password:"12340101"},{studentId:"11470102",name:"林玹德",className:"7年1班",seatNo:2,idLast4:"2345",birthdayMMDD:"0202",password:"23450202"},{studentId:"11470104",name:"徐常碩",className:"7年1班",seatNo:4,idLast4:"3456",birthdayMMDD:"0303",password:"34560303"},{studentId:"11470105",name:"許鈞翔",className:"7年1班",seatNo:5,idLast4:"4567",birthdayMMDD:"0404",password:"45670404"},{studentId:"11470106",name:"陳冠宇",className:"7年1班",seatNo:6,idLast4:"5678",birthdayMMDD:"0505",password:"56780505"},{studentId:"11480101",name:"申啟智",className:"8年1班",seatNo:1,idLast4:"3841",birthdayMMDD:"1018",password:"38411018"},{studentId:"11480102",name:"吳宏安",className:"8年1班",seatNo:2,idLast4:"5920",birthdayMMDD:"0815",password:"59200815"},{studentId:"11480103",name:"李明原",className:"8年1班",seatNo:3,idLast4:"7104",birthdayMMDD:"0520",password:"71040520"},{studentId:"11480105",name:"林烜",className:"8年1班",seatNo:5,idLast4:"6391",birthdayMMDD:"0412",password:"63910412"},{studentId:"11480106",name:"倪聖恩",className:"8年1班",seatNo:6,idLast4:"8412",birthdayMMDD:"0930",password:"84120930"},{studentId:"11480108",name:"曾承淞",className:"8年1班",seatNo:8,idLast4:"4726",birthdayMMDD:"0719",password:"47260719"},{studentId:"11480109",name:"黃瑀晨",className:"8年1班",seatNo:9,idLast4:"9035",birthdayMMDD:"1208",password:"90351208"},{studentId:"11480110",name:"楊宇傑",className:"8年1班",seatNo:10,idLast4:"3187",birthdayMMDD:"0314",password:"31870314"},{studentId:"11480111",name:"廖祥甫",className:"8年1班",seatNo:11,idLast4:"6540",birthdayMMDD:"0622",password:"65400622"},{studentId:"11480113",name:"潘暘昕",className:"8年1班",seatNo:13,idLast4:"4219",birthdayMMDD:"0808",password:"42190808"},{studentId:"11480114",name:"黎冠昇",className:"8年1班",seatNo:14,idLast4:"5308",birthdayMMDD:"1031",password:"53081031"},{studentId:"11480115",name:"顏丞佑",className:"8年1班",seatNo:15,idLast4:"1942",birthdayMMDD:"0505",password:"19420505"},{studentId:"11480116",name:"蘇昀晨",className:"8年1班",seatNo:16,idLast4:"7823",birthdayMMDD:"0228",password:"78230228"},{studentId:"11490101",name:"江成博",className:"9年1班",seatNo:1,idLast4:"1111",birthdayMMDD:"0901",password:"11110901"},{studentId:"11490102",name:"吳彥霆",className:"9年1班",seatNo:2,idLast4:"2222",birthdayMMDD:"0902",password:"22220902"},{studentId:"11490103",name:"李元翔",className:"9年1班",seatNo:3,idLast4:"3333",birthdayMMDD:"0903",password:"33330903"},{studentId:"11490106",name:"高俊哲",className:"9年1班",seatNo:6,idLast4:"6666",birthdayMMDD:"0906",password:"66660906"},{studentId:"11490107",name:"許修齊",className:"9年1班",seatNo:7,idLast4:"7777",birthdayMMDD:"0907",password:"77770907"}],a=[{account:"tf51056",name:"張雅琪 導師",assignedClass:"7年1班",password:"701701",mustChangePassword:!0,email:"tf51056@dsjh.tyc.edu.tw"},{account:"tf51032",name:"李俊毅 導師",assignedClass:"7年2班",password:"702702",mustChangePassword:!0,email:"tf51032@dsjh.tyc.edu.tw"},{account:"tf51011",name:"王明貴 導師",assignedClass:"7年3班",password:"703703",mustChangePassword:!0,email:"tf51011@dsjh.tyc.edu.tw"},{account:"tf51112",name:"王宣惠 導師",assignedClass:"7年4班",password:"704704",mustChangePassword:!0,email:"tf51112@dsjh.tyc.edu.tw"},{account:"tf51027",name:"陳小鈴 導師",assignedClass:"7年5班",password:"705705",mustChangePassword:!0,email:"tf51027@dsjh.tyc.edu.tw"},{account:"tf51237",name:"武道協卡 導師",assignedClass:"7年6班",password:"706706",mustChangePassword:!0,email:"tf51237@dsjh.tyc.edu.tw"},{account:"tf51154",name:"張銘峰 導師",assignedClass:"7年7班",password:"707707",mustChangePassword:!0,email:"tf51154@dsjh.tyc.edu.tw"},{account:"tf51125",name:"韓美瑛 導師",assignedClass:"7年8班",password:"708708",mustChangePassword:!0,email:"tf51125@dsjh.tyc.edu.tw"},{account:"tf51115",name:"吳嘉祥 導師",assignedClass:"7年9班",password:"709709",mustChangePassword:!0,email:"tf51115@dsjh.tyc.edu.tw"},{account:"tf51241",name:"塗美文 導師",assignedClass:"7年10班",password:"710710",mustChangePassword:!0,email:"tf51241@dsjh.tyc.edu.tw"},{account:"tf51076",name:"游敬廉 導師",assignedClass:"7年10班",password:"710710",mustChangePassword:!0,email:"tf51076@dsjh.tyc.edu.tw"},{account:"tf51039",name:"劉惠珠 導師",assignedClass:"8年1班",password:"801801",mustChangePassword:!0,email:"tf51039@dsjh.tyc.edu.tw"},{account:"tf51138",name:"羅培瑛 導師",assignedClass:"8年2班",password:"802802",mustChangePassword:!0,email:"tf51138@dsjh.tyc.edu.tw"},{account:"tf51035",name:"陳惠晶 導師",assignedClass:"8年3班",password:"803803",mustChangePassword:!0,email:"tf51035@dsjh.tyc.edu.tw"},{account:"tf51135",name:"張一梅 導師",assignedClass:"8年4班",password:"804804",mustChangePassword:!0,email:"tf51135@dsjh.tyc.edu.tw"},{account:"tf51057",name:"蔡淑禎 導師",assignedClass:"8年5班",password:"805805",mustChangePassword:!0,email:"tf51057@dsjh.tyc.edu.tw"},{account:"tf51130",name:"黃文昌 導師",assignedClass:"8年6班",password:"806806",mustChangePassword:!0,email:"tf51130@dsjh.tyc.edu.tw"},{account:"tf51134",name:"謝如琳 導師",assignedClass:"8年7班",password:"807807",mustChangePassword:!0,email:"tf51134@dsjh.tyc.edu.tw"},{account:"tf51073",name:"陳毅宏 導師",assignedClass:"8年8班",password:"808808",mustChangePassword:!0,email:"tf51073@dsjh.tyc.edu.tw"},{account:"tf51031",name:"陳秋梅 導師",assignedClass:"8年9班",password:"809809",mustChangePassword:!0,email:"tf51031@dsjh.tyc.edu.tw"},{account:"tf51140",name:"康嘉玲 導師",assignedClass:"9年1班",password:"901901",mustChangePassword:!0,email:"tf51140@dsjh.tyc.edu.tw"},{account:"tf51084",name:"陳建生 導師",assignedClass:"9年2班",password:"902902",mustChangePassword:!0,email:"tf51084@dsjh.tyc.edu.tw"},{account:"tf51142",name:"劉信志 導師",assignedClass:"9年3班",password:"903903",mustChangePassword:!0,email:"tf51142@dsjh.tyc.edu.tw"},{account:"tf51043",name:"林璟薇 導師",assignedClass:"9年4班",password:"904904",mustChangePassword:!0,email:"tf51043@dsjh.tyc.edu.tw"},{account:"tf51036",name:"張秀萍 導師",assignedClass:"9年5班",password:"905905",mustChangePassword:!0,email:"tf51036@dsjh.tyc.edu.tw"},{account:"tf51133",name:"周育秀 導師",assignedClass:"9年6班",password:"906906",mustChangePassword:!0,email:"tf51133@dsjh.tyc.edu.tw"},{account:"tf51055",name:"文明慧 導師",assignedClass:"9年7班",password:"907907",mustChangePassword:!0,email:"tf51055@dsjh.tyc.edu.tw"},{account:"tf51051",name:"潘建銘 導師",assignedClass:"9年8班",password:"908908",mustChangePassword:!0,email:"tf51051@dsjh.tyc.edu.tw"},{account:"tf51008",name:"陳麗芳 導師",assignedClass:"9年9班",password:"909909",mustChangePassword:!0,email:"tf51008@dsjh.tyc.edu.tw"}],d=[{account:"admin",name:"註冊組長",password:"admin1234"}],i=[],t=e.filter(o=>o.className==="7年1班"),b=[{name:"余子瀚",s:[88,96,94,72.5,87.5,90,87.5]},{name:"林玹德",s:[84,96,92,87.5,97.5,90,80]},{name:"徐常碩",s:[87,100,95,82.5,95,82.5,80]},{name:"許鈞翔",s:[72,33,65,50,90,75,52.5]},{name:"陳冠宇",s:[73,94,86,60,90,92.5,92.5]}],l=["國文","英文","數學","地理","歷史","公民","生物"];b.forEach(o=>{const g=t.find($=>$.name===o.name);if(!g)return;const c={};l.forEach(($,N)=>{c[$]=o.s[N]});const y=o.s.reduce(($,N)=>$+N,0),f=Number((y/l.length).toFixed(1));i.push({gradeSheet:"七年級成績資料庫",academicYear:"114學年度",semester:"第1學期",examName:"第1次定期評量",name:g.name,className:g.className,seatNo:g.seatNo,subjects:c,totalScore:Number(y.toFixed(1)),averageScore:f,gradeLevel:f>=90?"優":f>=80?"甲":f>=70?"乙":f>=60?"丙":"丁"})});const n=e.filter(o=>o.className==="8年1班"),s=["國文","英文","數學","地理","歷史","公民","理化"],r=[{name:"申啟智",s:[39.5,22,12,55,50,37.5,25]},{name:"吳宏安",s:[63,18,18,52.5,60,75,27.5]},{name:"李明原",s:[49.5,72,93,62.5,95,67.5,67.5]},{name:"林烜",s:[79.5,87,98,87.5,100,92.5,80]},{name:"倪聖恩",s:[54,34,78,55,45,40,47.5]},{name:"曾承淞",s:[75,71,69,75,95,75,70]},{name:"黃瑀晨",s:[76.5,45,65,62.5,65,65,70]},{name:"楊宇傑",s:[78,76,80,100,92.5,90,97.5]},{name:"廖祥甫",s:[55.5,68,57,60,70,57.5,57.5]},{name:"潘暘昕",s:[95,89,97,100,100,100,80]},{name:"黎冠昇",s:[49.5,66,79,55,70,75,67.5]},{name:"顏丞佑",s:[51.5,17,53,67.5,82.5,75,57.5]},{name:"蘇昀晨",s:[68,81,93,75,85,87.5,77.5]}];["第1次定期評量","第2次定期評量"].forEach((o,g)=>{r.forEach((c,y)=>{const f=n.find(u=>u.name===c.name);if(!f)return;const $=g===0?0:y%3===0?4:y%3===1?-2:3,N={};s.forEach((u,v)=>{N[u]=Math.min(100,Math.max(20,Number((c.s[v]+$).toFixed(1))))});const k=Object.values(N).reduce((u,v)=>u+v,0),w=Number((k/s.length).toFixed(1)),A=N.地理!==void 0&&N.歷史!==void 0&&N.公民!==void 0?Number(((N.地理+N.歷史+N.公民)/3).toFixed(1)):null;i.push({gradeSheet:"八年級成績資料庫",academicYear:"114學年度",semester:"第1學期",examName:o,name:f.name,className:f.className,seatNo:f.seatNo,subjects:N,socialAverage:A,scienceAverage:null,totalScore:Number(k.toFixed(1)),averageScore:w,gradeLevel:w>=90?"優":w>=80?"甲":w>=70?"乙":w>=60?"丙":"丁"})})});const x=e.filter(o=>o.className==="9年1班"),p=["國文","英文","數學","地理","歷史","公民","理化","地科","生物"];return[{name:"江成博",s:[43,63,52,45,60,62.5,40,46,35]},{name:"吳彥霆",s:[90,93,97,87.5,100,90,85,92,100]},{name:"李元翔",s:[47,38,48,55,72.5,47.5,30,59,50]},{name:"高俊哲",s:[64,83,75,80,95,90,75,73,100]},{name:"許修齊",s:[84,88,98,85,100,92.5,92.5,89,100]}].forEach(o=>{const g=x.find(k=>k.name===o.name);if(!g)return;const c={};p.forEach((k,w)=>{c[k]=o.s[w]});const y=o.s.reduce((k,w)=>k+w,0),f=Number((y/p.length).toFixed(1)),$=Number(((c.地理+c.歷史+c.公民)/3).toFixed(1)),N=Number(((c.理化*3+c.地科*2+c.生物*1)/6).toFixed(1));i.push({gradeSheet:"九年級成績資料庫",academicYear:"114學年度",semester:"第1學期",examName:"第1次定期評量",name:g.name,className:g.className,seatNo:g.seatNo,subjects:c,socialAverage:$,scienceAverage:N,totalScore:Number(y.toFixed(1)),averageScore:f,gradeLevel:f>=90?"優":f>=80?"甲":f>=70?"乙":f>=60?"丙":"丁"})}),{students:e,teachers:a,admins:d,grades:i}}function Pe(){try{const a=localStorage.getItem(G.LOCAL_DB);if(a)return JSON.parse(a)}catch{}const e=De();return localStorage.setItem(G.LOCAL_DB,JSON.stringify(e)),e}function He(e){localStorage.setItem(G.LOCAL_DB,JSON.stringify(e))}function de(e,a){if(e==null||e===""||a==null||a==="")return!1;const d=String(e).trim(),i=String(a).trim();if(d===i)return!0;const t=n=>{if(!n)return null;const s=parseFloat(n);if(!isNaN(s)&&!n.includes("年")&&!n.includes("班")){let p=Math.floor(s);return p>=701&&p<=999&&(p=p%100),p}const r=n.match(/年(\d+)班/)||n.match(/(\d+)班/)||n.match(/(\d+)/);if(!r)return null;let x=parseInt(r[1],10);return x>=701&&x<=999&&(x=x%100),x},b=t(d),l=t(i);return b!==null&&l!==null&&b===l}function ie(e){if(!e.length)return{ding:0,qian:0,jun:0,hou:0,di:0};const a=e.length,d=i=>{const t=(a-1)*i,b=Math.floor(t),l=Math.ceil(t),n=t-b;return Number((e[b]*(1-n)+e[l]*n).toFixed(1))};return{ding:d(.88),qian:d(.75),jun:d(.5),hou:d(.25),di:d(.12)}}function qe(e,a){if(!e||!e.length)return 0;const d=e.slice().sort((n,s)=>n-s),i=d.length,t=(i-1)*(a/4),b=Math.floor(t),l=t-b;return b+1<i?d[b]+l*(d[b+1]-d[b]):d[b]}function W(e){const a=[];let d=0;for(let r=0;r<e.length;r++){const x=e[r];typeof x=="number"&&isFinite(x)?a.push(x):x===null&&d++}if(a.length===0)return{average:0,high:0,low:0};const i=a.reduce((r,x)=>r+x,0)/a.length,t=qe(a,2),b=a.filter(r=>r>=t),l=b.length?b.reduce((r,x)=>r+x,0)/b.length:0,n=a.filter(r=>r<=t);for(let r=0;r<d;r++)n.push(0);const s=n.length?n.reduce((r,x)=>r+x,0)/n.length:0;return{average:i,high:l,low:s}}function Y(e,a){if(e.hasScore===!1)return!0;if(e.rawAverageScore===null||e.rawAverageScore===void 0){const d=e.scores||e.subjects||{};return!a.some(i=>typeof d[i]=="number"&&isFinite(d[i]))}return!1}function ye(e,a,d,i="class"){const t={};a.forEach(o=>{const g=e.map(c=>{const y=c.scores||c.subjects,f=y?y[o]:void 0;if(typeof f=="number"&&isFinite(f))return f;const $=Y(c,a);if(c.identity==="學中"||$)return null});t[o]=W(g),o==="英文"&&(t.英語=t[o]),o==="英語"&&(t.英文=t[o])});const b=e.map(o=>typeof o.socialAverage=="number"&&isFinite(o.socialAverage)?o.socialAverage:Y(o,a)?null:void 0);if(t.社會=t.社會平均=t.社平=W(b),d){const o=e.map(g=>typeof g.scienceAverage=="number"&&isFinite(g.scienceAverage)?g.scienceAverage:Y(g,a)?null:void 0);t.自然=t.自然平均=t.自平=W(o)}const l=t.英語?"英語":"英文",n=d?"自然":t.生物?"生物":"理化",s=(t.國文?.average||0)+(t[l]?.average||0)+(t.數學?.average||0)+(t.社會?.average||0)+(t[n]?.average||0),r=(t.國文?.high||0)+(t[l]?.high||0)+(t.數學?.high||0)+(t.社會?.high||0)+(t[n]?.high||0),x=(t.國文?.low||0)+(t[l]?.low||0)+(t.數學?.low||0)+(t.社會?.low||0)+(t[n]?.low||0),p=o=>Y(o,a)?null:typeof o.rawTotalScore=="number"&&isFinite(o.rawTotalScore)?o.rawTotalScore:typeof o.totalScore=="number"&&isFinite(o.totalScore)?o.totalScore:null,S=o=>Y(o,a)?null:typeof o.rawAverageScore=="number"&&isFinite(o.rawAverageScore)?o.rawAverageScore:typeof o.averageScore=="number"&&isFinite(o.averageScore)?o.averageScore:null;if(d)if(t.總分={average:s,high:r,low:x},i==="school")t.平均={average:s/5,high:r/5,low:x/5};else{const o=e.map(S);t.平均=W(o)}else if(i==="school"){const o=e.map(p),g=e.map(S);t.總分=W(o),t.平均=W(g)}else t.總分={average:s,high:r,low:x},t.平均={average:s/5,high:r/5,low:x/5};return t}function U(e,a){const d={};return e&&Object.keys(e).forEach(i=>{e[i]&&typeof e[i][a]=="number"&&(d[i]=Number(e[i][a].toFixed(2)))}),d}function we(e,a,d,i,t){const b=a.filter(x=>{const p=x.identity;return p!=="體育班"&&p!=="特教"&&p!=="特教班"&&p!=="秀才"}),l=a.filter(x=>{const p=x.identity;return p!=="特教"&&p!=="特教班"&&p!=="秀才"}),n=ye(e,d,i,"class"),s=ye(t?l:b,d,i,"school");return{cohortLabel:t?"含體育班":"不含體育班",isSportsClass:!!t,classBenchmarks:n,schoolBenchmarks:s,classAverage:U(n,"average"),schoolAverage:U(s,"average"),classHigh:U(n,"high"),schoolHigh:U(s,"high"),classLow:U(n,"low"),schoolLow:U(s,"low")}}async function P(e,a={}){const d=ae(),i={action:e,authToken:ue()?.authToken,...a};if(typeof window<"u"&&window.google?.script?.run)try{return await new Promise((t,b)=>{window.google.script.run.withSuccessHandler(t).withFailureHandler(b).requestApiBridge(i)})}catch{return{success:!1,message:"系統服務暫時無法回應，請稍後重試或洽教務處註冊組。"}}if(d)try{const t=await fetch(d,{method:"POST",headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify(i)});if(!t.ok)throw new Error(`GAS 伺服器回應錯誤 (狀態碼 ${t.status})`);return await t.json()}catch{return{success:!1,message:"無法連線至校務服務，請稍後重試；如持續發生，請洽教務處註冊組。"}}return Fe(e,a)}function Fe(e,a){const d=Pe();switch(e){case"ping":return{success:!0,mode:"mock",message:"本地示範資料庫運作正常（未設定 GAS 網址）"};case"login":{const{role:i,account:t,password:b}=a;if(!t||!b)return{success:!1,message:"請輸入帳號與密碼"};if(i==="student"){const l=d.students.find(n=>n.studentId===t);return l?l.password!==b?{success:!1,message:"密碼錯誤，請輸入身分證後四碼＋生日共8碼"}:{success:!0,role:"student",authToken:"mock-token-student-"+l.studentId,user:{studentId:l.studentId,name:l.name,className:l.className,seatNo:l.seatNo},mustChangePassword:!1}:{success:!1,message:"查無此學號"}}if(i==="teacher"){const l=d.teachers.find(n=>n.account.toLowerCase()===t.toLowerCase()||t.toLowerCase()===`t${n.assignedClass.replace(/\D/g,"")}`||t===n.assignedClass.replace(/\D/g,"")||de(n.assignedClass,t));return l?l.password!==b?{success:!1,message:"導師密碼錯誤"}:{success:!0,role:"teacher",authToken:"mock-token-teacher-"+l.account,user:{account:l.account,name:l.name,assignedClass:l.assignedClass},mustChangePassword:!!l.mustChangePassword}:{success:!1,message:"查無此教師帳號"}}if(i==="admin"){const l=d.admins.find(n=>n.account.toLowerCase()===t.toLowerCase());return l?l.password!==b?{success:!1,message:"管理者密碼錯誤"}:{success:!0,role:"admin",authToken:"mock-token-admin-"+l.account,user:{account:l.account,name:l.name},mustChangePassword:!1}:{success:!1,message:"查無管理者帳號"}}return{success:!1,message:"未知的身分角色"}}case"changeTeacherPassword":{const{account:i,newPassword:t}=a,b=d.teachers.find(l=>l.account.toLowerCase()===(i||"").toLowerCase());return b?(b.password=t,b.mustChangePassword=!1,He(d),{success:!0,message:"密碼已順利變更完成！"}):{success:!1,message:"找不到導師帳號"}}case"getStudentScores":{const{studentId:i}=a,t=d.students.find(n=>n.studentId===i);if(!t)return{success:!1,message:"該學號目前不在最新在校學生名單中"};const l=d.grades.filter(n=>n.studentId&&n.studentId===i||n.name===t.name&&(n.seatNo===t.seatNo||de(n.className,t.className))).map(n=>{const s=d.grades.filter(k=>k.examName===n.examName&&k.className===n.className),r=s.map(k=>k.averageScore).sort((k,w)=>k-w),x=ie(r),p=Object.keys(n.subjects||{}),S={};p.forEach(k=>{const w=s.map(A=>A.subjects&&A.subjects[k]||0).sort((A,u)=>A-u);S[k]={average:w.length?Number((w.reduce((A,u)=>A+u,0)/w.length).toFixed(1)):0,...ie(w)}});const g=1+s.map(k=>k.averageScore).sort((k,w)=>w-k).filter(k=>k>n.averageScore).length,c=g,y=/[九9]/.test(n.gradeSheet||"")||/^([九9])\s*年|^9\d{2}$/.test(String(n.className||"").trim())||p.includes("地科"),f=n.identity==="體育班"||s.some(k=>k.identity==="體育班")||/(?:^|[^\d])9班|(?:\d09)$/.test(n.className),$=d.grades.filter(k=>k.examName===n.examName),N=we(s,$.length?$:s,p,y,f);return{...n,scienceAverage:y?n.scienceAverage:null,classRank:g,classRankInterval:he(g),schoolRank:c,schoolPR:80,schoolRankInterval:ve(c),benchmarks:N,classStats:{studentCount:s.length,fiveBenchmarks:x,subjectBenchmarks:S}}});return{success:!0,student:t,exams:l}}case"getTeacherClassData":{const{teacherAccount:i,className:t}=a,b=d.teachers.find(x=>x.account.toLowerCase()===(i||"").toLowerCase()),l=t||(b?b.assignedClass:"8年1班"),n=d.grades.filter(x=>de(x.className,l)),r=Array.from(new Set(n.map(x=>x.examName))).map(x=>{const p=n.filter(u=>u.examName===x).sort((u,v)=>u.seatNo-v.seatNo),S=p.map(u=>u.averageScore).sort((u,v)=>u-v),o=p.length,g=ie(S),c=p.length?Object.keys(p[0].subjects||{}):[],y={};c.forEach(u=>{const v=p.map(C=>C.subjects&&C.subjects[u]||0);y[u]=v.length?Number((v.reduce((C,I)=>C+I,0)/v.length).toFixed(1)):0});const f={優:0,甲:0,乙:0,丙:0,丁:0};p.forEach(u=>{f[u.gradeLevel]!==void 0&&f[u.gradeLevel]++});const $=p.filter(u=>u.averageScore>=60).length,N=/^([九9])\s*年|^9\d{2}$/.test(String(l||"").trim())||c.includes("地科"),k=p.some(u=>u.identity==="體育班")||/(?:^|[^\d])9班|(?:\d09)$/.test(l),w=d.grades.filter(u=>u.examName===x),A=we(p,w.length?w:p,c,N,k);return{examName:x,totalStudents:o,subjects:c,subjectAverages:y,fiveBenchmarks:g,benchmarks:A,gradeDistribution:f,passCount:$,passRate:o?Math.round($/o*100):0,students:p.map(u=>{const v=1+S.filter(C=>C>u.averageScore).length;return{studentId:u.studentId,name:u.name,seatNo:u.seatNo,identity:u.identity,scores:u.subjects,socialAverage:u.socialAverage,scienceAverage:N?u.scienceAverage:null,totalScore:u.totalScore,averageScore:u.averageScore,gradeLevel:u.gradeLevel,classRank:v,classRankInterval:he(v),schoolRank:v,schoolPR:80,schoolRankInterval:ve(v),isFailing:u.averageScore<60}})}});return{success:!0,className:l,exams:r}}case"logout":case"logoutAdmin":return{success:!0};case"getAdminOverview":{const i=d.grades.filter(l=>(l.gradeSheet||"").includes("七年級")).length,t=d.grades.filter(l=>(l.gradeSheet||"").includes("八年級")).length,b=d.grades.filter(l=>(l.gradeSheet||"").includes("九年級")).length;return{success:!0,stats:{studentCount:d.students.length,teacherCount:d.teachers.length,grade7Count:i,grade8Count:t,grade9Count:b,gradeRecordCount:d.grades.length,examCount:2,exams:["第1次定期評量","第2次定期評量"]}}}default:return{success:!1,message:"未支援的本地測試動作: "+e}}}function m(e){return String(e??"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;").replace(/'/g,"&#39;")}function B(e,a="success"){const d=document.getElementById("toast-root");if(!d)return;const i=document.createElement("div"),t=a==="error";i.className=`pointer-events-auto flex items-center gap-2 px-4 py-3 rounded-lg shadow-xl text-sm font-medium transition-all duration-300 transform translate-y-2 opacity-0 ${t?"bg-rose-600 text-white":"bg-slate-900 text-white border-l-4 border-emerald-500"}`,i.innerHTML=`
-    <span>${t?"⚠️":"✓"}</span>
+(function(){const t=document.createElement("link").relList;if(t&&t.supports&&t.supports("modulepreload"))return;for(const a of document.querySelectorAll('link[rel="modulepreload"]'))i(a);new MutationObserver(a=>{for(const b of a)if(b.type==="childList")for(const r of b.addedNodes)r.tagName==="LINK"&&r.rel==="modulepreload"&&i(r)}).observe(document,{childList:!0,subtree:!0});function l(a){const b={};return a.integrity&&(b.integrity=a.integrity),a.referrerPolicy&&(b.referrerPolicy=a.referrerPolicy),a.crossOrigin==="use-credentials"?b.credentials="include":a.crossOrigin==="anonymous"?b.credentials="omit":b.credentials="same-origin",b}function i(a){if(a.ep)return;a.ep=!0;const b=l(a);fetch(a.href,b)}})();const G={GAS_URL:"daxi_grade_sys_gas_url",SESSION:"daxi_grade_sys_session_v4",LOCAL_DB:"daxi_grade_sys_local_mock_v4"},qe="https://script.google.com/macros/s/AKfycby0G1hk9Z3OxFq7uR5leRMZqHhNqYypZRzvByvQlYcV_0AoE-Y9fPnHoTsPcu9IJw_1yQ/exec";function le(){if(typeof window<"u"&&window.location&&window.location.hostname.includes("script.google.com"))return window.location.href.split("?")[0].split("#")[0];const e=localStorage.getItem(G.GAS_URL);return e!==null?e:qe}function de(e){const t=String(e||"").trim();t?localStorage.setItem(G.GAS_URL,t):localStorage.removeItem(G.GAS_URL)}function Y(){try{const e=sessionStorage.getItem(G.SESSION);return e?JSON.parse(e):null}catch{return null}}function ye(e){sessionStorage.setItem(G.SESSION,JSON.stringify(e))}function fe(){sessionStorage.removeItem(G.SESSION);try{localStorage.removeItem(G.SESSION)}catch{}}function we(e){if(!e||typeof e!="number"||e<1)return null;const t=Math.floor((e-1)/5)*5+1,l=(Math.floor((e-1)/5)+1)*5;return t+"~"+l+"名"}function $e(e){if(!e||typeof e!="number"||e<1)return null;const t=Math.floor((e-1)/10)*10+1,l=(Math.floor((e-1)/10)+1)*10;return t+"~"+l+"名"}function Fe(){const e=[{studentId:"11470101",name:"余子瀚",className:"7年1班",seatNo:1,idLast4:"1234",birthdayMMDD:"0101",password:"12340101"},{studentId:"11470102",name:"林玹德",className:"7年1班",seatNo:2,idLast4:"2345",birthdayMMDD:"0202",password:"23450202"},{studentId:"11470104",name:"徐常碩",className:"7年1班",seatNo:4,idLast4:"3456",birthdayMMDD:"0303",password:"34560303"},{studentId:"11470105",name:"許鈞翔",className:"7年1班",seatNo:5,idLast4:"4567",birthdayMMDD:"0404",password:"45670404"},{studentId:"11470106",name:"陳冠宇",className:"7年1班",seatNo:6,idLast4:"5678",birthdayMMDD:"0505",password:"56780505"},{studentId:"11480101",name:"申啟智",className:"8年1班",seatNo:1,idLast4:"3841",birthdayMMDD:"1018",password:"38411018"},{studentId:"11480102",name:"吳宏安",className:"8年1班",seatNo:2,idLast4:"5920",birthdayMMDD:"0815",password:"59200815"},{studentId:"11480103",name:"李明原",className:"8年1班",seatNo:3,idLast4:"7104",birthdayMMDD:"0520",password:"71040520"},{studentId:"11480105",name:"林烜",className:"8年1班",seatNo:5,idLast4:"6391",birthdayMMDD:"0412",password:"63910412"},{studentId:"11480106",name:"倪聖恩",className:"8年1班",seatNo:6,idLast4:"8412",birthdayMMDD:"0930",password:"84120930"},{studentId:"11480108",name:"曾承淞",className:"8年1班",seatNo:8,idLast4:"4726",birthdayMMDD:"0719",password:"47260719"},{studentId:"11480109",name:"黃瑀晨",className:"8年1班",seatNo:9,idLast4:"9035",birthdayMMDD:"1208",password:"90351208"},{studentId:"11480110",name:"楊宇傑",className:"8年1班",seatNo:10,idLast4:"3187",birthdayMMDD:"0314",password:"31870314"},{studentId:"11480111",name:"廖祥甫",className:"8年1班",seatNo:11,idLast4:"6540",birthdayMMDD:"0622",password:"65400622"},{studentId:"11480113",name:"潘暘昕",className:"8年1班",seatNo:13,idLast4:"4219",birthdayMMDD:"0808",password:"42190808"},{studentId:"11480114",name:"黎冠昇",className:"8年1班",seatNo:14,idLast4:"5308",birthdayMMDD:"1031",password:"53081031"},{studentId:"11480115",name:"顏丞佑",className:"8年1班",seatNo:15,idLast4:"1942",birthdayMMDD:"0505",password:"19420505"},{studentId:"11480116",name:"蘇昀晨",className:"8年1班",seatNo:16,idLast4:"7823",birthdayMMDD:"0228",password:"78230228"},{studentId:"11490101",name:"江成博",className:"9年1班",seatNo:1,idLast4:"1111",birthdayMMDD:"0901",password:"11110901"},{studentId:"11490102",name:"吳彥霆",className:"9年1班",seatNo:2,idLast4:"2222",birthdayMMDD:"0902",password:"22220902"},{studentId:"11490103",name:"李元翔",className:"9年1班",seatNo:3,idLast4:"3333",birthdayMMDD:"0903",password:"33330903"},{studentId:"11490106",name:"高俊哲",className:"9年1班",seatNo:6,idLast4:"6666",birthdayMMDD:"0906",password:"66660906"},{studentId:"11490107",name:"許修齊",className:"9年1班",seatNo:7,idLast4:"7777",birthdayMMDD:"0907",password:"77770907"}],t=[{account:"tf51056",name:"張雅琪 導師",assignedClass:"7年1班",password:"701701",mustChangePassword:!0,email:"tf51056@dsjh.tyc.edu.tw"},{account:"tf51032",name:"李俊毅 導師",assignedClass:"7年2班",password:"702702",mustChangePassword:!0,email:"tf51032@dsjh.tyc.edu.tw"},{account:"tf51011",name:"王明貴 導師",assignedClass:"7年3班",password:"703703",mustChangePassword:!0,email:"tf51011@dsjh.tyc.edu.tw"},{account:"tf51112",name:"王宣惠 導師",assignedClass:"7年4班",password:"704704",mustChangePassword:!0,email:"tf51112@dsjh.tyc.edu.tw"},{account:"tf51027",name:"陳小鈴 導師",assignedClass:"7年5班",password:"705705",mustChangePassword:!0,email:"tf51027@dsjh.tyc.edu.tw"},{account:"tf51237",name:"武道協卡 導師",assignedClass:"7年6班",password:"706706",mustChangePassword:!0,email:"tf51237@dsjh.tyc.edu.tw"},{account:"tf51154",name:"張銘峰 導師",assignedClass:"7年7班",password:"707707",mustChangePassword:!0,email:"tf51154@dsjh.tyc.edu.tw"},{account:"tf51125",name:"韓美瑛 導師",assignedClass:"7年8班",password:"708708",mustChangePassword:!0,email:"tf51125@dsjh.tyc.edu.tw"},{account:"tf51115",name:"吳嘉祥 導師",assignedClass:"7年9班",password:"709709",mustChangePassword:!0,email:"tf51115@dsjh.tyc.edu.tw"},{account:"tf51241",name:"塗美文 導師",assignedClass:"7年10班",password:"710710",mustChangePassword:!0,email:"tf51241@dsjh.tyc.edu.tw"},{account:"tf51076",name:"游敬廉 導師",assignedClass:"7年10班",password:"710710",mustChangePassword:!0,email:"tf51076@dsjh.tyc.edu.tw"},{account:"tf51039",name:"劉惠珠 導師",assignedClass:"8年1班",password:"801801",mustChangePassword:!0,email:"tf51039@dsjh.tyc.edu.tw"},{account:"tf51138",name:"羅培瑛 導師",assignedClass:"8年2班",password:"802802",mustChangePassword:!0,email:"tf51138@dsjh.tyc.edu.tw"},{account:"tf51035",name:"陳惠晶 導師",assignedClass:"8年3班",password:"803803",mustChangePassword:!0,email:"tf51035@dsjh.tyc.edu.tw"},{account:"tf51135",name:"張一梅 導師",assignedClass:"8年4班",password:"804804",mustChangePassword:!0,email:"tf51135@dsjh.tyc.edu.tw"},{account:"tf51057",name:"蔡淑禎 導師",assignedClass:"8年5班",password:"805805",mustChangePassword:!0,email:"tf51057@dsjh.tyc.edu.tw"},{account:"tf51130",name:"黃文昌 導師",assignedClass:"8年6班",password:"806806",mustChangePassword:!0,email:"tf51130@dsjh.tyc.edu.tw"},{account:"tf51134",name:"謝如琳 導師",assignedClass:"8年7班",password:"807807",mustChangePassword:!0,email:"tf51134@dsjh.tyc.edu.tw"},{account:"tf51073",name:"陳毅宏 導師",assignedClass:"8年8班",password:"808808",mustChangePassword:!0,email:"tf51073@dsjh.tyc.edu.tw"},{account:"tf51031",name:"陳秋梅 導師",assignedClass:"8年9班",password:"809809",mustChangePassword:!0,email:"tf51031@dsjh.tyc.edu.tw"},{account:"tf51140",name:"康嘉玲 導師",assignedClass:"9年1班",password:"901901",mustChangePassword:!0,email:"tf51140@dsjh.tyc.edu.tw"},{account:"tf51084",name:"陳建生 導師",assignedClass:"9年2班",password:"902902",mustChangePassword:!0,email:"tf51084@dsjh.tyc.edu.tw"},{account:"tf51142",name:"劉信志 導師",assignedClass:"9年3班",password:"903903",mustChangePassword:!0,email:"tf51142@dsjh.tyc.edu.tw"},{account:"tf51043",name:"林璟薇 導師",assignedClass:"9年4班",password:"904904",mustChangePassword:!0,email:"tf51043@dsjh.tyc.edu.tw"},{account:"tf51036",name:"張秀萍 導師",assignedClass:"9年5班",password:"905905",mustChangePassword:!0,email:"tf51036@dsjh.tyc.edu.tw"},{account:"tf51133",name:"周育秀 導師",assignedClass:"9年6班",password:"906906",mustChangePassword:!0,email:"tf51133@dsjh.tyc.edu.tw"},{account:"tf51055",name:"文明慧 導師",assignedClass:"9年7班",password:"907907",mustChangePassword:!0,email:"tf51055@dsjh.tyc.edu.tw"},{account:"tf51051",name:"潘建銘 導師",assignedClass:"9年8班",password:"908908",mustChangePassword:!0,email:"tf51051@dsjh.tyc.edu.tw"},{account:"tf51008",name:"陳麗芳 導師",assignedClass:"9年9班",password:"909909",mustChangePassword:!0,email:"tf51008@dsjh.tyc.edu.tw"}],l=[{account:"admin",name:"註冊組長",password:"admin1234"}],i=[],a=e.filter(o=>o.className==="7年1班"),b=[{name:"余子瀚",s:[88,96,94,72.5,87.5,90,87.5]},{name:"林玹德",s:[84,96,92,87.5,97.5,90,80]},{name:"徐常碩",s:[87,100,95,82.5,95,82.5,80]},{name:"許鈞翔",s:[72,33,65,50,90,75,52.5]},{name:"陳冠宇",s:[73,94,86,60,90,92.5,92.5]}],r=["國文","英文","數學","地理","歷史","公民","生物"];b.forEach(o=>{const f=a.find($=>$.name===o.name);if(!f)return;const c={};r.forEach(($,N)=>{c[$]=o.s[N]});const y=o.s.reduce(($,N)=>$+N,0),g=Number((y/r.length).toFixed(1));i.push({gradeSheet:"七年級成績資料庫",academicYear:"114學年度",semester:"第1學期",examName:"第1次定期評量",name:f.name,className:f.className,seatNo:f.seatNo,subjects:c,totalScore:Number(y.toFixed(1)),averageScore:g,gradeLevel:g>=90?"優":g>=80?"甲":g>=70?"乙":g>=60?"丙":"丁"})});const n=e.filter(o=>o.className==="8年1班"),s=["國文","英文","數學","地理","歷史","公民","理化"],d=[{name:"申啟智",s:[39.5,22,12,55,50,37.5,25]},{name:"吳宏安",s:[63,18,18,52.5,60,75,27.5]},{name:"李明原",s:[49.5,72,93,62.5,95,67.5,67.5]},{name:"林烜",s:[79.5,87,98,87.5,100,92.5,80]},{name:"倪聖恩",s:[54,34,78,55,45,40,47.5]},{name:"曾承淞",s:[75,71,69,75,95,75,70]},{name:"黃瑀晨",s:[76.5,45,65,62.5,65,65,70]},{name:"楊宇傑",s:[78,76,80,100,92.5,90,97.5]},{name:"廖祥甫",s:[55.5,68,57,60,70,57.5,57.5]},{name:"潘暘昕",s:[95,89,97,100,100,100,80]},{name:"黎冠昇",s:[49.5,66,79,55,70,75,67.5]},{name:"顏丞佑",s:[51.5,17,53,67.5,82.5,75,57.5]},{name:"蘇昀晨",s:[68,81,93,75,85,87.5,77.5]}];["第1次定期評量","第2次定期評量"].forEach((o,f)=>{d.forEach((c,y)=>{const g=n.find(u=>u.name===c.name);if(!g)return;const $=f===0?0:y%3===0?4:y%3===1?-2:3,N={};s.forEach((u,v)=>{N[u]=Math.min(100,Math.max(20,Number((c.s[v]+$).toFixed(1))))});const k=Object.values(N).reduce((u,v)=>u+v,0),w=Number((k/s.length).toFixed(1)),A=N.地理!==void 0&&N.歷史!==void 0&&N.公民!==void 0?Number(((N.地理+N.歷史+N.公民)/3).toFixed(1)):null;i.push({gradeSheet:"八年級成績資料庫",academicYear:"114學年度",semester:"第1學期",examName:o,name:g.name,className:g.className,seatNo:g.seatNo,subjects:N,socialAverage:A,scienceAverage:null,totalScore:Number(k.toFixed(1)),averageScore:w,gradeLevel:w>=90?"優":w>=80?"甲":w>=70?"乙":w>=60?"丙":"丁"})})});const x=e.filter(o=>o.className==="9年1班"),p=["國文","英文","數學","地理","歷史","公民","理化","地科","生物"];return[{name:"江成博",s:[43,63,52,45,60,62.5,40,46,35]},{name:"吳彥霆",s:[90,93,97,87.5,100,90,85,92,100]},{name:"李元翔",s:[47,38,48,55,72.5,47.5,30,59,50]},{name:"高俊哲",s:[64,83,75,80,95,90,75,73,100]},{name:"許修齊",s:[84,88,98,85,100,92.5,92.5,89,100]}].forEach(o=>{const f=x.find(k=>k.name===o.name);if(!f)return;const c={};p.forEach((k,w)=>{c[k]=o.s[w]});const y=o.s.reduce((k,w)=>k+w,0),g=Number((y/p.length).toFixed(1)),$=Number(((c.地理+c.歷史+c.公民)/3).toFixed(1)),N=Number(((c.理化*3+c.地科*2+c.生物*1)/6).toFixed(1));i.push({gradeSheet:"九年級成績資料庫",academicYear:"114學年度",semester:"第1學期",examName:"第1次定期評量",name:f.name,className:f.className,seatNo:f.seatNo,subjects:c,socialAverage:$,scienceAverage:N,totalScore:Number(y.toFixed(1)),averageScore:g,gradeLevel:g>=90?"優":g>=80?"甲":g>=70?"乙":g>=60?"丙":"丁"})}),{students:e,teachers:t,admins:l,grades:i}}function _e(){try{const t=localStorage.getItem(G.LOCAL_DB);if(t)return JSON.parse(t)}catch{}const e=Fe();return localStorage.setItem(G.LOCAL_DB,JSON.stringify(e)),e}function ke(e){localStorage.setItem(G.LOCAL_DB,JSON.stringify(e))}function ce(e,t){if(e==null||e===""||t==null||t==="")return!1;const l=String(e).trim(),i=String(t).trim();if(l===i)return!0;const a=n=>{if(!n)return null;const s=parseFloat(n);if(!isNaN(s)&&!n.includes("年")&&!n.includes("班")){let p=Math.floor(s);return p>=701&&p<=999&&(p=p%100),p}const d=n.match(/年(\d+)班/)||n.match(/(\d+)班/)||n.match(/(\d+)/);if(!d)return null;let x=parseInt(d[1],10);return x>=701&&x<=999&&(x=x%100),x},b=a(l),r=a(i);return b!==null&&r!==null&&b===r}function be(e){if(!e.length)return{ding:0,qian:0,jun:0,hou:0,di:0};const t=e.length,l=i=>{const a=(t-1)*i,b=Math.floor(a),r=Math.ceil(a),n=a-b;return Number((e[b]*(1-n)+e[r]*n).toFixed(1))};return{ding:l(.88),qian:l(.75),jun:l(.5),hou:l(.25),di:l(.12)}}function Ge(e,t){if(!e||!e.length)return 0;const l=e.slice().sort((n,s)=>n-s),i=l.length,a=(i-1)*(t/4),b=Math.floor(a),r=a-b;return b+1<i?l[b]+r*(l[b+1]-l[b]):l[b]}function V(e){const t=[];let l=0;for(let d=0;d<e.length;d++){const x=e[d];typeof x=="number"&&isFinite(x)?t.push(x):x===null&&l++}if(t.length===0)return{average:0,high:0,low:0};const i=t.reduce((d,x)=>d+x,0)/t.length,a=Ge(t,2),b=t.filter(d=>d>=a),r=b.length?b.reduce((d,x)=>d+x,0)/b.length:0,n=t.filter(d=>d<=a);for(let d=0;d<l;d++)n.push(0);const s=n.length?n.reduce((d,x)=>d+x,0)/n.length:0;return{average:i,high:r,low:s}}function Q(e,t){if(e.hasScore===!1)return!0;if(e.rawAverageScore===null||e.rawAverageScore===void 0){const l=e.scores||e.subjects||{};return!t.some(i=>typeof l[i]=="number"&&isFinite(l[i]))}return!1}function Se(e,t,l,i="class"){const a={};t.forEach(o=>{const f=e.map(c=>{const y=c.scores||c.subjects,g=y?y[o]:void 0;if(typeof g=="number"&&isFinite(g))return g;const $=Q(c,t);if(c.identity==="學中"||$)return null});a[o]=V(f),o==="英文"&&(a.英語=a[o]),o==="英語"&&(a.英文=a[o])});const b=e.map(o=>typeof o.socialAverage=="number"&&isFinite(o.socialAverage)?o.socialAverage:Q(o,t)?null:void 0);if(a.社會=a.社會平均=a.社平=V(b),l){const o=e.map(f=>typeof f.scienceAverage=="number"&&isFinite(f.scienceAverage)?f.scienceAverage:Q(f,t)?null:void 0);a.自然=a.自然平均=a.自平=V(o)}const r=a.英語?"英語":"英文",n=l?"自然":a.生物?"生物":"理化",s=(a.國文?.average||0)+(a[r]?.average||0)+(a.數學?.average||0)+(a.社會?.average||0)+(a[n]?.average||0),d=(a.國文?.high||0)+(a[r]?.high||0)+(a.數學?.high||0)+(a.社會?.high||0)+(a[n]?.high||0),x=(a.國文?.low||0)+(a[r]?.low||0)+(a.數學?.low||0)+(a.社會?.low||0)+(a[n]?.low||0),p=o=>Q(o,t)?null:typeof o.rawTotalScore=="number"&&isFinite(o.rawTotalScore)?o.rawTotalScore:typeof o.totalScore=="number"&&isFinite(o.totalScore)?o.totalScore:null,S=o=>Q(o,t)?null:typeof o.rawAverageScore=="number"&&isFinite(o.rawAverageScore)?o.rawAverageScore:typeof o.averageScore=="number"&&isFinite(o.averageScore)?o.averageScore:null;if(l)if(a.總分={average:s,high:d,low:x},i==="school")a.平均={average:s/5,high:d/5,low:x/5};else{const o=e.map(S);a.平均=V(o)}else if(i==="school"){const o=e.map(p),f=e.map(S);a.總分=V(o),a.平均=V(f)}else a.總分={average:s,high:d,low:x},a.平均={average:s/5,high:d/5,low:x/5};return a}function W(e,t){const l={};return e&&Object.keys(e).forEach(i=>{e[i]&&typeof e[i][t]=="number"&&(l[i]=Number(e[i][t].toFixed(2)))}),l}function Ne(e,t,l,i,a){const b=t.filter(x=>{const p=x.identity;return p!=="體育班"&&p!=="特教"&&p!=="特教班"&&p!=="秀才"}),r=t.filter(x=>{const p=x.identity;return p!=="特教"&&p!=="特教班"&&p!=="秀才"}),n=Se(e,l,i,"class"),s=Se(a?r:b,l,i,"school");return{cohortLabel:a?"含體育班":"不含體育班",isSportsClass:!!a,classBenchmarks:n,schoolBenchmarks:s,classAverage:W(n,"average"),schoolAverage:W(s,"average"),classHigh:W(n,"high"),schoolHigh:W(s,"high"),classLow:W(n,"low"),schoolLow:W(s,"low")}}async function D(e,t={}){const l=le(),i={action:e,authToken:Y()?.authToken,...t};if(typeof window<"u"&&window.google?.script?.run)try{return await new Promise((a,b)=>{window.google.script.run.withSuccessHandler(a).withFailureHandler(b).requestApiBridge(i)})}catch{return{success:!1,message:"系統服務暫時無法回應，請稍後重試或洽教務處註冊組。"}}if(l)try{const a=await fetch(l,{method:"POST",headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify(i)});if(!a.ok)throw new Error(`GAS 伺服器回應錯誤 (狀態碼 ${a.status})`);return await a.json()}catch{return{success:!1,message:"無法連線至校務服務，請稍後重試；如持續發生，請洽教務處註冊組。"}}return Oe(e,t)}function Oe(e,t){const l=_e();switch(e){case"ping":return{success:!0,mode:"mock",message:"本地示範資料庫運作正常（未設定 GAS 網址）"};case"login":{const{role:i,account:a,password:b}=t;if(!a||!b)return{success:!1,message:"請輸入帳號與密碼"};if(i==="student"){const r=l.students.find(n=>n.studentId===a);return r?r.password!==b?{success:!1,message:"密碼錯誤，請輸入身分證後四碼＋生日共8碼"}:{success:!0,role:"student",authToken:"mock-token-student-"+r.studentId,user:{studentId:r.studentId,name:r.name,className:r.className,seatNo:r.seatNo},mustChangePassword:!1}:{success:!1,message:"查無此學號"}}if(i==="teacher"){const r=l.teachers.find(n=>n.account.toLowerCase()===a.toLowerCase()||a.toLowerCase()===`t${n.assignedClass.replace(/\D/g,"")}`||a===n.assignedClass.replace(/\D/g,"")||ce(n.assignedClass,a));return r?r.password!==b?{success:!1,message:"導師密碼錯誤"}:{success:!0,role:"teacher",authToken:"mock-token-teacher-"+r.account,user:{account:r.account,name:r.name,assignedClass:r.assignedClass},mustChangePassword:!!r.mustChangePassword}:{success:!1,message:"查無此教師帳號"}}if(i==="admin"){const r=l.admins.find(n=>n.account.toLowerCase()===a.toLowerCase());return r?r.password!==b?{success:!1,message:"管理者密碼錯誤"}:{success:!0,role:"admin",authToken:"mock-token-admin-"+r.account,user:{account:r.account,name:r.name},mustChangePassword:!1}:{success:!1,message:"查無管理者帳號"}}return{success:!1,message:"未知的身分角色"}}case"changeTeacherPassword":{const{account:i,newPassword:a}=t,b=l.teachers.find(r=>r.account.toLowerCase()===(i||"").toLowerCase());return b?(b.password=a,b.mustChangePassword=!1,ke(l),{success:!0,message:"密碼已順利變更完成！"}):{success:!1,message:"找不到導師帳號"}}case"changeStudentPassword":{const i=t.studentId||t.account,{currentPassword:a,newPassword:b}=t,r=l.students.find(n=>n.studentId===i);return r?a&&r.password!==a?{success:!1,message:"目前舊密碼驗證不符，無法修改"}:(r.password=b,ke(l),{success:!0,message:"個人密碼已成功變更！下次請使用新密碼登入。"}):{success:!1,message:"找不到該學號紀錄"}}case"getStudentScores":{const{studentId:i}=t,a=l.students.find(n=>n.studentId===i);if(!a)return{success:!1,message:"該學號目前不在最新在校學生名單中"};const r=l.grades.filter(n=>n.studentId&&n.studentId===i||n.name===a.name&&(n.seatNo===a.seatNo||ce(n.className,a.className))).map(n=>{const s=l.grades.filter(k=>k.examName===n.examName&&k.className===n.className),d=s.map(k=>k.averageScore).sort((k,w)=>k-w),x=be(d),p=Object.keys(n.subjects||{}),S={};p.forEach(k=>{const w=s.map(A=>A.subjects&&A.subjects[k]||0).sort((A,u)=>A-u);S[k]={average:w.length?Number((w.reduce((A,u)=>A+u,0)/w.length).toFixed(1)):0,...be(w)}});const f=1+s.map(k=>k.averageScore).sort((k,w)=>w-k).filter(k=>k>n.averageScore).length,c=f,y=/[九9]/.test(n.gradeSheet||"")||/^([九9])\s*年|^9\d{2}$/.test(String(n.className||"").trim())||p.includes("地科"),g=n.identity==="體育班"||s.some(k=>k.identity==="體育班")||/(?:^|[^\d])9班|(?:\d09)$/.test(n.className),$=l.grades.filter(k=>k.examName===n.examName),N=Ne(s,$.length?$:s,p,y,g);return{...n,scienceAverage:y?n.scienceAverage:null,classRank:f,classRankInterval:we(f),schoolRank:c,schoolPR:80,schoolRankInterval:$e(c),benchmarks:N,classStats:{studentCount:s.length,fiveBenchmarks:x,subjectBenchmarks:S}}});return{success:!0,student:a,exams:r}}case"getTeacherClassData":{const{teacherAccount:i,className:a}=t,b=l.teachers.find(x=>x.account.toLowerCase()===(i||"").toLowerCase()),r=a||(b?b.assignedClass:"8年1班"),n=l.grades.filter(x=>ce(x.className,r)),d=Array.from(new Set(n.map(x=>x.examName))).map(x=>{const p=n.filter(u=>u.examName===x).sort((u,v)=>u.seatNo-v.seatNo),S=p.map(u=>u.averageScore).sort((u,v)=>u-v),o=p.length,f=be(S),c=p.length?Object.keys(p[0].subjects||{}):[],y={};c.forEach(u=>{const v=p.map(C=>C.subjects&&C.subjects[u]||0);y[u]=v.length?Number((v.reduce((C,R)=>C+R,0)/v.length).toFixed(1)):0});const g={優:0,甲:0,乙:0,丙:0,丁:0};p.forEach(u=>{g[u.gradeLevel]!==void 0&&g[u.gradeLevel]++});const $=p.filter(u=>u.averageScore>=60).length,N=/^([九9])\s*年|^9\d{2}$/.test(String(r||"").trim())||c.includes("地科"),k=p.some(u=>u.identity==="體育班")||/(?:^|[^\d])9班|(?:\d09)$/.test(r),w=l.grades.filter(u=>u.examName===x),A=Ne(p,w.length?w:p,c,N,k);return{examName:x,totalStudents:o,subjects:c,subjectAverages:y,fiveBenchmarks:f,benchmarks:A,gradeDistribution:g,passCount:$,passRate:o?Math.round($/o*100):0,students:p.map(u=>{const v=1+S.filter(C=>C>u.averageScore).length;return{studentId:u.studentId,name:u.name,seatNo:u.seatNo,identity:u.identity,scores:u.subjects,socialAverage:u.socialAverage,scienceAverage:N?u.scienceAverage:null,totalScore:u.totalScore,averageScore:u.averageScore,gradeLevel:u.gradeLevel,classRank:v,classRankInterval:we(v),schoolRank:v,schoolPR:80,schoolRankInterval:$e(v),isFailing:u.averageScore<60}})}});return{success:!0,className:r,exams:d}}case"logout":case"logoutAdmin":return{success:!0};case"getAdminOverview":{const i=l.grades.filter(r=>(r.gradeSheet||"").includes("七年級")).length,a=l.grades.filter(r=>(r.gradeSheet||"").includes("八年級")).length,b=l.grades.filter(r=>(r.gradeSheet||"").includes("九年級")).length;return{success:!0,stats:{studentCount:l.students.length,teacherCount:l.teachers.length,grade7Count:i,grade8Count:a,grade9Count:b,gradeRecordCount:l.grades.length,examCount:2,exams:["第1次定期評量","第2次定期評量"]}}}default:return{success:!1,message:"未支援的本地測試動作: "+e}}}function m(e){return String(e??"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;").replace(/'/g,"&#39;")}function I(e,t="success"){const l=document.getElementById("toast-root");if(!l)return;const i=document.createElement("div"),a=t==="error";i.className=`pointer-events-auto flex items-center gap-2 px-4 py-3 rounded-lg shadow-xl text-sm font-medium transition-all duration-300 transform translate-y-2 opacity-0 ${a?"bg-rose-600 text-white":"bg-slate-900 text-white border-l-4 border-emerald-500"}`,i.innerHTML=`
+    <span>${a?"⚠️":"✓"}</span>
     <span>${m(e)}</span>
-  `,d.appendChild(i),requestAnimationFrame(()=>{i.classList.remove("translate-y-2","opacity-0")}),setTimeout(()=>{i.classList.add("opacity-0","translate-y-2"),setTimeout(()=>i.remove(),300)},3600)}function oe(e,a){const d=document.getElementById("modal-root");if(!d)return;d.innerHTML=`
+  `,l.appendChild(i),requestAnimationFrame(()=>{i.classList.remove("translate-y-2","opacity-0")}),setTimeout(()=>{i.classList.add("opacity-0","translate-y-2"),setTimeout(()=>i.remove(),300)},3600)}function ee(e,t){const l=document.getElementById("modal-root");if(!l)return;l.innerHTML=`
     <div class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm transition-opacity" id="active-modal-backdrop">
       <div class="bg-white rounded-2xl shadow-2xl max-w-lg w-full overflow-hidden border border-slate-200 animate-in fade-in zoom-in-95 duration-200" role="dialog" aria-modal="true">
         ${e}
       </div>
     </div>
-  `;const i=document.getElementById("active-modal-backdrop");i?.addEventListener("click",t=>{t.target===i&&_()}),typeof a=="function"&&a(d)}function _(){const e=document.getElementById("modal-root");e&&(e.innerHTML="")}function J(e){const a=String(e||"丁").trim(),d={優:"bg-emerald-50 text-emerald-700 border-emerald-300",甲:"bg-blue-50 text-blue-700 border-blue-300",乙:"bg-sky-50 text-sky-700 border-sky-300",丙:"bg-amber-50 text-amber-700 border-amber-300",丁:"bg-rose-50 text-rose-700 border-rose-300 font-bold"},i={優:"優等 (90分以上)",甲:"甲等 (80-89分)",乙:"乙等 (70-79分)",丙:"丙等 (60-69分，及格基準)",丁:"丁等 (未滿60分，待加強扶助)"};return`<span class="inline-flex items-center justify-center px-2.5 py-1 rounded-md text-xs font-semibold border ${d[a]||d.丁}" title="${i[a]||""}">${m(a)}等</span>`}function _e(e,a){if(!a)return'<span class="text-xs text-slate-400">-</span>';const{ding:d=0,qian:i=0,jun:t=0,hou:b=0,di:l=0}=a,n=Number(e)||0;let s="未達底標",r="bg-rose-100 text-rose-800";return n>=d?(s="🌟 超越頂標",r="bg-emerald-100 text-emerald-800 font-bold"):n>=i?(s="✨ 頂標 ~ 前標之間",r="bg-blue-100 text-blue-800 font-bold"):n>=t?(s="👍 前標 ~ 均標之間",r="bg-sky-100 text-sky-800"):n>=b?(s="均標 ~ 後標之間",r="bg-amber-100 text-amber-800"):n>=l&&(s="後標 ~ 底標之間",r="bg-orange-100 text-orange-800"),`
+  `;const i=document.getElementById("active-modal-backdrop");i?.addEventListener("click",a=>{a.target===i&&H()}),typeof t=="function"&&t(l)}function H(){const e=document.getElementById("modal-root");e&&(e.innerHTML="")}function Z(e){const t=String(e||"丁").trim(),l={優:"bg-emerald-50 text-emerald-700 border-emerald-300",甲:"bg-blue-50 text-blue-700 border-blue-300",乙:"bg-sky-50 text-sky-700 border-sky-300",丙:"bg-amber-50 text-amber-700 border-amber-300",丁:"bg-rose-50 text-rose-700 border-rose-300 font-bold"},i={優:"優等 (90分以上)",甲:"甲等 (80-89分)",乙:"乙等 (70-79分)",丙:"丙等 (60-69分，及格基準)",丁:"丁等 (未滿60分，待加強扶助)"};return`<span class="inline-flex items-center justify-center px-2.5 py-1 rounded-md text-xs font-semibold border ${l[t]||l.丁}" title="${i[t]||""}">${m(t)}等</span>`}function Ke(e,t){if(!t)return'<span class="text-xs text-slate-400">-</span>';const{ding:l=0,qian:i=0,jun:a=0,hou:b=0,di:r=0}=t,n=Number(e)||0;let s="未達底標",d="bg-rose-100 text-rose-800";return n>=l?(s="🌟 超越頂標",d="bg-emerald-100 text-emerald-800 font-bold"):n>=i?(s="✨ 頂標 ~ 前標之間",d="bg-blue-100 text-blue-800 font-bold"):n>=a?(s="👍 前標 ~ 均標之間",d="bg-sky-100 text-sky-800"):n>=b?(s="均標 ~ 後標之間",d="bg-amber-100 text-amber-800"):n>=r&&(s="後標 ~ 底標之間",d="bg-orange-100 text-orange-800"),`
     <div class="flex flex-col gap-1 w-full max-w-xs">
       <div class="flex items-center justify-between text-[11px] text-slate-500 font-mono">
-        <span>底: ${l}</span>
-        <span>均: ${t}</span>
-        <span>頂: ${d}</span>
+        <span>底: ${r}</span>
+        <span>均: ${a}</span>
+        <span>頂: ${l}</span>
       </div>
       <div class="h-2 w-full bg-slate-200 rounded-full overflow-hidden flex">
-        <div class="h-full bg-rose-400" style="width: 20%;" title="底標: ${l}"></div>
+        <div class="h-full bg-rose-400" style="width: 20%;" title="底標: ${r}"></div>
         <div class="h-full bg-amber-400" style="width: 25%;" title="後標: ${b}"></div>
-        <div class="h-full bg-sky-400" style="width: 25%;" title="均標: ${t}"></div>
+        <div class="h-full bg-sky-400" style="width: 25%;" title="均標: ${a}"></div>
         <div class="h-full bg-blue-400" style="width: 18%;" title="前標: ${i}"></div>
-        <div class="h-full bg-emerald-500" style="width: 12%;" title="頂標: ${d}"></div>
+        <div class="h-full bg-emerald-500" style="width: 12%;" title="頂標: ${l}"></div>
       </div>
       <div class="mt-0.5">
-        <span class="inline-block text-[11px] px-2 py-0.5 rounded ${r}">${s}</span>
+        <span class="inline-block text-[11px] px-2 py-0.5 rounded ${d}">${s}</span>
       </div>
     </div>
-  `}let ee=null,te=null;async function Ge(e,a){e.innerHTML=`
+  `}let ae=null,ne=null;async function Ue(e,t){e.innerHTML=`
     <div class="flex items-center justify-center py-20 text-slate-500">
       <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-emerald-600 mr-3"></div>
       <span>正在從雲端試算表載入成績紀錄...</span>
     </div>
-  `;const d=await P("getStudentScores",{studentId:a.studentId});if(!d.success){e.innerHTML=`
+  `;const l=await D("getStudentScores",{studentId:t.studentId});if(!l.success){e.innerHTML=`
       <div class="bg-white rounded-2xl p-8 shadow-sm border border-slate-200 text-center max-w-lg mx-auto mt-12">
         <div class="w-16 h-16 bg-rose-50 text-rose-500 rounded-full flex items-center justify-center mx-auto text-2xl mb-4">⚠️</div>
         <h3 class="text-xl font-bold text-slate-800 mb-2">無法載入成績資料</h3>
-        <p class="text-slate-600 mb-6 text-sm">${m(d.message||"查無此學號之學籍或成績紀錄")}</p>
+        <p class="text-slate-600 mb-6 text-sm">${m(l.message||"查無此學號之學籍或成績紀錄")}</p>
         <button id="btn-portal-back" class="px-5 py-2.5 bg-slate-800 text-white rounded-xl text-sm font-medium hover:bg-slate-700">返回登入頁</button>
       </div>
-    `,document.getElementById("btn-portal-back")?.addEventListener("click",()=>{window.location.reload()});return}const{student:i,exams:t}=d;if(!t||t.length===0){e.innerHTML=`
+    `,document.getElementById("btn-portal-back")?.addEventListener("click",()=>{window.location.reload()});return}const{student:i,exams:a}=l;if(!a||a.length===0){e.innerHTML=`
       <div class="bg-white rounded-2xl p-8 shadow-sm border border-slate-200 text-center max-w-lg mx-auto mt-12">
         <div class="w-16 h-16 bg-amber-50 text-amber-500 rounded-full flex items-center justify-center mx-auto text-2xl mb-4">📋</div>
         <h3 class="text-xl font-bold text-slate-800 mb-2">尚未發布定期評量成績</h3>
         <p class="text-slate-600 text-sm">【${m(i.className)}】目前試算表尚無開放查詢之成績，請靜候學校教務處公告。</p>
       </div>
-    `;return}let b=t.length-1;function l(){const s=t[b],r=Object.keys(s.subjects||{}),x=s.classStats||{},p=x.fiveBenchmarks||{},S=x.subjectBenchmarks||{},o=s.benchmarks||{},g=o.cohortLabel||s.schoolCohortLabel||(/(?:^|[^\d])9班|(?:\d09)$/.test(i.className)?"含體育班":"不含體育班"),c=f=>f==null||isNaN(f)?"-":Number(f).toFixed(2),y=/[九9]/.test(s.gradeSheet||"")||/^([九9])\s*年|^9\d{2}$/.test(String(s.className||"").trim())||r.includes("地科");e.innerHTML=`
+    `;return}let b=a.length-1;function r(){const s=a[b],d=Object.keys(s.subjects||{}),x=s.classStats||{},p=x.fiveBenchmarks||{},S=x.subjectBenchmarks||{},o=s.benchmarks||{},f=o.cohortLabel||s.schoolCohortLabel||(/(?:^|[^\d])9班|(?:\d09)$/.test(i.className)?"含體育班":"不含體育班"),c=g=>g==null||isNaN(g)?"-":Number(g).toFixed(2),y=/[九9]/.test(s.gradeSheet||"")||/^([九9])\s*年|^9\d{2}$/.test(String(s.className||"").trim())||d.includes("地科");e.innerHTML=`
       <div class="student-print-sheet">
       <!-- A4 列印頁首 (列印時才顯現) -->
       <div class="student-print-header hidden print:block mb-6 border-b-2 border-slate-800 pb-4">
@@ -75,9 +75,9 @@
           <!-- 考試切換下拉選單 -->
           <div class="flex-1 sm:flex-none">
             <select id="exam-selector" class="w-full sm:w-auto px-4 py-2 bg-white border border-slate-300 rounded-xl text-sm font-medium text-slate-700 shadow-sm focus:ring-2 focus:ring-emerald-500 focus:outline-none">
-              ${t.map((f,$)=>`
+              ${a.map((g,$)=>`
                 <option value="${$}" ${$===b?"selected":""}>
-                  ${m(f.academicYear)} ${m(f.semester)} ${m(f.examName)}
+                  ${m(g.academicYear)} ${m(g.semester)} ${m(g.examName)}
                 </option>
               `).join("")}
             </select>
@@ -171,7 +171,7 @@
             <span class="text-[11px] text-slate-400">${x.studentCount||0} 人統計</span>
           </div>
           <div class="my-2">
-            ${_e(s.averageScore,p)}
+            ${Ke(s.averageScore,p)}
           </div>
           <div class="text-[11px] text-slate-500 border-t border-slate-100 pt-2 font-mono flex justify-between">
             <span>頂標: ${p.ding||0}</span>
@@ -186,7 +186,7 @@
         <div class="student-print-table-header px-6 py-4 bg-slate-50 border-b border-slate-200 flex flex-wrap justify-between items-center gap-2">
           <div class="flex items-center gap-2">
             <h3 class="font-bold text-slate-800 text-sm">各領域學科學習評量成績表</h3>
-            <span class="text-[11px] bg-slate-200/80 text-slate-700 px-2 py-0.5 rounded font-medium">年標參照：${m(g)}</span>
+            <span class="text-[11px] bg-slate-200/80 text-slate-700 px-2 py-0.5 rounded font-medium">年標參照：${m(f)}</span>
           </div>
           <span class="text-xs text-slate-500">丙等 (60分) 以上為及格基準</span>
         </div>
@@ -208,50 +208,50 @@
               </tr>
             </thead>
             <tbody class="divide-y divide-slate-100">
-              ${(()=>{let f=!1;const $=()=>{if(s.socialAverage===null||s.socialAverage===void 0)return"";f=!0;const w=Number(Number(s.socialAverage).toFixed(1));let A="丁";w>=90?A="優":w>=80?A="甲":w>=70?A="乙":w>=60&&(A="丙");const u=c(o.classAverage?.社平??o.classAverage?.社會),v=c(o.schoolAverage?.社平??o.schoolAverage?.社會),C=c(o.classHigh?.社平??o.classHigh?.社會),I=c(o.schoolHigh?.社平??o.schoolHigh?.社會),M=c(o.classLow?.社平??o.classLow?.社會),E=c(o.schoolLow?.社平??o.schoolLow?.社會);return`
+              ${(()=>{let g=!1;const $=()=>{if(s.socialAverage===null||s.socialAverage===void 0)return"";g=!0;const w=Number(Number(s.socialAverage).toFixed(1));let A="丁";w>=90?A="優":w>=80?A="甲":w>=70?A="乙":w>=60&&(A="丙");const u=c(o.classAverage?.社平??o.classAverage?.社會),v=c(o.schoolAverage?.社平??o.schoolAverage?.社會),C=c(o.classHigh?.社平??o.classHigh?.社會),R=c(o.schoolHigh?.社平??o.schoolHigh?.社會),E=c(o.classLow?.社平??o.classLow?.社會),B=c(o.schoolLow?.社平??o.schoolLow?.社會);return`
                     <tr class="bg-amber-50/50 font-medium">
                       <td class="px-4 py-3.5 font-bold text-amber-900 flex items-center gap-1.5">
                         <span class="w-2 h-2 rounded-full bg-amber-500"></span>
                         <span>社會領域平均 (地理/歷史/公民)</span>
                       </td>
                       <td class="px-3 py-3.5 text-center font-mono font-black text-base ${w>=60?"text-amber-900":"text-rose-600"}">${w}</td>
-                      <td class="px-3 py-3.5 text-center">${J(A)}</td>
+                      <td class="px-3 py-3.5 text-center">${Z(A)}</td>
                       <td class="px-3 py-3.5 text-center font-mono text-slate-600">${u}</td>
                       <td class="px-3 py-3.5 text-center font-mono text-slate-600">${v}</td>
                       <td class="px-3 py-3.5 text-center font-mono text-blue-700">${C}</td>
-                      <td class="px-3 py-3.5 text-center font-mono text-blue-700">${I}</td>
-                      <td class="px-3 py-3.5 text-center font-mono text-rose-700">${M}</td>
+                      <td class="px-3 py-3.5 text-center font-mono text-blue-700">${R}</td>
                       <td class="px-3 py-3.5 text-center font-mono text-rose-700">${E}</td>
+                      <td class="px-3 py-3.5 text-center font-mono text-rose-700">${B}</td>
                       <td class="px-3 py-3.5 text-center">
                         ${w>=60?'<span class="text-xs px-2 py-0.5 rounded bg-emerald-50 text-emerald-700 font-medium">✓ 及格</span>':'<span class="text-xs px-2 py-0.5 rounded bg-rose-50 text-rose-700 font-bold">⚠️ 需扶助</span>'}
                       </td>
                     </tr>
-                  `},N=r.map(w=>{const A=s.subjects[w],u=A!=null,v=u?A:null;let C="丁";u&&(v>=90?C="優":v>=80?C="甲":v>=70?C="乙":v>=60&&(C="丙"));const I=S[w]||{},M=o.classAverage?c(o.classAverage[w]):I.average?c(I.average):"-",E=o.schoolAverage?c(o.schoolAverage[w]):"-",T=o.classHigh?c(o.classHigh[w]):I.qian?c(I.qian):"-",D=o.schoolHigh?c(o.schoolHigh[w]):"-",le=o.classLow?c(o.classLow[w]):I.hou?c(I.hou):"-",H=o.schoolLow?c(o.schoolLow[w]):"-",O=`
+                  `},N=d.map(w=>{const A=s.subjects[w],u=A!=null,v=u?A:null;let C="丁";u&&(v>=90?C="優":v>=80?C="甲":v>=70?C="乙":v>=60&&(C="丙"));const R=S[w]||{},E=o.classAverage?c(o.classAverage[w]):R.average?c(R.average):"-",B=o.schoolAverage?c(o.schoolAverage[w]):"-",T=o.classHigh?c(o.classHigh[w]):R.qian?c(R.qian):"-",P=o.schoolHigh?c(o.schoolHigh[w]):"-",ie=o.classLow?c(o.classLow[w]):R.hou?c(R.hou):"-",q=o.schoolLow?c(o.schoolLow[w]):"-",O=`
                     <tr class="hover:bg-slate-50/60 transition">
                       <td class="px-4 py-3.5 font-medium text-slate-900">${m(w)}</td>
                       <td class="px-3 py-3.5 text-center font-mono font-bold text-base ${u?v>=60?"text-slate-900":"text-rose-600":"text-slate-400"}">
                         ${u?v:'<span class="text-xs font-sans text-slate-400 font-normal">免測/個別評量</span>'}
                       </td>
-                      <td class="px-3 py-3.5 text-center">${u?J(C):'<span class="text-xs px-2 py-0.5 rounded bg-slate-100 text-slate-500 font-medium">特教適性</span>'}</td>
-                      <td class="px-3 py-3.5 text-center font-mono text-slate-600">${M}</td>
+                      <td class="px-3 py-3.5 text-center">${u?Z(C):'<span class="text-xs px-2 py-0.5 rounded bg-slate-100 text-slate-500 font-medium">特教適性</span>'}</td>
                       <td class="px-3 py-3.5 text-center font-mono text-slate-600">${E}</td>
+                      <td class="px-3 py-3.5 text-center font-mono text-slate-600">${B}</td>
                       <td class="px-3 py-3.5 text-center font-mono text-blue-700">${T}</td>
-                      <td class="px-3 py-3.5 text-center font-mono text-blue-700">${D}</td>
-                      <td class="px-3 py-3.5 text-center font-mono text-rose-700">${le}</td>
-                      <td class="px-3 py-3.5 text-center font-mono text-rose-700">${H}</td>
+                      <td class="px-3 py-3.5 text-center font-mono text-blue-700">${P}</td>
+                      <td class="px-3 py-3.5 text-center font-mono text-rose-700">${ie}</td>
+                      <td class="px-3 py-3.5 text-center font-mono text-rose-700">${q}</td>
                       <td class="px-3 py-3.5 text-center">
                         ${u?v>=60?'<span class="text-xs px-2 py-0.5 rounded bg-emerald-50 text-emerald-700 font-medium">✓ 及格</span>':'<span class="text-xs px-2 py-0.5 rounded bg-rose-50 text-rose-700 font-bold">⚠️ 需扶助</span>':'<span class="text-xs text-slate-400">個別化評定</span>'}
                       </td>
                     </tr>
-                  `;return w==="公民"?O+$():O}).join(""),k=!f&&s.socialAverage!==null&&s.socialAverage!==void 0?$():"";return N+k})()}
-              ${y&&s.scienceAverage!==null&&s.scienceAverage!==void 0?(()=>{const f=Number(Number(s.scienceAverage).toFixed(1));let $="丁";f>=90?$="優":f>=80?$="甲":f>=70?$="乙":f>=60&&($="丙");const N=c(o.classAverage?.自平??o.classAverage?.自然),k=c(o.schoolAverage?.自平??o.schoolAverage?.自然),w=c(o.classHigh?.自平??o.classHigh?.自然),A=c(o.schoolHigh?.自平??o.schoolHigh?.自然),u=c(o.classLow?.自平??o.classLow?.自然),v=c(o.schoolLow?.自平??o.schoolLow?.自然);return`
+                  `;return w==="公民"?O+$():O}).join(""),k=!g&&s.socialAverage!==null&&s.socialAverage!==void 0?$():"";return N+k})()}
+              ${y&&s.scienceAverage!==null&&s.scienceAverage!==void 0?(()=>{const g=Number(Number(s.scienceAverage).toFixed(1));let $="丁";g>=90?$="優":g>=80?$="甲":g>=70?$="乙":g>=60&&($="丙");const N=c(o.classAverage?.自平??o.classAverage?.自然),k=c(o.schoolAverage?.自平??o.schoolAverage?.自然),w=c(o.classHigh?.自平??o.classHigh?.自然),A=c(o.schoolHigh?.自平??o.schoolHigh?.自然),u=c(o.classLow?.自平??o.classLow?.自然),v=c(o.schoolLow?.自平??o.schoolLow?.自然);return`
                   <tr class="bg-cyan-50/50 font-medium">
                     <td class="px-4 py-3.5 font-bold text-cyan-900 flex items-center gap-1.5">
                       <span class="w-2 h-2 rounded-full bg-cyan-500"></span>
                       <span>自然科學領域平均 (理化3/地科2/生物1)</span>
                     </td>
-                    <td class="px-3 py-3.5 text-center font-mono font-black text-base ${f>=60?"text-cyan-900":"text-rose-600"}">${f}</td>
-                    <td class="px-3 py-3.5 text-center">${J($)}</td>
+                    <td class="px-3 py-3.5 text-center font-mono font-black text-base ${g>=60?"text-cyan-900":"text-rose-600"}">${g}</td>
+                    <td class="px-3 py-3.5 text-center">${Z($)}</td>
                     <td class="px-3 py-3.5 text-center font-mono text-slate-600">${N}</td>
                     <td class="px-3 py-3.5 text-center font-mono text-slate-600">${k}</td>
                     <td class="px-3 py-3.5 text-center font-mono text-blue-700">${w}</td>
@@ -259,7 +259,7 @@
                     <td class="px-3 py-3.5 text-center font-mono text-rose-700">${u}</td>
                     <td class="px-3 py-3.5 text-center font-mono text-rose-700">${v}</td>
                     <td class="px-3 py-3.5 text-center">
-                      ${f>=60?'<span class="text-xs px-2 py-0.5 rounded bg-emerald-50 text-emerald-700 font-medium">✓ 及格</span>':'<span class="text-xs px-2 py-0.5 rounded bg-rose-50 text-rose-700 font-bold">⚠️ 需扶助</span>'}
+                      ${g>=60?'<span class="text-xs px-2 py-0.5 rounded bg-emerald-50 text-emerald-700 font-medium">✓ 及格</span>':'<span class="text-xs px-2 py-0.5 rounded bg-rose-50 text-rose-700 font-bold">⚠️ 需扶助</span>'}
                     </td>
                   </tr>
                 `})():""}
@@ -280,7 +280,7 @@
                 <tr class="bg-slate-100/70 font-semibold">
                   <td class="px-4 py-3 font-bold text-slate-800">評量平均</td>
                   <td class="px-3 py-3 text-center font-mono font-bold text-slate-900">${s.averageScore!==null&&s.averageScore!==void 0?s.averageScore:"-"}</td>
-                  <td class="px-3 py-3 text-center">${s.hasScore!==!1?J(s.gradeLevel):'<span class="text-xs px-2 py-0.5 rounded bg-slate-100 text-slate-400">免測</span>'}</td>
+                  <td class="px-3 py-3 text-center">${s.hasScore!==!1?Z(s.gradeLevel):'<span class="text-xs px-2 py-0.5 rounded bg-slate-100 text-slate-400">免測</span>'}</td>
                   <td class="px-3 py-3 text-center font-mono text-slate-700">${c(o.classAverage?.平均)}</td>
                   <td class="px-3 py-3 text-center font-mono text-slate-700">${c(o.schoolAverage?.平均)}</td>
                   <td class="px-3 py-3 text-center font-mono text-blue-800">${c(o.classHigh?.平均)}</td>
@@ -326,25 +326,25 @@
         </div>
       </div>
       </div>
-    `,document.getElementById("exam-selector")?.addEventListener("change",f=>{b=Number(f.target.value)||0,l()}),document.getElementById("btn-print-report")?.addEventListener("click",()=>{window.print()}),n(s,t,r,S)}function n(s,r,x,p){if(typeof Chart>"u")return;ee&&(ee.destroy(),ee=null),te&&(te.destroy(),te=null);const S=document.getElementById("chart-radar");if(S){const g=x.map(y=>s.subjects[y]||0),c=x.map(y=>p[y]&&p[y].average||70);ee=new Chart(S,{type:"radar",data:{labels:x,datasets:[{label:"個人得分",data:g,fill:!0,backgroundColor:"rgba(13, 122, 95, 0.2)",borderColor:"#0D7A5F",pointBackgroundColor:"#0D7A5F",pointBorderColor:"#fff",pointHoverBackgroundColor:"#fff",pointHoverBorderColor:"#0D7A5F"},{label:"班級平均",data:c,fill:!0,backgroundColor:"rgba(71, 85, 105, 0.1)",borderColor:"#64748B",borderDash:[4,4],pointBackgroundColor:"#64748B"}]},options:{responsive:!0,maintainAspectRatio:!1,scales:{r:{suggestedMin:30,suggestedMax:100,ticks:{stepSize:20}}},plugins:{legend:{position:"bottom",labels:{boxWidth:12}}}}})}const o=document.getElementById("chart-trend");if(o){const g=r.map(f=>f.examName),c=r.map(f=>f.averageScore),y=r.map(f=>{const $=f.classStats||{};return $.fiveBenchmarks&&$.fiveBenchmarks.jun||70});te=new Chart(o,{type:"line",data:{labels:g,datasets:[{label:"個人平均分",data:c,borderColor:"#1D4ED8",backgroundColor:"#1D4ED8",tension:.3,borderWidth:3,pointRadius:5},{label:"班級均標 (P50)",data:y,borderColor:"#94A3B8",backgroundColor:"#94A3B8",borderDash:[5,5],tension:.2,pointRadius:3}]},options:{responsive:!0,maintainAspectRatio:!1,scales:{y:{suggestedMin:40,suggestedMax:100,ticks:{stepSize:10}}},plugins:{legend:{position:"bottom",labels:{boxWidth:12}}}}})}}l()}function be(){const e=new Date,a=e.getFullYear(),d=String(e.getMonth()+1).padStart(2,"0"),i=String(e.getDate()).padStart(2,"0");return`${a}年${d}月${i}日`}function Oe(e){if(e.identity==="學中")return"該生平時上課積極配合特教資源班適性課程，學習態度認真努力，各領域評量皆展現正向學習動機，期勉維持良好學習步調，持續突破自我！";if(e.identity==="體育班")return"該生兼顧體育專項訓練與學業課程，展現堅毅抗壓之運動員精神，學習態度專注踏實，期勉在競賽與課業雙軌上精益求精、為校爭光！";const a=e.averageScore||0;return a>=90?"該生本階段學習態度主動嚴謹，各領域核心素養精熟扎實，邏輯思維與學科探究能力俱佳，表現卓越非凡，值得高度嘉許！期勉持之以恆、勇於探索新知！":a>=80?"該生在校品學兼優、學習態度專注穩定，已確實掌握各領域核心概念，表現十分良好！若能在弱項科目更深入鑽研錯題盲點，必定能再攀高峰！":a>=70?"該生具備良好之學科基礎能力，上課規矩良好、能按時完成作業。建議課後多花時間統整觀念脈絡，主動向師長請教，學習成效必能大幅躍進！":a>=60?"該生各領域皆已達到法定及格基準，學習態度和善。建議妥善規劃每日課後複習時間，建立規律筆記習慣，循序漸進加強熟練度，期待更優異的表現！":"該生部分學科概念尚待強化，請家長毋須過度焦慮，建議與導師共同配合，落實課後錯題訂正並善用校內學習扶助輔導資源，攜手協助孩子重拾信心與成就感！"}function Ke(e,a){const d=a.ding||90,i=a.qian||80,t=a.jun||70,b=a.hou||60,l=a.di||50,n=Math.max(0,Math.min(100,e||0)),s=n;let r="均標附近";return n>=d?r="【頂標以上 (前12%)】表現精熟卓越":n>=i?r="【前標與頂標之間】表現良好":n>=t?r="【均標與前標之間】表現尚可":n>=b?r="【後標與均標之間】建議加強複習":n>=l?r="【底標與後標之間】需重點關懷":r="【底標以下】需積極參與補強扶助",`
+    `,document.getElementById("exam-selector")?.addEventListener("change",g=>{b=Number(g.target.value)||0,r()}),document.getElementById("btn-print-report")?.addEventListener("click",()=>{window.print()}),n(s,a,d,S)}function n(s,d,x,p){if(typeof Chart>"u")return;ae&&(ae.destroy(),ae=null),ne&&(ne.destroy(),ne=null);const S=document.getElementById("chart-radar");if(S){const f=x.map(y=>s.subjects[y]||0),c=x.map(y=>p[y]&&p[y].average||70);ae=new Chart(S,{type:"radar",data:{labels:x,datasets:[{label:"個人得分",data:f,fill:!0,backgroundColor:"rgba(13, 122, 95, 0.2)",borderColor:"#0D7A5F",pointBackgroundColor:"#0D7A5F",pointBorderColor:"#fff",pointHoverBackgroundColor:"#fff",pointHoverBorderColor:"#0D7A5F"},{label:"班級平均",data:c,fill:!0,backgroundColor:"rgba(71, 85, 105, 0.1)",borderColor:"#64748B",borderDash:[4,4],pointBackgroundColor:"#64748B"}]},options:{responsive:!0,maintainAspectRatio:!1,scales:{r:{suggestedMin:30,suggestedMax:100,ticks:{stepSize:20}}},plugins:{legend:{position:"bottom",labels:{boxWidth:12}}}}})}const o=document.getElementById("chart-trend");if(o){const f=d.map(g=>g.examName),c=d.map(g=>g.averageScore),y=d.map(g=>{const $=g.classStats||{};return $.fiveBenchmarks&&$.fiveBenchmarks.jun||70});ne=new Chart(o,{type:"line",data:{labels:f,datasets:[{label:"個人平均分",data:c,borderColor:"#1D4ED8",backgroundColor:"#1D4ED8",tension:.3,borderWidth:3,pointRadius:5},{label:"班級均標 (P50)",data:y,borderColor:"#94A3B8",backgroundColor:"#94A3B8",borderDash:[5,5],tension:.2,pointRadius:3}]},options:{responsive:!0,maintainAspectRatio:!1,scales:{y:{suggestedMin:40,suggestedMax:100,ticks:{stepSize:10}}},plugins:{legend:{position:"bottom",labels:{boxWidth:12}}}}})}}r()}function pe(){const e=new Date,t=e.getFullYear(),l=String(e.getMonth()+1).padStart(2,"0"),i=String(e.getDate()).padStart(2,"0");return`${t}年${l}月${i}日`}function ze(e){if(e.identity==="學中")return"該生平時上課積極配合特教資源班適性課程，學習態度認真努力，各領域評量皆展現正向學習動機，期勉維持良好學習步調，持續突破自我！";if(e.identity==="體育班")return"該生兼顧體育專項訓練與學業課程，展現堅毅抗壓之運動員精神，學習態度專注踏實，期勉在競賽與課業雙軌上精益求精、為校爭光！";const t=e.averageScore||0;return t>=90?"該生本階段學習態度主動嚴謹，各領域核心素養精熟扎實，邏輯思維與學科探究能力俱佳，表現卓越非凡，值得高度嘉許！期勉持之以恆、勇於探索新知！":t>=80?"該生在校品學兼優、學習態度專注穩定，已確實掌握各領域核心概念，表現十分良好！若能在弱項科目更深入鑽研錯題盲點，必定能再攀高峰！":t>=70?"該生具備良好之學科基礎能力，上課規矩良好、能按時完成作業。建議課後多花時間統整觀念脈絡，主動向師長請教，學習成效必能大幅躍進！":t>=60?"該生各領域皆已達到法定及格基準，學習態度和善。建議妥善規劃每日課後複習時間，建立規律筆記習慣，循序漸進加強熟練度，期待更優異的表現！":"該生部分學科概念尚待強化，請家長毋須過度焦慮，建議與導師共同配合，落實課後錯題訂正並善用校內學習扶助輔導資源，攜手協助孩子重拾信心與成就感！"}function Ve(e,t){const l=t.ding||90,i=t.qian||80,a=t.jun||70,b=t.hou||60,r=t.di||50,n=Math.max(0,Math.min(100,e||0)),s=n;let d="均標附近";return n>=l?d="【頂標以上 (前12%)】表現精熟卓越":n>=i?d="【前標與頂標之間】表現良好":n>=a?d="【均標與前標之間】表現尚可":n>=b?d="【後標與均標之間】建議加強複習":n>=r?d="【底標與後標之間】需重點關懷":d="【底標以下】需積極參與補強扶助",`
     <div class="my-1.5 px-1">
       <div class="relative w-full h-5 bg-slate-100 rounded border border-slate-300 flex overflow-hidden">
         <!-- 5個區間 -->
-        <div class="h-full bg-rose-50 border-r border-rose-200 flex items-center justify-center text-[9px] text-rose-700 font-mono" style="width: ${Math.max(10,l)}%;">底標 ${l}</div>
-        <div class="h-full bg-amber-50 border-r border-amber-200 flex items-center justify-center text-[9px] text-amber-700 font-mono" style="width: ${Math.max(10,b-l)}%;">後標 ${b}</div>
-        <div class="h-full bg-slate-50 border-r border-slate-300 flex items-center justify-center text-[9px] text-slate-700 font-mono" style="width: ${Math.max(10,t-b)}%;">均標 ${t}</div>
-        <div class="h-full bg-blue-50 border-r border-blue-200 flex items-center justify-center text-[9px] text-blue-700 font-mono" style="width: ${Math.max(10,i-t)}%;">前標 ${i}</div>
-        <div class="h-full bg-emerald-50 flex items-center justify-center text-[9px] text-emerald-800 font-mono flex-1">頂標 ${d}</div>
+        <div class="h-full bg-rose-50 border-r border-rose-200 flex items-center justify-center text-[9px] text-rose-700 font-mono" style="width: ${Math.max(10,r)}%;">底標 ${r}</div>
+        <div class="h-full bg-amber-50 border-r border-amber-200 flex items-center justify-center text-[9px] text-amber-700 font-mono" style="width: ${Math.max(10,b-r)}%;">後標 ${b}</div>
+        <div class="h-full bg-slate-50 border-r border-slate-300 flex items-center justify-center text-[9px] text-slate-700 font-mono" style="width: ${Math.max(10,a-b)}%;">均標 ${a}</div>
+        <div class="h-full bg-blue-50 border-r border-blue-200 flex items-center justify-center text-[9px] text-blue-700 font-mono" style="width: ${Math.max(10,i-a)}%;">前標 ${i}</div>
+        <div class="h-full bg-emerald-50 flex items-center justify-center text-[9px] text-emerald-800 font-mono flex-1">頂標 ${l}</div>
         
         <!-- 個人分數定位針 -->
         <div class="absolute top-0 bottom-0 w-1 bg-red-600 shadow-sm z-10" style="left: ${s}%;"></div>
       </div>
       <div class="flex justify-between items-center text-[10px] text-slate-600 mt-1">
-        <span>個人落點診斷：<b class="text-slate-900">${r}</b></span>
+        <span>個人落點診斷：<b class="text-slate-900">${d}</b></span>
         <span class="font-mono text-red-600 font-bold">▲ 學生五科平均: ${e} 分</span>
       </div>
     </div>
-  `}function ze(e){return["國文","英文","英語"].includes(e)?"語文領域":["數學"].includes(e)?"數學領域":["地理","歷史","公民"].includes(e)?"社會領域":["生物","理化","地科"].includes(e)?"自然科學領域":"專業學科"}function Se(e,a,d,i,t={}){const{includeRank:b=!0,includeTeacherNote:l=!0,printDate:n=be(),customNote:s=""}=t,r=a.subjects||[],x=a.fiveBenchmarks||{},p=a.totalStudents||(a.students?a.students.length:0),S=s||Oe(e),o=a.className||d||"",g=/[九9]/.test(a.gradeSheet||"")||/[九9]/.test(a.gradeLevelLabel||"")||!a.gradeSheet&&/^([九9])\s*年|^9\d{2}$/.test(String(o).trim())||r.includes("地科");let c="一般生";return e.identity==="體育班"?c="體育班專項生":e.identity==="學中"?c="學習中心適性生":e.identity&&e.identity!=="*"&&(c=e.identity),`
+  `}function We(e){return["國文","英文","英語"].includes(e)?"語文領域":["數學"].includes(e)?"數學領域":["地理","歷史","公民"].includes(e)?"社會領域":["生物","理化","地科"].includes(e)?"自然科學領域":"專業學科"}function Ce(e,t,l,i,a={}){const{includeRank:b=!0,includeTeacherNote:r=!0,printDate:n=pe(),customNote:s=""}=a,d=t.subjects||[],x=t.fiveBenchmarks||{},p=t.totalStudents||(t.students?t.students.length:0),S=s||ze(e),o=t.className||l||"",f=/[九9]/.test(t.gradeSheet||"")||/[九9]/.test(t.gradeLevelLabel||"")||!t.gradeSheet&&/^([九9])\s*年|^9\d{2}$/.test(String(o).trim())||d.includes("地科");let c="一般生";return e.identity==="體育班"?c="體育班專項生":e.identity==="學中"?c="學習中心適性生":e.identity&&e.identity!=="*"&&(c=e.identity),`
     <div class="a4-report-card-page font-sans text-slate-900 bg-white flex flex-col justify-between" style="width: 100%; box-sizing: border-box;">
       
       <div>
@@ -354,12 +354,12 @@
             <span class="text-xl font-black tracking-wider text-slate-900">桃園市立大溪國民中學</span>
           </div>
           <div class="text-sm font-bold tracking-wide text-slate-800 mt-0.5">
-            ${m(a.academicYear||"114學年度")}${m(a.semester||"第1學期")} ${m(a.examName||"定期評量")} 個人成績通知單
+            ${m(t.academicYear||"114學年度")}${m(t.semester||"第1學期")} ${m(t.examName||"定期評量")} 個人成績通知單
           </div>
           
           <!-- 學生資訊條 -->
           <div class="mt-1.5 pt-1 border-t border-slate-300 grid grid-cols-6 gap-1 text-[11px] text-slate-700 text-left bg-slate-50/80 p-1.5 rounded border">
-            <div>班級：<b class="text-slate-900">${m(d)}</b></div>
+            <div>班級：<b class="text-slate-900">${m(l)}</b></div>
             <div>座號：<b class="text-slate-900 font-mono text-xs">${e.seatNo} 號</b></div>
             <div>姓名：<b class="text-slate-900 text-xs">${m(e.name)}</b></div>
             <div>學號：<span class="font-mono">${m(e.studentId||"-")}</span></div>
@@ -417,7 +417,7 @@
               </tr>
             </thead>
             <tbody class="divide-y border-slate-300">
-              ${(()=>{let y=!1;const f=()=>{if(e.socialAverage===null||e.socialAverage===void 0)return"";y=!0;const k=Number(Number(e.socialAverage).toFixed(1));let w="丁";k>=90?w="優":k>=80?w="甲":k>=70?w="乙":k>=60&&(w="丙");let A="-";return a.benchmarks?.classAverage?.社會!==void 0?A=Number(a.benchmarks.classAverage.社會).toFixed(1):a.subjectAverages&&a.subjectAverages.地理!==void 0&&a.subjectAverages.歷史!==void 0&&a.subjectAverages.公民!==void 0&&(A=(((Number(a.subjectAverages.地理)||0)+(Number(a.subjectAverages.歷史)||0)+(Number(a.subjectAverages.公民)||0))/3).toFixed(1)),`
+              ${(()=>{let y=!1;const g=()=>{if(e.socialAverage===null||e.socialAverage===void 0)return"";y=!0;const k=Number(Number(e.socialAverage).toFixed(1));let w="丁";k>=90?w="優":k>=80?w="甲":k>=70?w="乙":k>=60&&(w="丙");let A="-";return t.benchmarks?.classAverage?.社會!==void 0?A=Number(t.benchmarks.classAverage.社會).toFixed(1):t.subjectAverages&&t.subjectAverages.地理!==void 0&&t.subjectAverages.歷史!==void 0&&t.subjectAverages.公民!==void 0&&(A=(((Number(t.subjectAverages.地理)||0)+(Number(t.subjectAverages.歷史)||0)+(Number(t.subjectAverages.公民)||0))/3).toFixed(1)),`
                     <tr class="bg-amber-50/40 font-medium">
                       <td class="py-0.5 px-1 border border-slate-300 text-center text-[11px] font-bold text-amber-900">社會領域</td>
                       <td class="py-0.5 px-1 border border-slate-300 text-center font-bold text-amber-900">社會科平均</td>
@@ -431,9 +431,9 @@
                       <td class="py-0.5 px-1 border border-slate-300 text-center font-mono text-[11px] text-slate-500">${A}</td>
                       <td class="py-0.5 px-1 border border-slate-300 text-left text-[11px] text-slate-600 pl-2">採地理、歷史、公民三科平均計算</td>
                     </tr>
-                  `},$=r.map(k=>{const w=e.scores[k],A=w!=null,u=A?Number(w):null;let v="丁";A&&(u>=90?v="優":u>=80?v="甲":u>=70?v="乙":u>=60&&(v="丙"));const C=a.benchmarks?.classAverage,I=C&&C[k]!==void 0?Number(C[k]).toFixed(1):a.subjectAverages&&a.subjectAverages[k]!==void 0?a.subjectAverages[k]:"-";let M="";A?u>=90?M="核心素養精熟，表現優異卓越":u>=80?M="學科概念清晰，表現穩定良好":u>=70?M="具備基礎知能，建議加強深究":u>=60?M="達法定及格標準，宜針對錯題複習":M="未達及格基準，建議落實課後學習扶助":M="學習中心個別化適性評量（段考免測）";const E=`
+                  `},$=d.map(k=>{const w=e.scores[k],A=w!=null,u=A?Number(w):null;let v="丁";A&&(u>=90?v="優":u>=80?v="甲":u>=70?v="乙":u>=60&&(v="丙"));const C=t.benchmarks?.classAverage,R=C&&C[k]!==void 0?Number(C[k]).toFixed(1):t.subjectAverages&&t.subjectAverages[k]!==void 0?t.subjectAverages[k]:"-";let E="";A?u>=90?E="核心素養精熟，表現優異卓越":u>=80?E="學科概念清晰，表現穩定良好":u>=70?E="具備基礎知能，建議加強深究":u>=60?E="達法定及格標準，宜針對錯題複習":E="未達及格基準，建議落實課後學習扶助":E="學習中心個別化適性評量（段考免測）";const B=`
                     <tr class="hover:bg-slate-50 ${A&&u<60?"bg-rose-50/20":""}">
-                      <td class="py-0.5 px-1 border border-slate-300 text-center text-[11px] text-slate-600">${ze(k)}</td>
+                      <td class="py-0.5 px-1 border border-slate-300 text-center text-[11px] text-slate-600">${We(k)}</td>
                       <td class="py-0.5 px-1 border border-slate-300 text-center font-bold text-slate-800">${m(k)}</td>
                       <td class="py-0.5 px-1 border border-slate-300 text-center font-mono font-bold ${A?u<60?"text-rose-600":"text-slate-900":"text-slate-400"}">
                         ${A?u:"-"}
@@ -444,17 +444,17 @@
                       <td class="py-0.5 px-1 border border-slate-300 text-center">
                         ${A?u>=60?'<span class="text-[10px] text-emerald-700 font-bold">✓ 及格</span>':'<span class="text-[10px] text-rose-600 font-bold">⚠️ 待扶助</span>':'<span class="text-[10px] text-slate-400">個別評量</span>'}
                       </td>
-                      <td class="py-0.5 px-1 border border-slate-300 text-center font-mono text-[11px] text-slate-500">${I}</td>
-                      <td class="py-0.5 px-1 border border-slate-300 text-left text-[11px] text-slate-600 pl-2">${M}</td>
+                      <td class="py-0.5 px-1 border border-slate-300 text-center font-mono text-[11px] text-slate-500">${R}</td>
+                      <td class="py-0.5 px-1 border border-slate-300 text-left text-[11px] text-slate-600 pl-2">${E}</td>
                     </tr>
-                  `;return k==="公民"?E+f():E}).join(""),N=!y&&e.socialAverage!==null&&e.socialAverage!==void 0?f():"";return $+N})()}
-              ${g&&e.scienceAverage!==null&&e.scienceAverage!==void 0?(()=>{const y=Number(Number(e.scienceAverage).toFixed(1));let f="丁";y>=90?f="優":y>=80?f="甲":y>=70?f="乙":y>=60&&(f="丙");let $="-";return a.benchmarks?.classAverage?.自然!==void 0?$=Number(a.benchmarks.classAverage.自然).toFixed(1):a.subjectAverages&&a.subjectAverages.理化!==void 0&&a.subjectAverages.地科!==void 0&&a.subjectAverages.生物!==void 0&&($=(((Number(a.subjectAverages.理化)||0)*3+(Number(a.subjectAverages.地科)||0)*2+(Number(a.subjectAverages.生物)||0)*1)/6).toFixed(1)),`
+                  `;return k==="公民"?B+g():B}).join(""),N=!y&&e.socialAverage!==null&&e.socialAverage!==void 0?g():"";return $+N})()}
+              ${f&&e.scienceAverage!==null&&e.scienceAverage!==void 0?(()=>{const y=Number(Number(e.scienceAverage).toFixed(1));let g="丁";y>=90?g="優":y>=80?g="甲":y>=70?g="乙":y>=60&&(g="丙");let $="-";return t.benchmarks?.classAverage?.自然!==void 0?$=Number(t.benchmarks.classAverage.自然).toFixed(1):t.subjectAverages&&t.subjectAverages.理化!==void 0&&t.subjectAverages.地科!==void 0&&t.subjectAverages.生物!==void 0&&($=(((Number(t.subjectAverages.理化)||0)*3+(Number(t.subjectAverages.地科)||0)*2+(Number(t.subjectAverages.生物)||0)*1)/6).toFixed(1)),`
                   <tr class="bg-cyan-50/40 font-medium">
                     <td class="py-0.5 px-1 border border-slate-300 text-center text-[11px] font-bold text-cyan-900">自然科學領域</td>
                     <td class="py-0.5 px-1 border border-slate-300 text-center font-bold text-cyan-900">自然科平均</td>
                     <td class="py-0.5 px-1 border border-slate-300 text-center font-mono font-black ${y<60?"text-rose-600":"text-slate-900"}">${y}</td>
                     <td class="py-0.5 px-1 border border-slate-300 text-center">
-                      <span class="px-1.5 py-0.2 rounded font-bold text-[10px] ${f==="優"?"bg-emerald-100 text-emerald-800":f==="甲"?"bg-blue-100 text-blue-800":f==="乙"?"bg-sky-100 text-sky-800":f==="丙"?"bg-amber-100 text-amber-800":"bg-rose-100 text-rose-800"}">${f}等</span>
+                      <span class="px-1.5 py-0.2 rounded font-bold text-[10px] ${g==="優"?"bg-emerald-100 text-emerald-800":g==="甲"?"bg-blue-100 text-blue-800":g==="乙"?"bg-sky-100 text-sky-800":g==="丙"?"bg-amber-100 text-amber-800":"bg-rose-100 text-rose-800"}">${g}等</span>
                     </td>
                     <td class="py-0.5 px-1 border border-slate-300 text-center">
                       ${y>=60?'<span class="text-[10px] text-emerald-700 font-bold">✓ 及格</span>':'<span class="text-[10px] text-rose-600 font-bold">⚠️ 待扶助</span>'}
@@ -473,7 +473,7 @@
             <span>📊 班級常模五標分佈定位條（教育部公告常模）</span>
             <span class="text-[9px] text-slate-500 font-normal">全班 ${p} 人統計基準</span>
           </div>
-          ${Ke(e.averageScore,x)}
+          ${Ve(e.averageScore,x)}
         </div>
 
         <!-- 5. 評量等第說明法規參照 (小字版) -->
@@ -483,7 +483,7 @@
         </div>
 
         <!-- 6. 導師個別評語與學習勉勵 -->
-        ${l?`
+        ${r?`
           <div class="border border-slate-300 rounded-lg p-1.5 mb-1.5 bg-white">
             <div class="text-[10px] font-bold text-slate-800 mb-0.5 flex justify-between items-center">
               <span>📝 導師個別學習回饋與勉勵：</span>
@@ -504,7 +504,7 @@
         </div>
         <div class="border border-slate-400 rounded-md p-1.5 bg-slate-50/60 text-xs">
           <div class="flex justify-between items-center mb-1 pb-0.5 border-b border-slate-200 text-[11px]">
-            <div>班級：<b class="text-slate-900">${m(d)}</b></div>
+            <div>班級：<b class="text-slate-900">${m(l)}</b></div>
             <div>座號：<b class="text-slate-900 font-mono">${e.seatNo} 號</b></div>
             <div>姓名：<b class="text-slate-900">${m(e.name)}</b></div>
             <div>總平均：<b class="font-mono text-slate-900">${e.averageScore} 分 (${e.gradeLevel}等)</b></div>
@@ -528,7 +528,7 @@
       </div>
 
     </div>
-  `}function $e(e,a,d,i,t=null){let b=!0,l=!0,n=t!==null?i.findIndex(p=>p.seatNo===t):0;n<0&&(n=0);let s=t===null;const r=document.createElement("div");r.id="report-card-modal-wrapper",r.className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/70 p-2 sm:p-4 backdrop-blur-sm print:hidden";function x(){const p=i.length,S=i[n]||i[0],o=Se(S,e,a,d,{includeRank:b,includeTeacherNote:l,printDate:be()});r.innerHTML=`
+  `}function Le(e,t,l,i,a=null){let b=!0,r=!0,n=a!==null?i.findIndex(p=>p.seatNo===a):0;n<0&&(n=0);let s=a===null;const d=document.createElement("div");d.id="report-card-modal-wrapper",d.className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/70 p-2 sm:p-4 backdrop-blur-sm print:hidden";function x(){const p=i.length,S=i[n]||i[0],o=Ce(S,e,t,l,{includeRank:b,includeTeacherNote:r,printDate:pe()});d.innerHTML=`
       <div class="bg-white w-full max-w-5xl max-h-[96vh] rounded-2xl shadow-2xl flex flex-col overflow-hidden border border-slate-200">
         <!-- 頂部控制列 -->
         <div class="px-6 py-3.5 bg-slate-900 text-white flex flex-wrap justify-between items-center gap-3">
@@ -536,7 +536,7 @@
             <span class="text-xl">📄</span>
             <div>
               <h3 class="font-bold text-sm sm:text-base leading-tight">個人成績通知單（A4 批量/個別列印）</h3>
-              <p class="text-slate-400 text-xs mt-0.5">【${m(a)}】${m(e.examName||"定期評量")} ｜ 一人一張 A4 格式</p>
+              <p class="text-slate-400 text-xs mt-0.5">【${m(t)}】${m(e.examName||"定期評量")} ｜ 一人一張 A4 格式</p>
             </div>
           </div>
 
@@ -558,7 +558,7 @@
               <span>包含班排與校排 PR 值</span>
             </label>
             <label class="flex items-center gap-1.5 cursor-pointer font-medium hover:text-slate-900">
-              <input type="checkbox" id="chk-include-note" ${l?"checked":""} class="rounded text-emerald-600 focus:ring-emerald-500">
+              <input type="checkbox" id="chk-include-note" ${r?"checked":""} class="rounded text-emerald-600 focus:ring-emerald-500">
               <span>包含導師個別勉勵評語</span>
             </label>
           </div>
@@ -578,9 +578,9 @@
             <div class="flex items-center gap-1 ml-2">
               <button id="btn-prev-stu" class="px-2 py-1 bg-white border border-slate-300 rounded hover:bg-slate-50 font-bold" title="上一位">◀</button>
               <select id="select-preview-student" class="px-2 py-1 bg-white border border-slate-300 rounded text-xs font-medium">
-                ${i.map((g,c)=>`
+                ${i.map((f,c)=>`
                   <option value="${c}" ${c===n?"selected":""}>
-                    ${g.seatNo}號 ${m(g.name)}
+                    ${f.seatNo}號 ${m(f.name)}
                   </option>
                 `).join("")}
               </select>
@@ -603,15 +603,15 @@
           <span class="font-mono text-slate-400">大溪國中成績查詢系統・合規列印模組</span>
         </div>
       </div>
-    `,document.getElementById("btn-close-modal")?.addEventListener("click",()=>{r.remove()}),document.getElementById("chk-include-rank")?.addEventListener("change",g=>{b=g.target.checked,x()}),document.getElementById("chk-include-note")?.addEventListener("change",g=>{l=g.target.checked,x()}),document.getElementById("btn-mode-all")?.addEventListener("click",()=>{s=!0,x()}),document.getElementById("btn-mode-single")?.addEventListener("click",()=>{s=!1,x()}),document.getElementById("select-preview-student")?.addEventListener("change",g=>{n=Number(g.target.value)||0,x()}),document.getElementById("btn-prev-stu")?.addEventListener("click",()=>{n>0&&(n--,x())}),document.getElementById("btn-next-stu")?.addEventListener("click",()=>{n<p-1&&(n++,x())}),document.getElementById("btn-do-print")?.addEventListener("click",()=>{Ve(s?i:[S],e,a,d,{includeRank:b,includeTeacherNote:l,printDate:be()})})}document.body.appendChild(r),x()}function Ve(e,a,d,i,t){let b=document.getElementById("print-report-cards-container");b||(b=document.createElement("div"),b.id="print-report-cards-container",document.body.appendChild(b)),b.innerHTML=e.map(l=>Se(l,a,d,i,t)).join(""),document.body.classList.add("printing-report-cards"),setTimeout(()=>{window.print(),setTimeout(()=>{document.body.classList.remove("printing-report-cards"),b&&(b.innerHTML="")},1e3)},250)}const Ne=Object.freeze([{label:"100 分",min:100,max:100},...Array.from({length:10},(e,a)=>{const d=90-a*10;return{label:`${d}～${d+9} 分`,min:d,max:d+10}})].map(Object.freeze));function We(e,a){return a.map(d=>{const i=Ne.map(r=>({...r,count:0})),t=[];let b=0,l=0;for(const r of e){const x=(r.assessmentScores??r.scores)?.[d];if(x==null||x==="")b++;else if(typeof x!="number"||!Number.isFinite(x)||x<0||x>100)l++;else{t.push(x);const p=x===100?0:10-Math.floor(x/10);i[p].count++}}const n=t.length,s=t.filter(r=>r>=60).length;return{subject:d,bands:i,validCount:n,unassessedCount:b,invalidCount:l,passCount:s,average:n?t.reduce((r,x)=>r+x,0)/n:null,highest:n?Math.max(...t):null,lowest:n?Math.min(...t):null,passRate:n?s/n*100:null}})}const se=e=>e===null?"—":Number(e.toFixed(2)).toString(),ce=e=>e===null?"—":`${Number(e.toFixed(1))}%`;function Ue(e,a,d,i={}){const t=We(a,d),b=t.some(s=>s.invalidCount>0);e.innerHTML=`
+    `,document.getElementById("btn-close-modal")?.addEventListener("click",()=>{d.remove()}),document.getElementById("chk-include-rank")?.addEventListener("change",f=>{b=f.target.checked,x()}),document.getElementById("chk-include-note")?.addEventListener("change",f=>{r=f.target.checked,x()}),document.getElementById("btn-mode-all")?.addEventListener("click",()=>{s=!0,x()}),document.getElementById("btn-mode-single")?.addEventListener("click",()=>{s=!1,x()}),document.getElementById("select-preview-student")?.addEventListener("change",f=>{n=Number(f.target.value)||0,x()}),document.getElementById("btn-prev-stu")?.addEventListener("click",()=>{n>0&&(n--,x())}),document.getElementById("btn-next-stu")?.addEventListener("click",()=>{n<p-1&&(n++,x())}),document.getElementById("btn-do-print")?.addEventListener("click",()=>{Ye(s?i:[S],e,t,l,{includeRank:b,includeTeacherNote:r,printDate:pe()})})}document.body.appendChild(d),x()}function Ye(e,t,l,i,a){let b=document.getElementById("print-report-cards-container");b||(b=document.createElement("div"),b.id="print-report-cards-container",document.body.appendChild(b)),b.innerHTML=e.map(r=>Ce(r,t,l,i,a)).join(""),document.body.classList.add("printing-report-cards"),setTimeout(()=>{window.print(),setTimeout(()=>{document.body.classList.remove("printing-report-cards"),b&&(b.innerHTML="")},1e3)},250)}const je=Object.freeze([{label:"100 分",min:100,max:100},...Array.from({length:10},(e,t)=>{const l=90-t*10;return{label:`${l}～${l+9} 分`,min:l,max:l+10}})].map(Object.freeze));function Je(e,t){return t.map(l=>{const i=je.map(d=>({...d,count:0})),a=[];let b=0,r=0;for(const d of e){const x=(d.assessmentScores??d.scores)?.[l];if(x==null||x==="")b++;else if(typeof x!="number"||!Number.isFinite(x)||x<0||x>100)r++;else{a.push(x);const p=x===100?0:10-Math.floor(x/10);i[p].count++}}const n=a.length,s=a.filter(d=>d>=60).length;return{subject:l,bands:i,validCount:n,unassessedCount:b,invalidCount:r,passCount:s,average:n?a.reduce((d,x)=>d+x,0)/n:null,highest:n?Math.max(...a):null,lowest:n?Math.min(...a):null,passRate:n?s/n*100:null}})}const oe=e=>e===null?"—":Number(e.toFixed(2)).toString(),xe=e=>e===null?"—":`${Number(e.toFixed(1))}%`;function Qe(e,t,l,i={}){const a=Je(t,l),b=a.some(s=>s.invalidCount>0);e.innerHTML=`
     <div class="score-analysis-heading">
       <div>
-        <p class="score-analysis-eyebrow">段考統計・全班 ${a.length} 人</p>
+        <p class="score-analysis-eyebrow">段考統計・全班 ${t.length} 人</p>
         <h3 id="score-analysis-title">各科分數區間分析</h3>
         <p>查看各分數區間人數與各科表現。本區統計完整班級，不受下方名冊搜尋影響。</p>
       </div>
-      ${d.length?`<label class="score-subject-picker" for="score-distribution-subject">查看科目
-        <select id="score-distribution-subject">${d.map((s,r)=>`<option value="${r}" ${s===i.selectedSubject?"selected":""}>${m(s)}</option>`).join("")}</select>
+      ${l.length?`<label class="score-subject-picker" for="score-distribution-subject">查看科目
+        <select id="score-distribution-subject">${l.map((s,d)=>`<option value="${d}" ${s===i.selectedSubject?"selected":""}>${m(s)}</option>`).join("")}</select>
       </label>`:""}
     </div>
     <div id="score-distribution-detail" aria-live="polite"></div>
@@ -619,35 +619,35 @@
     <div class="score-matrix-scroll" tabindex="0" role="region" aria-label="各科區間人數總表，可左右捲動">
       <table class="score-matrix">
         <caption class="sr-only">本次段考各科分數區間人數、有效人數、未評量人數、平均與及格率</caption>
-        <thead><tr><th scope="col">科目</th>${Ne.map(s=>`<th scope="col">${s.label}</th>`).join("")}<th scope="col">有效人數</th><th scope="col">未評量</th>${b?'<th scope="col">待確認</th>':""}<th scope="col">平均</th><th scope="col">及格率</th></tr></thead>
-        <tbody>${t.map(s=>`<tr data-subject="${m(s.subject)}">
+        <thead><tr><th scope="col">科目</th>${je.map(s=>`<th scope="col">${s.label}</th>`).join("")}<th scope="col">有效人數</th><th scope="col">未評量</th>${b?'<th scope="col">待確認</th>':""}<th scope="col">平均</th><th scope="col">及格率</th></tr></thead>
+        <tbody>${a.map(s=>`<tr data-subject="${m(s.subject)}">
           <th scope="row">${m(s.subject)}</th>
-          ${s.bands.map((r,x)=>`<td data-band="${x}" data-count="${r.count}" class="${r.count?"score-count-present":"score-count-empty"}">${r.count}</td>`).join("")}
-          <td data-stat="valid">${s.validCount}</td><td data-stat="unassessed">${s.unassessedCount}</td>${b?`<td data-stat="invalid">${s.invalidCount}</td>`:""}<td>${se(s.average)}</td><td>${ce(s.passRate)}</td>
+          ${s.bands.map((d,x)=>`<td data-band="${x}" data-count="${d.count}" class="${d.count?"score-count-present":"score-count-empty"}">${d.count}</td>`).join("")}
+          <td data-stat="valid">${s.validCount}</td><td data-stat="unassessed">${s.unassessedCount}</td>${b?`<td data-stat="invalid">${s.invalidCount}</td>`:""}<td>${oe(s.average)}</td><td>${xe(s.passRate)}</td>
         </tr>`).join("")}</tbody>
       </table>
     </div>
     <p class="score-analysis-footnote">100 分單獨計數，其餘每 10 分一區；例如「90～99 分」含 90 分以上、未滿 100 分的小數成績。0 分計入統計；未評量${b?"及待確認資料":""}不列入平均與及格率，及格基準為 60 分。</p>
-  `;function l(s){const r=t[s],x=e.querySelector("#score-distribution-detail");if(!r){x.innerHTML='<p class="score-analysis-empty">本次段考尚無可分析科目。</p>';return}x.innerHTML=`
+  `;function r(s){const d=a[s],x=e.querySelector("#score-distribution-detail");if(!d){x.innerHTML='<p class="score-analysis-empty">本次段考尚無可分析科目。</p>';return}x.innerHTML=`
       <div class="score-subject-summary">
-        <div><span>有效成績／未評量</span><strong>${r.validCount}<small> 人 ／ ${r.unassessedCount} 人</small></strong></div>
-        <div><span>${m(r.subject)}平均</span><strong>${se(r.average)}<small> 分</small></strong></div>
-        <div><span>最高／最低</span><strong>${se(r.highest)}<small> ／ ${se(r.lowest)} 分</small></strong></div>
-        <div><span>及格率</span><strong>${ce(r.passRate)}</strong></div>
+        <div><span>有效成績／未評量</span><strong>${d.validCount}<small> 人 ／ ${d.unassessedCount} 人</small></strong></div>
+        <div><span>${m(d.subject)}平均</span><strong>${oe(d.average)}<small> 分</small></strong></div>
+        <div><span>最高／最低</span><strong>${oe(d.highest)}<small> ／ ${oe(d.lowest)} 分</small></strong></div>
+        <div><span>及格率</span><strong>${xe(d.passRate)}</strong></div>
       </div>
-      ${r.invalidCount?`<p class="score-analysis-empty">本科技分另有 ${r.invalidCount} 筆資料待確認，請洽註冊組。</p>`:""}
-      ${r.validCount?"":'<p class="score-analysis-empty">本科目前尚無有效成績，區間人數均為 0。</p>'}
-      <ol class="score-band-chart" aria-label="${m(r.subject)}各分數區間人數">
-        ${r.bands.map(p=>{const S=r.validCount?p.count/r.validCount*100:0;return`<li><span class="score-band-label">${p.label}</span><span class="score-band-track" aria-hidden="true"><span style="width:${S}%"></span></span><span class="score-band-count">${p.count} 人</span><span class="score-band-percent">${ce(S)}</span></li>`}).join("")}
+      ${d.invalidCount?`<p class="score-analysis-empty">本科技分另有 ${d.invalidCount} 筆資料待確認，請洽註冊組。</p>`:""}
+      ${d.validCount?"":'<p class="score-analysis-empty">本科目前尚無有效成績，區間人數均為 0。</p>'}
+      <ol class="score-band-chart" aria-label="${m(d.subject)}各分數區間人數">
+        ${d.bands.map(p=>{const S=d.validCount?p.count/d.validCount*100:0;return`<li><span class="score-band-label">${p.label}</span><span class="score-band-track" aria-hidden="true"><span style="width:${S}%"></span></span><span class="score-band-count">${p.count} 人</span><span class="score-band-percent">${xe(S)}</span></li>`}).join("")}
       </ol>
-    `}const n=Math.max(0,d.indexOf(i.selectedSubject));l(n),e.querySelector("#score-distribution-subject")?.addEventListener("change",s=>{const r=Number(s.target.value);l(r),i.onSubjectChange?.(d[r])})}function Le(e,a={}){const{title:d="班級",isGradeWide:i=!1,examList:t=[],studentResults:b=[],onPrint:l=null}=a;let n="rankAvg",s=!0,r="",x="all";function p(){let o=b.slice();const g=(r||"").trim().toLowerCase();if(g)if(/^\d{1,2}$/.test(g)){const c=Number(g);o=o.filter(y=>Number(y.seatNo)===c)}else/^\d{3,}$/.test(g)?o=o.filter(c=>c.studentId&&String(c.studentId).toLowerCase().includes(g)||String(c.seatNo)===g):o=o.filter(c=>c.name&&c.name.toLowerCase().includes(g)||c.className&&c.className.toLowerCase().includes(g)||c.studentId&&String(c.studentId).toLowerCase().includes(g)||`${c.seatNo}號`===g);return o.sort((c,y)=>{if(n==="rankAvg")return c.rankAvg===null?1:y.rankAvg===null?-1:s?c.rankAvg-y.rankAvg:y.rankAvg-c.rankAvg;if(n==="seatNo")return c.className!==y.className?c.className.localeCompare(y.className,"zh-Hant"):s?c.seatNo-y.seatNo:y.seatNo-c.seatNo;if(n==="className")return c.className!==y.className?s?c.className.localeCompare(y.className,"zh-Hant"):y.className.localeCompare(c.className,"zh-Hant"):c.seatNo-y.seatNo;if(n==="latestRank"){const f=t.length?t[t.length-1].examKey:"",$=c.examRanks?.[f],N=y.examRanks?.[f];return $==null?1:N==null?-1:s?$-N:N-$}return 0}),o}function S(){const o=t.filter(u=>x==="all"?!0:x==="7"?u.label.startsWith("7"):x==="8"?u.label.startsWith("8"):x==="9"?u.label.startsWith("9"):!0),g=p(),c=b.length,y=b.filter(u=>u.rankAvg!==null).length,f=b.length&&b[0].rankAvg!==null?b[0].rankAvg:"-",$=t.some(u=>u.label.startsWith("7")),N=t.some(u=>u.label.startsWith("8")),k=t.some(u=>u.label.startsWith("9")),w=u=>u.length?u.map(v=>{const C=o.map(E=>{const T=v.examRanks?.[E.examKey];if(T==null)return'<td class="px-2 py-2 text-center text-xs text-slate-300 font-mono">-</td>';let D="text-slate-700";return T<=5?D="bg-amber-100 text-amber-950 font-black border border-amber-300 rounded px-1.5 py-0.5 shadow-2xs":T<=20?D="bg-blue-50 text-blue-900 font-bold border border-blue-200 rounded px-1.5 py-0.5":T<=50&&(D="bg-emerald-50 text-emerald-800 font-semibold border border-emerald-200 rounded px-1 py-0.5"),`
+    `}const n=Math.max(0,l.indexOf(i.selectedSubject));r(n),e.querySelector("#score-distribution-subject")?.addEventListener("change",s=>{const d=Number(s.target.value);r(d),i.onSubjectChange?.(l[d])})}function Ie(e,t={}){const{title:l="班級",isGradeWide:i=!1,examList:a=[],studentResults:b=[],onPrint:r=null}=t;let n="rankAvg",s=!0,d="",x="all";function p(){let o=b.slice();const f=(d||"").trim().toLowerCase();if(f)if(/^\d{1,2}$/.test(f)){const c=Number(f);o=o.filter(y=>Number(y.seatNo)===c)}else/^\d{3,}$/.test(f)?o=o.filter(c=>c.studentId&&String(c.studentId).toLowerCase().includes(f)||String(c.seatNo)===f):o=o.filter(c=>c.name&&c.name.toLowerCase().includes(f)||c.className&&c.className.toLowerCase().includes(f)||c.studentId&&String(c.studentId).toLowerCase().includes(f)||`${c.seatNo}號`===f);return o.sort((c,y)=>{if(n==="rankAvg")return c.rankAvg===null?1:y.rankAvg===null?-1:s?c.rankAvg-y.rankAvg:y.rankAvg-c.rankAvg;if(n==="seatNo")return c.className!==y.className?c.className.localeCompare(y.className,"zh-Hant"):s?c.seatNo-y.seatNo:y.seatNo-c.seatNo;if(n==="className")return c.className!==y.className?s?c.className.localeCompare(y.className,"zh-Hant"):y.className.localeCompare(c.className,"zh-Hant"):c.seatNo-y.seatNo;if(n==="latestRank"){const g=a.length?a[a.length-1].examKey:"",$=c.examRanks?.[g],N=y.examRanks?.[g];return $==null?1:N==null?-1:s?$-N:N-$}return 0}),o}function S(){const o=a.filter(u=>x==="all"?!0:x==="7"?u.label.startsWith("7"):x==="8"?u.label.startsWith("8"):x==="9"?u.label.startsWith("9"):!0),f=p(),c=b.length,y=b.filter(u=>u.rankAvg!==null).length,g=b.length&&b[0].rankAvg!==null?b[0].rankAvg:"-",$=a.some(u=>u.label.startsWith("7")),N=a.some(u=>u.label.startsWith("8")),k=a.some(u=>u.label.startsWith("9")),w=u=>u.length?u.map(v=>{const C=o.map(B=>{const T=v.examRanks?.[B.examKey];if(T==null)return'<td class="px-2 py-2 text-center text-xs text-slate-300 font-mono">-</td>';let P="text-slate-700";return T<=5?P="bg-amber-100 text-amber-950 font-black border border-amber-300 rounded px-1.5 py-0.5 shadow-2xs":T<=20?P="bg-blue-50 text-blue-900 font-bold border border-blue-200 rounded px-1.5 py-0.5":T<=50&&(P="bg-emerald-50 text-emerald-800 font-semibold border border-emerald-200 rounded px-1 py-0.5"),`
           <td class="px-2 py-2 text-center text-xs font-mono font-medium">
-            <span class="${D}">${T}</span>
+            <span class="${P}">${T}</span>
           </td>
-        `}).join("");let I=`<span class="font-mono text-sm font-bold text-slate-600">${v.overallRank}</span>`;v.overallRank===1?I='<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-amber-100 text-amber-950 font-black text-xs border border-amber-300 shadow-xs">🥇 1</span>':v.overallRank===2?I='<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-slate-100 text-slate-900 font-black text-xs border border-slate-300 shadow-xs">🥈 2</span>':v.overallRank===3?I='<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-amber-50 text-amber-900 font-black text-xs border border-amber-200 shadow-xs">🥉 3</span>':typeof v.overallRank=="number"&&v.overallRank<=10&&(I=`<span class="inline-block px-1.5 py-0.5 rounded bg-indigo-50 text-indigo-900 font-bold text-xs border border-indigo-200">${v.overallRank}</span>`);let M='<span class="text-slate-300 text-xs">-</span>';if(t.length>=2&&v.rankAvg!==null){const E=t[t.length-1].examKey,T=v.examRanks?.[E];if(T!=null){const D=v.rankAvg-T;D>=15?M='<span class="inline-flex items-center text-emerald-700 font-bold text-xs bg-emerald-50 px-1.5 py-0.5 rounded border border-emerald-200" title="最新段考優於歷史平均 15 名以上">↗ 大幅進步</span>':D>=5?M='<span class="inline-flex items-center text-emerald-600 font-semibold text-xs" title="最新段考有所進步">↗ 成長中</span>':D<=-15?M='<span class="inline-flex items-center text-rose-700 font-bold text-xs bg-rose-50 px-1.5 py-0.5 rounded border border-rose-200" title="最新段考落後歷史平均 15 名以上">↘ 需關懷</span>':D<=-5?M='<span class="inline-flex items-center text-amber-700 text-xs" title="最新段考有些微波動">↘ 略退步</span>':M='<span class="inline-flex items-center text-slate-500 text-xs">→ 穩定</span>'}}return`
+        `}).join("");let R=`<span class="font-mono text-sm font-bold text-slate-600">${v.overallRank}</span>`;v.overallRank===1?R='<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-amber-100 text-amber-950 font-black text-xs border border-amber-300 shadow-xs">🥇 1</span>':v.overallRank===2?R='<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-slate-100 text-slate-900 font-black text-xs border border-slate-300 shadow-xs">🥈 2</span>':v.overallRank===3?R='<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-amber-50 text-amber-900 font-black text-xs border border-amber-200 shadow-xs">🥉 3</span>':typeof v.overallRank=="number"&&v.overallRank<=10&&(R=`<span class="inline-block px-1.5 py-0.5 rounded bg-indigo-50 text-indigo-900 font-bold text-xs border border-indigo-200">${v.overallRank}</span>`);let E='<span class="text-slate-300 text-xs">-</span>';if(a.length>=2&&v.rankAvg!==null){const B=a[a.length-1].examKey,T=v.examRanks?.[B];if(T!=null){const P=v.rankAvg-T;P>=15?E='<span class="inline-flex items-center text-emerald-700 font-bold text-xs bg-emerald-50 px-1.5 py-0.5 rounded border border-emerald-200" title="最新段考優於歷史平均 15 名以上">↗ 大幅進步</span>':P>=5?E='<span class="inline-flex items-center text-emerald-600 font-semibold text-xs" title="最新段考有所進步">↗ 成長中</span>':P<=-15?E='<span class="inline-flex items-center text-rose-700 font-bold text-xs bg-rose-50 px-1.5 py-0.5 rounded border border-rose-200" title="最新段考落後歷史平均 15 名以上">↘ 需關懷</span>':P<=-5?E='<span class="inline-flex items-center text-amber-700 text-xs" title="最新段考有些微波動">↘ 略退步</span>':E='<span class="inline-flex items-center text-slate-500 text-xs">→ 穩定</span>'}}return`
         <tr class="group hover:bg-slate-50/90 transition border-b border-slate-100">
           <td class="roster-sticky-col-1 bg-white group-hover:bg-slate-50 text-center px-2 py-2 border-r border-slate-200">
-            ${I}
+            ${R}
           </td>
           ${i?`
             <td class="px-2.5 py-2 text-center text-xs font-semibold text-indigo-900 bg-indigo-50/40 border-r border-slate-200 whitespace-nowrap">
@@ -678,16 +678,16 @@
           </td>
           <!-- 歷屆走勢 -->
           <td class="px-2.5 py-2 text-center whitespace-nowrap">
-            ${M}
+            ${E}
           </td>
         </tr>
       `}).join(""):`
           <tr>
             <td colspan="${4+(i?1:0)+o.length+4}" class="py-10 text-center text-slate-400 text-sm">
-              查無符合「<b class="text-slate-600">${m(r)}</b>」的座號或學生姓名
+              查無符合「<b class="text-slate-600">${m(d)}</b>」的座號或學生姓名
             </td>
           </tr>
-        `,A=w(g);e.innerHTML=`
+        `,A=w(f);e.innerHTML=`
       <!-- 頂部資訊與控制列 -->
       <div class="cohort-ranks-wrapper mb-6">
         <!-- 核心統計指標 -->
@@ -704,7 +704,7 @@
           <div class="bg-white rounded-2xl p-4 border border-slate-200 shadow-xs">
             <div class="text-[11px] font-semibold text-slate-500 mb-1">定期評量考次跨度</div>
             <div class="flex items-baseline gap-1.5 my-1">
-              <span class="text-2xl font-black font-mono text-indigo-700">${t.length}</span>
+              <span class="text-2xl font-black font-mono text-indigo-700">${a.length}</span>
               <span class="text-xs text-slate-500">場考次</span>
             </div>
             <div class="text-[11px] text-slate-400">跨越國一至最新段考</div>
@@ -713,7 +713,7 @@
           <div class="bg-white rounded-2xl p-4 border border-slate-200 shadow-xs">
             <div class="text-[11px] font-semibold text-slate-500 mb-1">最佳校排平均</div>
             <div class="flex items-baseline gap-1.5 my-1">
-              <span class="text-2xl font-black font-mono text-amber-800">${f}</span>
+              <span class="text-2xl font-black font-mono text-amber-800">${g}</span>
               <span class="text-xs text-slate-500">名</span>
             </div>
             <div class="text-[11px] text-slate-400">歷屆綜合表現最佳</div>
@@ -734,10 +734,10 @@
             <div class="flex items-center gap-2.5 flex-wrap">
               <h3 class="font-bold text-slate-800 text-sm sm:text-base flex items-center gap-1.5">
                 <span>🏆</span>
-                <span>${m(d)} 歷屆校排綜合追蹤大榜</span>
+                <span>${m(l)} 歷屆校排綜合追蹤大榜</span>
               </h3>
               <span id="cohort-count-badge" class="text-xs bg-emerald-100 text-emerald-800 px-2.5 py-0.5 rounded-full font-bold">
-                共 ${g.length} 筆
+                共 ${f.length} 筆
               </span>
             </div>
 
@@ -762,7 +762,7 @@
 
               <!-- 搜尋框 -->
               <div class="w-full sm:w-44">
-                <input type="search" id="cohort-search-input" value="${m(r)}" placeholder="🔍 輸入座號(如 5)或姓名..." class="w-full px-3 py-1.5 bg-white border border-slate-300 rounded-lg text-xs focus:ring-2 focus:ring-emerald-500 focus:outline-none" autocomplete="off" />
+                <input type="search" id="cohort-search-input" value="${m(d)}" placeholder="🔍 輸入座號(如 5)或姓名..." class="w-full px-3 py-1.5 bg-white border border-slate-300 rounded-lg text-xs focus:ring-2 focus:ring-emerald-500 focus:outline-none" autocomplete="off" />
               </div>
 
               <!-- 列印與匯出按鈕 -->
@@ -835,48 +835,48 @@
           </div>
         </div>
       </div>
-    `,requestAnimationFrame(()=>{const u=e.querySelector(".roster-table"),v=u?.querySelector("thead tr:first-child");if(u&&v){const C=Math.round(v.getBoundingClientRect().height);C>0&&u.style.setProperty("--roster-head-row1-h",`${C}px`)}}),e.querySelector("#btn-sort-rank")?.addEventListener("click",()=>{n==="rankAvg"?s=!s:(n="rankAvg",s=!0),S()}),e.querySelector("#btn-sort-seat")?.addEventListener("click",()=>{n==="seatNo"?s=!s:(n="seatNo",s=!0),S()}),e.querySelector("#btn-sort-latest")?.addEventListener("click",()=>{n==="latestRank"?s=!s:(n="latestRank",s=!0),S()}),e.querySelectorAll(".btn-filter-grade").forEach(u=>{u.addEventListener("click",v=>{x=v.currentTarget.getAttribute("data-filter")||"all",S()})}),e.querySelector("#cohort-search-input")?.addEventListener("input",u=>{r=u.target.value;const v=p(),C=e.querySelector("#cohort-tbody"),I=e.querySelector("#cohort-count-badge");C&&(C.innerHTML=w(v)),I&&(I.textContent=`共 ${v.length} 筆`)}),e.querySelector("#btn-cohort-print")?.addEventListener("click",()=>{l?l():window.print()}),e.querySelector("#btn-cohort-export")?.addEventListener("click",()=>{Ye(d,o,p(),i)})}S()}function Ye(e,a,d,i){const t=["綜合排名"];i&&t.push("班級"),t.push("座號","姓名"),a.forEach(r=>t.push(r.label)),t.push("參測次數","校排加總","校排平均","總排名");const b=[t.join(",")];d.forEach(r=>{const x=[r.overallRank];i&&x.push(`"${r.className}"`),x.push(r.seatNo,`"${r.name}"`),a.forEach(p=>{const S=r.examRanks?.[p.examKey];x.push(S??"")}),x.push(`"${r.validCount}/${r.totalExams}"`,r.rankSum!==null?r.rankSum:"",r.rankAvg!==null?r.rankAvg:"",r.overallRank),b.push(x.join(","))});const l=new Blob(["\uFEFF"+b.join(`\r
-`)],{type:"text/csv;charset=utf-8;"}),n=URL.createObjectURL(l),s=document.createElement("a");s.href=n,s.download=`${e}_歷屆校排綜合追蹤表_${new Date().toISOString().slice(0,10)}.csv`,document.body.appendChild(s),s.click(),document.body.removeChild(s),URL.revokeObjectURL(n)}function Je(e){if(!e||!e.length)return{examList:[],studentResults:[]};const a=e.map(l=>{const n=(l.semester||"").includes("1")?"上":"下",s=(l.examName||"").match(/\d+/),r=s?s[0]:"1",p=`${(l.gradeLevelLabel||"").includes("七")?"7":(l.gradeLevelLabel||"").includes("八")?"8":"9"}${n}-${r}`;return{examKey:l.examKey,label:p,academicYear:l.academicYear,semester:l.semester,examName:l.examName,gradeLevelLabel:l.gradeLevelLabel}}),d=e[e.length-1],t=(d.students||[]).map(l=>{let n=0,s=0;const r={};e.forEach(p=>{const S=p.students.find(g=>l.studentId&&g.studentId?g.studentId===l.studentId:!l.studentId&&!g.studentId?g.seatNo===l.seatNo&&g.name===l.name:g.name===l.name&&g.seatNo===l.seatNo),o=S&&typeof S.schoolRank=="number"?S.schoolRank:null;r[p.examKey]=o,o!==null&&(n+=o,s++)});const x=s>0?Number((n/s).toFixed(2)):null;return{studentId:l.studentId,name:l.name,className:l.className||d.className,seatNo:l.seatNo,identity:l.identity,examRanks:r,validCount:s,totalExams:e.length,rankSum:s>0?n:null,rankAvg:x}});t.sort((l,n)=>l.rankAvg===null?1:n.rankAvg===null?-1:l.rankAvg-n.rankAvg);let b=1;return t.forEach((l,n)=>{l.rankAvg===null?l.overallRank="-":(n>0&&t[n-1].rankAvg===l.rankAvg?l.overallRank=t[n-1].overallRank:l.overallRank=b,b++)}),{examList:a,studentResults:t}}async function me(e,a,d={}){const i=a.role==="admin"&&!!d.className,t=i?d.className:a.assignedClass;e.innerHTML=`
+    `,requestAnimationFrame(()=>{const u=e.querySelector(".roster-table"),v=u?.querySelector("thead tr:first-child");if(u&&v){const C=Math.round(v.getBoundingClientRect().height);C>0&&u.style.setProperty("--roster-head-row1-h",`${C}px`)}}),e.querySelector("#btn-sort-rank")?.addEventListener("click",()=>{n==="rankAvg"?s=!s:(n="rankAvg",s=!0),S()}),e.querySelector("#btn-sort-seat")?.addEventListener("click",()=>{n==="seatNo"?s=!s:(n="seatNo",s=!0),S()}),e.querySelector("#btn-sort-latest")?.addEventListener("click",()=>{n==="latestRank"?s=!s:(n="latestRank",s=!0),S()}),e.querySelectorAll(".btn-filter-grade").forEach(u=>{u.addEventListener("click",v=>{x=v.currentTarget.getAttribute("data-filter")||"all",S()})}),e.querySelector("#cohort-search-input")?.addEventListener("input",u=>{d=u.target.value;const v=p(),C=e.querySelector("#cohort-tbody"),R=e.querySelector("#cohort-count-badge");C&&(C.innerHTML=w(v)),R&&(R.textContent=`共 ${v.length} 筆`)}),e.querySelector("#btn-cohort-print")?.addEventListener("click",()=>{r?r():window.print()}),e.querySelector("#btn-cohort-export")?.addEventListener("click",()=>{Ze(l,o,p(),i)})}S()}function Ze(e,t,l,i){const a=["綜合排名"];i&&a.push("班級"),a.push("座號","姓名"),t.forEach(d=>a.push(d.label)),a.push("參測次數","校排加總","校排平均","總排名");const b=[a.join(",")];l.forEach(d=>{const x=[d.overallRank];i&&x.push(`"${d.className}"`),x.push(d.seatNo,`"${d.name}"`),t.forEach(p=>{const S=d.examRanks?.[p.examKey];x.push(S??"")}),x.push(`"${d.validCount}/${d.totalExams}"`,d.rankSum!==null?d.rankSum:"",d.rankAvg!==null?d.rankAvg:"",d.overallRank),b.push(x.join(","))});const r=new Blob(["\uFEFF"+b.join(`\r
+`)],{type:"text/csv;charset=utf-8;"}),n=URL.createObjectURL(r),s=document.createElement("a");s.href=n,s.download=`${e}_歷屆校排綜合追蹤表_${new Date().toISOString().slice(0,10)}.csv`,document.body.appendChild(s),s.click(),document.body.removeChild(s),URL.revokeObjectURL(n)}function Xe(e){if(!e||!e.length)return{examList:[],studentResults:[]};const t=e.map(r=>{const n=(r.semester||"").includes("1")?"上":"下",s=(r.examName||"").match(/\d+/),d=s?s[0]:"1",p=`${(r.gradeLevelLabel||"").includes("七")?"7":(r.gradeLevelLabel||"").includes("八")?"8":"9"}${n}-${d}`;return{examKey:r.examKey,label:p,academicYear:r.academicYear,semester:r.semester,examName:r.examName,gradeLevelLabel:r.gradeLevelLabel}}),l=e[e.length-1],a=(l.students||[]).map(r=>{let n=0,s=0;const d={};e.forEach(p=>{const S=p.students.find(f=>r.studentId&&f.studentId?f.studentId===r.studentId:!r.studentId&&!f.studentId?f.seatNo===r.seatNo&&f.name===r.name:f.name===r.name&&f.seatNo===r.seatNo),o=S&&typeof S.schoolRank=="number"?S.schoolRank:null;d[p.examKey]=o,o!==null&&(n+=o,s++)});const x=s>0?Number((n/s).toFixed(2)):null;return{studentId:r.studentId,name:r.name,className:r.className||l.className,seatNo:r.seatNo,identity:r.identity,examRanks:d,validCount:s,totalExams:e.length,rankSum:s>0?n:null,rankAvg:x}});a.sort((r,n)=>r.rankAvg===null?1:n.rankAvg===null?-1:r.rankAvg-n.rankAvg);let b=1;return a.forEach((r,n)=>{r.rankAvg===null?r.overallRank="-":(n>0&&a[n-1].rankAvg===r.rankAvg?r.overallRank=a[n-1].overallRank:r.overallRank=b,b++)}),{examList:t,studentResults:a}}async function ge(e,t,l={}){const i=t.role==="admin"&&!!l.className,a=i?l.className:t.assignedClass;e.innerHTML=`
     <div class="flex items-center justify-center py-20 text-slate-500">
       <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-emerald-600 mr-3"></div>
-      <span>正在從雲端試算表讀取【${m(t||"負責班級")}】成績資料...</span>
+      <span>正在從雲端試算表讀取【${m(a||"負責班級")}】成績資料...</span>
     </div>
-  `;const b=i?await P("getAdminClassData",{className:t}):await P("getTeacherClassData",{teacherAccount:a.account,className:t});if(!b.success){e.innerHTML=`
+  `;const b=i?await D("getAdminClassData",{className:a}):await D("getTeacherClassData",{teacherAccount:t.account,className:a});if(!b.success){e.innerHTML=`
       <div class="bg-white rounded-2xl p-8 shadow-sm border border-slate-200 text-center max-w-lg mx-auto mt-12">
         <div class="w-16 h-16 bg-rose-50 text-rose-500 rounded-full flex items-center justify-center mx-auto text-2xl mb-4">⚠️</div>
         <h3 class="text-xl font-bold text-slate-800 mb-2">無法載入班級成績</h3>
         <p class="text-slate-600 mb-6 text-sm">${m(b.message||"查無此班級之成績紀錄")}</p>
         <button id="btn-teacher-retry" class="px-5 py-2.5 bg-slate-800 text-white rounded-xl text-sm font-medium hover:bg-slate-700">重新整理</button>
       </div>
-    `,e.querySelector("#btn-teacher-retry")?.addEventListener("click",()=>{me(e,a,d)});return}const{className:l,exams:n}=b,s=i?b.teacherName||d.teacherName||"":a.displayName||a.account;if(!n||n.length===0){e.innerHTML=`
+    `,e.querySelector("#btn-teacher-retry")?.addEventListener("click",()=>{ge(e,t,l)});return}const{className:r,exams:n}=b,s=i?b.teacherName||l.teacherName||"":t.displayName||t.account;if(!n||n.length===0){e.innerHTML=`
       <div class="bg-white rounded-2xl p-8 shadow-sm border border-slate-200 text-center max-w-lg mx-auto mt-12">
         <div class="w-16 h-16 bg-amber-50 text-amber-500 rounded-full flex items-center justify-center mx-auto text-2xl mb-4">📋</div>
         <h3 class="text-xl font-bold text-slate-800 mb-2">目前尚無班級成績資料</h3>
-        <p class="text-slate-600 text-sm">【${m(l)}】在試算表成績資料庫中暫無紀錄，請由教務處統一匯入。</p>
+        <p class="text-slate-600 text-sm">【${m(r)}】在試算表成績資料庫中暫無紀錄，請由教務處統一匯入。</p>
       </div>
-    `;return}let r="single",x=n.length-1,p="",S="",o=!1;function g(){const c=n[x],y=c.subjects||[],f=c.fiveBenchmarks||{},$=c.gradeDistribution||{},N=c.students||[],k=(L,h)=>{const j=(h||"").trim().toLowerCase();if(!j)return L;if(/^\d{1,2}$/.test(j)){const R=Number(j);return L.filter(z=>Number(z.seatNo)===R)}return/^\d{3,}$/.test(j)?L.filter(R=>R.studentId&&String(R.studentId).toLowerCase().includes(j)||String(R.seatNo)===j):L.filter(R=>R.name&&R.name.toLowerCase().includes(j)||R.studentId&&String(R.studentId).toLowerCase().includes(j)||`${R.seatNo}號`===j)},w=k(N,p),A=N.filter(L=>L.hasScore!==!1),u=A.length?Number((A.reduce((L,h)=>L+(h.rawAverageScore??h.averageScore),0)/A.length).toFixed(1)):0,v=/[九9]/.test(c.gradeSheet||"")||/[九9]/.test(c.gradeLevelLabel||"")||y.includes("地科"),C=v&&N.some(L=>L.scienceAverage!==null&&L.scienceAverage!==void 0),I=y.indexOf("公民"),M=I!==-1?y.slice(0,I+1):y,E=I!==-1?y.slice(I+1):[],T=3+M.length+1+E.length+(C?1:0)+6,D=L=>L.length?L.map(h=>{const j=V=>{const X=h.scores[V],ge=["英文","英語","數學"].includes(V);return X==null?`<td class="px-1.5 py-2 text-center font-mono text-xs text-slate-400 ${ge?"border-r border-slate-200":""} ${["地理","歷史","公民"].includes(V)?"bg-amber-50/20":["理化","地科","生物"].includes(V)?"bg-cyan-50/20":""}" title="學習中心/未測驗">-</td>`:`
-            <td class="px-1.5 py-2 text-center font-mono text-xs sm:text-sm ${ge?"border-r border-slate-200":""} ${["地理","歷史","公民"].includes(V)?"bg-amber-50/20":["理化","地科","生物"].includes(V)?"bg-cyan-50/20":""} ${X<60?"text-rose-600 font-bold":"text-slate-700"}">
-              ${X}
+    `;return}let d="single",x=n.length-1,p="",S="",o=!1;function f(){const c=n[x],y=c.subjects||[],g=c.fiveBenchmarks||{},$=c.gradeDistribution||{},N=c.students||[],k=(L,h)=>{const j=(h||"").trim().toLowerCase();if(!j)return L;if(/^\d{1,2}$/.test(j)){const M=Number(j);return L.filter(U=>Number(U.seatNo)===M)}return/^\d{3,}$/.test(j)?L.filter(M=>M.studentId&&String(M.studentId).toLowerCase().includes(j)||String(M.seatNo)===j):L.filter(M=>M.name&&M.name.toLowerCase().includes(j)||M.studentId&&String(M.studentId).toLowerCase().includes(j)||`${M.seatNo}號`===j)},w=k(N,p),A=N.filter(L=>L.hasScore!==!1),u=A.length?Number((A.reduce((L,h)=>L+(h.rawAverageScore??h.averageScore),0)/A.length).toFixed(1)):0,v=/[九9]/.test(c.gradeSheet||"")||/[九9]/.test(c.gradeLevelLabel||"")||y.includes("地科"),C=v&&N.some(L=>L.scienceAverage!==null&&L.scienceAverage!==void 0),R=y.indexOf("公民"),E=R!==-1?y.slice(0,R+1):y,B=R!==-1?y.slice(R+1):[],T=3+E.length+1+B.length+(C?1:0)+6,P=L=>L.length?L.map(h=>{const j=z=>{const se=h.scores[z],ve=["英文","英語","數學"].includes(z);return se==null?`<td class="px-1.5 py-2 text-center font-mono text-xs text-slate-400 ${ve?"border-r border-slate-200":""} ${["地理","歷史","公民"].includes(z)?"bg-amber-50/20":["理化","地科","生物"].includes(z)?"bg-cyan-50/20":""}" title="學習中心/未測驗">-</td>`:`
+            <td class="px-1.5 py-2 text-center font-mono text-xs sm:text-sm ${ve?"border-r border-slate-200":""} ${["地理","歷史","公民"].includes(z)?"bg-amber-50/20":["理化","地科","生物"].includes(z)?"bg-cyan-50/20":""} ${se<60?"text-rose-600 font-bold":"text-slate-700"}">
+              ${se}
             </td>
-          `},R=M.map(j).join(""),z=E.map(j).join(""),Re=`
+          `},M=E.map(j).join(""),U=B.map(j).join(""),Te=`
           <td class="px-1.5 py-2 text-center font-mono text-xs sm:text-sm font-bold text-amber-950 bg-amber-50/60 border-r border-amber-200">
             ${h.socialAverage!==null&&h.socialAverage!==void 0?Number(h.socialAverage).toFixed(1):"-"}
           </td>
-        `,Me=C?`
+        `,Pe=C?`
           <td class="px-1.5 py-2 text-center font-mono text-xs sm:text-sm font-bold text-cyan-950 bg-cyan-50/60 border-r border-cyan-200">
             ${h.scienceAverage!==null&&h.scienceAverage!==void 0?Number(h.scienceAverage).toFixed(1):"-"}
           </td>
-        `:"",Be=m(h.classRankInterval||(h.classRank?h.classRank+"名":"-")),Ee=m(h.schoolRankInterval||(h.schoolRank?h.schoolRank+"名":"-"));let Z='<span class="text-slate-300 text-xs">-</span>';return h.identity==="體育班"?Z='<span class="text-[10px] px-1 py-0.5 rounded bg-blue-100 text-blue-800 font-bold border border-blue-200">體育</span>':h.identity==="學中"?Z='<span class="text-[10px] px-1 py-0.5 rounded bg-amber-100 text-amber-800 font-bold border border-amber-200">學中</span>':h.identity&&h.identity!=="*"&&(Z=`<span class="text-[10px] px-1 py-0.5 rounded bg-slate-100 text-slate-700 border border-slate-200">${m(h.identity)}</span>`),`
+        `:"",De=m(h.classRankInterval||(h.classRank?h.classRank+"名":"-")),He=m(h.schoolRankInterval||(h.schoolRank?h.schoolRank+"名":"-"));let te='<span class="text-slate-300 text-xs">-</span>';return h.identity==="體育班"?te='<span class="text-[10px] px-1 py-0.5 rounded bg-blue-100 text-blue-800 font-bold border border-blue-200">體育</span>':h.identity==="學中"?te='<span class="text-[10px] px-1 py-0.5 rounded bg-amber-100 text-amber-800 font-bold border border-amber-200">學中</span>':h.identity&&h.identity!=="*"&&(te=`<span class="text-[10px] px-1 py-0.5 rounded bg-slate-100 text-slate-700 border border-slate-200">${m(h.identity)}</span>`),`
           <tr class="group hover:bg-slate-50/90 transition ${h.isFailing?"bg-rose-50/30":""}">
             <td class="roster-sticky-col-1 bg-white group-hover:bg-slate-50 text-center font-mono font-bold text-slate-800 border-r border-slate-200 px-1 py-1.5 text-xs sm:text-sm">${h.seatNo}</td>
             <td class="roster-sticky-col-2 bg-white group-hover:bg-slate-50 font-medium text-slate-900 border-r border-slate-300 roster-sticky-shadow px-2 py-1.5 whitespace-nowrap text-xs sm:text-sm">
               <span>${m(h.name)}</span>
             </td>
-            <td class="px-1.5 py-2 text-center border-r border-slate-200">${Z}</td>
-            ${R}
-            ${Re}
-            ${z}
-            ${Me}
+            <td class="px-1.5 py-2 text-center border-r border-slate-200">${te}</td>
+            ${M}
+            ${Te}
+            ${U}
+            ${Pe}
             <td class="px-1.5 py-2 text-center font-mono text-xs sm:text-sm font-bold text-slate-800 bg-slate-50/40">
               ${h.totalScore!==null&&h.totalScore!==void 0?h.totalScore:"-"}
             </td>
@@ -884,14 +884,14 @@
               ${h.averageScore!==null&&h.averageScore!==void 0?h.averageScore:"-"}
             </td>
             <td class="px-1.5 py-2 text-center text-xs">
-              ${h.hasScore!==!1?J(h.gradeLevel):'<span class="text-[10px] px-1.5 py-0.5 rounded bg-slate-100 text-slate-400">免測</span>'}
+              ${h.hasScore!==!1?Z(h.gradeLevel):'<span class="text-[10px] px-1.5 py-0.5 rounded bg-slate-100 text-slate-400">免測</span>'}
             </td>
             <td class="px-1.5 py-2 text-center font-mono text-xs whitespace-nowrap" title="${h.classRank?`班名次：第${h.classRank}名`:""}">
-              <div class="font-bold text-slate-800">${Be}</div>
+              <div class="font-bold text-slate-800">${De}</div>
               ${h.classRank?`<div class="text-[10px] text-slate-400 font-normal">第${h.classRank}名</div>`:""}
             </td>
             <td class="px-1.5 py-2 text-center font-mono text-xs whitespace-nowrap border-r border-slate-200" title="${h.schoolRank?`校名次：第${h.schoolRank}名 (PR ${h.schoolPR})`:""}">
-              <div class="font-bold text-slate-800">${Ee}</div>
+              <div class="font-bold text-slate-800">${He}</div>
               ${h.schoolRank?`<div class="text-[10px] text-slate-400 font-normal">第${h.schoolRank}名 (PR ${h.schoolPR})</div>`:""}
             </td>
             <td class="px-2 py-2 text-center whitespace-nowrap">
@@ -907,16 +907,16 @@
               查無符合「<b class="text-slate-600">${m(p)}</b>」的座號或學生姓名
             </td>
           </tr>
-        `,le=D(w),H=c.benchmarks||{},O=H.cohortLabel||(/(?:^|[^\d])9班|(?:\d09)$/.test(l)?"含體育班":"不含體育班"),K=L=>L==null||isNaN(L)?"-":Number(L).toFixed(2),je=[{label:"班平均",map:H.classAverage,cls:"bg-emerald-50/70 text-emerald-950 font-bold",stickyBg:"bg-emerald-50"},{label:`年平均 (${O})`,map:H.schoolAverage,cls:"bg-slate-50 text-slate-800 font-semibold",stickyBg:"bg-slate-50"},{label:"班高標",map:H.classHigh,cls:"bg-blue-50/70 text-blue-950 font-bold",stickyBg:"bg-blue-50"},{label:`年高標 (${O})`,map:H.schoolHigh,cls:"bg-slate-50 text-slate-800 font-semibold",stickyBg:"bg-slate-50"},{label:"班低標",map:H.classLow,cls:"bg-rose-50/70 text-rose-950 font-bold",stickyBg:"bg-rose-50"},{label:`年低標 (${O})`,map:H.schoolLow,cls:"bg-slate-50 text-slate-800 font-semibold",stickyBg:"bg-slate-50"}],Ie=H.classAverage?`
+        `,ie=P(w),q=c.benchmarks||{},O=q.cohortLabel||(/(?:^|[^\d])9班|(?:\d09)$/.test(r)?"含體育班":"不含體育班"),K=L=>L==null||isNaN(L)?"-":Number(L).toFixed(2),Ee=[{label:"班平均",map:q.classAverage,cls:"bg-emerald-50/70 text-emerald-950 font-bold",stickyBg:"bg-emerald-50"},{label:`年平均 (${O})`,map:q.schoolAverage,cls:"bg-slate-50 text-slate-800 font-semibold",stickyBg:"bg-slate-50"},{label:"班高標",map:q.classHigh,cls:"bg-blue-50/70 text-blue-950 font-bold",stickyBg:"bg-blue-50"},{label:`年高標 (${O})`,map:q.schoolHigh,cls:"bg-slate-50 text-slate-800 font-semibold",stickyBg:"bg-slate-50"},{label:"班低標",map:q.classLow,cls:"bg-rose-50/70 text-rose-950 font-bold",stickyBg:"bg-rose-50"},{label:`年低標 (${O})`,map:q.schoolLow,cls:"bg-slate-50 text-slate-800 font-semibold",stickyBg:"bg-slate-50"}],Be=q.classAverage?`
       <tfoot class="border-t-2 border-slate-300 divide-y divide-slate-200">
-        ${je.map(L=>`
+        ${Ee.map(L=>`
           <tr class="${L.cls}">
             <td class="roster-sticky-col-1 ${L.stickyBg||"bg-slate-50"} px-2 py-2 text-center text-xs font-mono font-bold text-slate-400 border-r border-slate-200">◆</td>
             <td class="roster-sticky-col-2 ${L.stickyBg||"bg-slate-50"} px-3 py-2 text-xs font-bold border-r border-slate-300 roster-sticky-shadow whitespace-nowrap">${m(L.label)}</td>
             <td class="px-1.5 py-2 text-center text-xs text-slate-400 border-r border-slate-200">基準</td>
-            ${M.map(h=>`<td class="px-1.5 py-2 text-center font-mono text-xs ${["英文","英語","數學"].includes(h)?"border-r border-slate-200":""}">${K(L.map?.[h])}</td>`).join("")}
+            ${E.map(h=>`<td class="px-1.5 py-2 text-center font-mono text-xs ${["英文","英語","數學"].includes(h)?"border-r border-slate-200":""}">${K(L.map?.[h])}</td>`).join("")}
             <td class="px-1.5 py-2 text-center font-mono text-xs font-bold text-amber-950 bg-amber-100/70 border-r border-amber-200">${K(L.map?.社平??L.map?.社會)}</td>
-            ${E.map((h,j)=>`<td class="px-1.5 py-2 text-center font-mono text-xs ${j===E.length-1&&!C?"border-r border-slate-200":""}">${K(L.map?.[h])}</td>`).join("")}
+            ${B.map((h,j)=>`<td class="px-1.5 py-2 text-center font-mono text-xs ${j===B.length-1&&!C?"border-r border-slate-200":""}">${K(L.map?.[h])}</td>`).join("")}
             ${C?`<td class="px-1.5 py-2 text-center font-mono text-xs font-bold text-cyan-950 bg-cyan-100/70 border-r border-cyan-200">${K(L.map?.自平??L.map?.自然)}</td>`:""}
             <td class="px-1.5 py-2 text-center font-mono text-xs font-bold text-slate-900 bg-slate-100/60">${K(L.map?.總分)}</td>
             <td class="px-1.5 py-2 text-center font-mono text-xs font-bold text-slate-900 bg-slate-100/60">${K(L.map?.平均)}</td>
@@ -929,8 +929,8 @@
       <div class="portal-toolbar flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-4">
         <div>
           <div class="flex items-center gap-2">
-            <h2 class="text-2xl font-bold text-slate-900">${m(l)} ${i?"班級成績管理":"導師成績儀表板"}${c&&c.className&&c.className!==l?` <span class="text-base font-normal text-slate-500">（評量時為 ${m(c.className)}）</span>`:""}</h2>
-            <span class="bg-emerald-100 text-emerald-800 text-xs px-2.5 py-1 rounded-full font-semibold">${i?"註冊組長・全校檢視":m(a.displayName||a.account)}</span>
+            <h2 class="text-2xl font-bold text-slate-900">${m(r)} ${i?"班級成績管理":"導師成績儀表板"}${c&&c.className&&c.className!==r?` <span class="text-base font-normal text-slate-500">（評量時為 ${m(c.className)}）</span>`:""}</h2>
+            <span class="bg-emerald-100 text-emerald-800 text-xs px-2.5 py-1 rounded-full font-semibold">${i?"註冊組長・全校檢視":m(t.displayName||t.account)}</span>
           </div>
           <p class="text-slate-500 text-xs mt-1">
             各科段考成績、分數區間分析、歷屆真實校排綜合追蹤與成績單
@@ -957,13 +957,13 @@
         <!-- 核心視圖切換與考次選單緊密結合 -->
         <div class="flex items-center gap-2 flex-wrap">
           <!-- 區塊 1：各科段考成績名冊 ＋ 緊鄰的考次選擇器 -->
-          <div class="flex items-center gap-1.5 p-1 rounded-xl transition ${r==="single"?"bg-emerald-50/90 border-2 border-emerald-500/60 shadow-2xs":"bg-slate-50 border border-slate-200"}">
-            <button type="button" id="tab-btn-single-exam" class="px-3.5 py-2 rounded-lg text-sm font-bold transition flex items-center gap-1.5 ${r==="single"?"bg-emerald-700 text-white shadow-xs":"text-slate-600 hover:text-slate-900"}" aria-pressed="${r==="single"}">
+          <div class="flex items-center gap-1.5 p-1 rounded-xl transition ${d==="single"?"bg-emerald-50/90 border-2 border-emerald-500/60 shadow-2xs":"bg-slate-50 border border-slate-200"}">
+            <button type="button" id="tab-btn-single-exam" class="px-3.5 py-2 rounded-lg text-sm font-bold transition flex items-center gap-1.5 ${d==="single"?"bg-emerald-700 text-white shadow-xs":"text-slate-600 hover:text-slate-900"}" aria-pressed="${d==="single"}">
               <span>📋</span>
               <span>各科段考成績名冊</span>
             </button>
 
-            ${r==="single"?`
+            ${d==="single"?`
               <!-- 緊鄰各科段考成績名冊之考次選單與快速切換鍵 -->
               <div class="flex items-center gap-1 pl-1.5 pr-1 border-l border-emerald-300">
                 <span class="text-xs font-bold text-emerald-950 whitespace-nowrap hidden sm:inline">考次：</span>
@@ -985,7 +985,7 @@
           </div>
 
           <!-- 區塊 2：歷屆校排綜合追蹤 -->
-          <button type="button" id="tab-btn-cohort-ranks" class="px-4 py-2.5 rounded-xl text-sm font-bold transition flex items-center gap-1.5 ${r==="cohort"?"bg-emerald-700 text-white shadow-xs border-2 border-emerald-600":"bg-white text-slate-700 hover:bg-slate-100 border border-slate-300"}" aria-pressed="${r==="cohort"}">
+          <button type="button" id="tab-btn-cohort-ranks" class="px-4 py-2.5 rounded-xl text-sm font-bold transition flex items-center gap-1.5 ${d==="cohort"?"bg-emerald-700 text-white shadow-xs border-2 border-emerald-600":"bg-white text-slate-700 hover:bg-slate-100 border border-slate-300"}" aria-pressed="${d==="cohort"}">
             <span>🏆</span>
             <span>歷屆校排綜合追蹤（入學至最新）</span>
           </button>
@@ -993,7 +993,7 @@
 
         <!-- 右側當前狀態標籤 -->
         <div class="text-xs flex items-center gap-2 pl-2 text-slate-600">
-          ${r==="single"?`
+          ${d==="single"?`
             <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-100 border border-slate-200">
               <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
               <span>當前考次：<b class="text-slate-800 font-bold">${m(c.academicYear)} ${m(c.semester)} ${m(c.examName)}</b></span>
@@ -1009,7 +1009,7 @@
 
       <!-- 視圖主內容掛載點 -->
       <div id="teacher-view-content"></div>
-    `;const q=e.querySelector("#teacher-view-content");if(r==="cohort"){const L=Je(n);Le(q,{title:l,isGradeWide:!1,examList:L.examList,studentResults:L.studentResults,onPrint:()=>window.print()})}else{q.innerHTML=`
+    `;const F=e.querySelector("#teacher-view-content");if(d==="cohort"){const L=Xe(n);Ie(F,{title:r,isGradeWide:!1,examList:L.examList,studentResults:L.studentResults,onPrint:()=>window.print()})}else{F.innerHTML=`
         <p class="calculation-note print:hidden">${m(c.calculationNote||"社會採地理、歷史、公民平均；各科折算及名次依本次評量規則計算。")}</p>
         <!-- 班級四大指標統計 (Tailwind Cards) -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
@@ -1027,11 +1027,11 @@
           <div class="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm">
             <div class="text-xs font-semibold uppercase tracking-wider text-slate-500 mb-1">班級常模五標</div>
             <div class="grid grid-cols-3 gap-1 my-2 text-xs font-mono">
-              <div><span class="text-slate-400">頂:</span> <b class="text-emerald-700">${f.ding||0}</b></div>
-              <div><span class="text-slate-400">前:</span> <b class="text-blue-700">${f.qian||0}</b></div>
-              <div><span class="text-slate-400">均:</span> <b class="text-slate-800">${f.jun||0}</b></div>
-              <div><span class="text-slate-400">後:</span> <b class="text-amber-700">${f.hou||0}</b></div>
-              <div><span class="text-slate-400">底:</span> <b class="text-rose-700">${f.di||0}</b></div>
+              <div><span class="text-slate-400">頂:</span> <b class="text-emerald-700">${g.ding||0}</b></div>
+              <div><span class="text-slate-400">前:</span> <b class="text-blue-700">${g.qian||0}</b></div>
+              <div><span class="text-slate-400">均:</span> <b class="text-slate-800">${g.jun||0}</b></div>
+              <div><span class="text-slate-400">後:</span> <b class="text-amber-700">${g.hou||0}</b></div>
+              <div><span class="text-slate-400">底:</span> <b class="text-rose-700">${g.di||0}</b></div>
             </div>
             <div class="text-[11px] text-slate-400">P88 / P75 / P50 / P25 / P12</div>
           </div>
@@ -1100,7 +1100,7 @@
                   <th colspan="2" class="bg-indigo-50 text-indigo-950 px-2 py-2 text-center border-r border-indigo-200">語文領域</th>
                   <th colspan="1" class="bg-violet-50 text-violet-950 px-1.5 py-2 text-center border-r border-violet-200">數學領域</th>
                   <th colspan="4" class="bg-amber-100 text-amber-950 px-2 py-2 text-center border-r border-amber-200">社會領域 (地理/歷史/公民 ➔ 社平)</th>
-                  <th colspan="${C?4:E.length||1}" class="bg-cyan-100 text-cyan-950 px-2 py-2 text-center border-r border-cyan-200">自然領域 ${C?"(理化3/地科2/生物1 ➔ 自平)":""}</th>
+                  <th colspan="${C?4:B.length||1}" class="bg-cyan-100 text-cyan-950 px-2 py-2 text-center border-r border-cyan-200">自然領域 ${C?"(理化3/地科2/生物1 ➔ 自平)":""}</th>
                   <th colspan="5" class="bg-slate-100 text-slate-800 px-2 py-2 text-center border-r border-slate-200">總計評定與序位</th>
                   <th class="bg-slate-100 text-slate-600 px-2 py-2 text-center">操作</th>
                 </tr>
@@ -1109,12 +1109,12 @@
                   <th class="roster-sticky-header-1 bg-slate-50 w-[42px] px-1 py-2 text-center border-r border-slate-200">座號</th>
                   <th class="roster-sticky-header-2 bg-slate-50 w-[74px] px-2 py-2 text-left border-r border-slate-300 roster-sticky-shadow">姓名</th>
                   <th class="bg-slate-50 w-[42px] px-1 py-2 text-center border-r border-slate-200">身分</th>
-                  ${M.map(h=>`
+                  ${E.map(h=>`
                     <th class="w-[48px] px-1 py-2 text-center ${["英文","英語","數學"].includes(h)?"border-r border-slate-200":""} ${["地理","歷史","公民"].includes(h)?"bg-amber-50 text-amber-950":"bg-slate-50"}">${m(h)}</th>
                   `).join("")}
                   <th class="w-[52px] px-1 py-2 text-center font-bold bg-amber-100 text-amber-950 border-r border-amber-200" title="社會領域平均 (地理/歷史/公民)">社平</th>
-                  ${E.map((h,j)=>`
-                    <th class="w-[48px] px-1 py-2 text-center bg-cyan-50 text-cyan-950 ${j===E.length-1&&!C?"border-r border-slate-200":""}">${m(h)}</th>
+                  ${B.map((h,j)=>`
+                    <th class="w-[48px] px-1 py-2 text-center bg-cyan-50 text-cyan-950 ${j===B.length-1&&!C?"border-r border-slate-200":""}">${m(h)}</th>
                   `).join("")}
                   ${C?'<th class="w-[52px] px-1 py-2 text-center font-bold bg-cyan-100 text-cyan-950 border-r border-cyan-200" title="自然領域平均 (理化3/地科2/生物1)">自平</th>':""}
                   <th class="w-[56px] px-1 py-2 text-center font-bold bg-slate-50">總分</th>
@@ -1126,9 +1126,9 @@
                 </tr>
               </thead>
               <tbody id="roster-tbody" class="divide-y divide-slate-100">
-                ${le}
+                ${ie}
               </tbody>
-              ${Ie}
+              ${Be}
             </table>
           </div>
           <div class="px-6 py-2.5 bg-slate-50 border-t border-slate-200 text-xs text-slate-500 flex flex-wrap justify-between items-center gap-2">
@@ -1136,7 +1136,7 @@
             <span class="font-mono text-slate-400">高標 / 低標：Q2 中位數前後 50% 學生之平均值</span>
           </div>
         </div>
-      `,Ue(q.querySelector("#subject-score-analysis"),N,y,{selectedSubject:S,onSubjectChange:h=>{S=h}}),e.querySelector("#teacher-exam-select")?.addEventListener("change",h=>{x=Number(h.target.value)||0,g()}),e.querySelector("#btn-prev-exam")?.addEventListener("click",()=>{x>0&&(x--,g())}),e.querySelector("#btn-next-exam")?.addEventListener("click",()=>{x<n.length-1&&(x++,g())});const L=()=>{const h=q.querySelector(".roster-table"),j=h?.querySelector("thead tr:first-child");if(h&&j){const R=Math.round(j.getBoundingClientRect().height);R>0&&h.style.setProperty("--roster-head-row1-h",`${R}px`)}};requestAnimationFrame(L),q.querySelector("#btn-toggle-density")?.addEventListener("click",h=>{o=!o;const j=q.querySelector(".roster-table");j&&j.classList.toggle("roster-compact",o);const R=h.currentTarget.querySelector("span");R&&(R.textContent=o?"📐 舒適視圖":"📏 緊湊視圖"),L()}),q.querySelector("#teacher-search-input")?.addEventListener("input",h=>{p=h.target.value;const j=k(N,p),R=q.querySelector("#roster-tbody"),z=q.querySelector("#roster-count-badge");R&&(R.innerHTML=D(j)),z&&(z.textContent=`${j.length} 筆`)}),e.querySelector("#btn-print-batch-cards")?.addEventListener("click",()=>{$e(c,c&&c.className||l,s,N,null)}),q.querySelector("#roster-tbody")?.addEventListener("click",h=>{const j=h.target.closest(".btn-print-single");if(!j)return;const R=Number(j.getAttribute("data-seat"));$e(c,c&&c.className||l,s,N,R)}),e.querySelector("#btn-print-class")?.addEventListener("click",()=>{window.print()})}e.querySelector("#tab-btn-single-exam")?.addEventListener("click",()=>{r!=="single"&&(r="single",g())}),e.querySelector("#tab-btn-cohort-ranks")?.addEventListener("click",()=>{r!=="cohort"&&(r="cohort",g())})}g()}async function Ae(e,a){e.innerHTML='<p class="admin-class-message" role="status">正在讀取全校班級名單…</p>';const d=await P("getAdminClasses");if(!d.success||!Array.isArray(d.classes)){e.innerHTML=`<div class="admin-class-message"><h3>無法載入全校班級</h3><p>${m(d.message||"請確認前後端版本一致，並重新登入註冊組長帳號。")}</p><button type="button" class="admin-class-retry">重新載入</button></div>`,e.querySelector("button")?.addEventListener("click",()=>Ae(e,a));return}const i=d.classes;if(!i.length){e.innerHTML='<p class="admin-class-message">最新學生名冊尚無班級資料，請先確認學生名單。</p>';return}e.innerHTML=`
+      `,Qe(F.querySelector("#subject-score-analysis"),N,y,{selectedSubject:S,onSubjectChange:h=>{S=h}}),e.querySelector("#teacher-exam-select")?.addEventListener("change",h=>{x=Number(h.target.value)||0,f()}),e.querySelector("#btn-prev-exam")?.addEventListener("click",()=>{x>0&&(x--,f())}),e.querySelector("#btn-next-exam")?.addEventListener("click",()=>{x<n.length-1&&(x++,f())});const L=()=>{const h=F.querySelector(".roster-table"),j=h?.querySelector("thead tr:first-child");if(h&&j){const M=Math.round(j.getBoundingClientRect().height);M>0&&h.style.setProperty("--roster-head-row1-h",`${M}px`)}};requestAnimationFrame(L),F.querySelector("#btn-toggle-density")?.addEventListener("click",h=>{o=!o;const j=F.querySelector(".roster-table");j&&j.classList.toggle("roster-compact",o);const M=h.currentTarget.querySelector("span");M&&(M.textContent=o?"📐 舒適視圖":"📏 緊湊視圖"),L()}),F.querySelector("#teacher-search-input")?.addEventListener("input",h=>{p=h.target.value;const j=k(N,p),M=F.querySelector("#roster-tbody"),U=F.querySelector("#roster-count-badge");M&&(M.innerHTML=P(j)),U&&(U.textContent=`${j.length} 筆`)}),e.querySelector("#btn-print-batch-cards")?.addEventListener("click",()=>{Le(c,c&&c.className||r,s,N,null)}),F.querySelector("#roster-tbody")?.addEventListener("click",h=>{const j=h.target.closest(".btn-print-single");if(!j)return;const M=Number(j.getAttribute("data-seat"));Le(c,c&&c.className||r,s,N,M)}),e.querySelector("#btn-print-class")?.addEventListener("click",()=>{window.print()})}e.querySelector("#tab-btn-single-exam")?.addEventListener("click",()=>{d!=="single"&&(d="single",f())}),e.querySelector("#tab-btn-cohort-ranks")?.addEventListener("click",()=>{d!=="cohort"&&(d="cohort",f())})}f()}async function Re(e,t){e.innerHTML='<p class="admin-class-message" role="status">正在讀取全校班級名單…</p>';const l=await D("getAdminClasses");if(!l.success||!Array.isArray(l.classes)){e.innerHTML=`<div class="admin-class-message"><h3>無法載入全校班級</h3><p>${m(l.message||"請確認前後端版本一致，並重新登入註冊組長帳號。")}</p><button type="button" class="admin-class-retry">重新載入</button></div>`,e.querySelector("button")?.addEventListener("click",()=>Re(e,t));return}const i=l.classes;if(!i.length){e.innerHTML='<p class="admin-class-message">最新學生名冊尚無班級資料，請先確認學生名單。</p>';return}e.innerHTML=`
     <section class="admin-class-picker" aria-labelledby="admin-class-title">
       <div>
         <h3 id="admin-class-title">各班成績與全校歷屆校排檢視</h3>
@@ -1158,17 +1158,17 @@
       <p id="admin-class-description" role="status"></p>
     </section>
     <div id="admin-selected-class"></div>
-  `;const t=e.querySelector("#admin-grade-select"),b=e.querySelector("#admin-class-select"),l=e.querySelector("#admin-selected-class");let n=0;async function s(){const x=b.value;if(!x)return;if(x.startsWith("cohort_grade_")){const g=Number(x.replace("cohort_grade_","")),c=++n,y=document.createElement("div");y.className="admin-grade-cohort-stage",l.replaceChildren(y),e.querySelector("#admin-class-description").textContent=`${g}年級全校歷屆校排綜合追蹤大榜｜全校學生跨班級統一依照歷屆校排平均綜合排序`,y.innerHTML=`
+  `;const a=e.querySelector("#admin-grade-select"),b=e.querySelector("#admin-class-select"),r=e.querySelector("#admin-selected-class");let n=0;async function s(){const x=b.value;if(!x)return;if(x.startsWith("cohort_grade_")){const f=Number(x.replace("cohort_grade_","")),c=++n,y=document.createElement("div");y.className="admin-grade-cohort-stage",r.replaceChildren(y),e.querySelector("#admin-class-description").textContent=`${f}年級全校歷屆校排綜合追蹤大榜｜全校學生跨班級統一依照歷屆校排平均綜合排序`,y.innerHTML=`
         <div class="py-16 text-center text-slate-500">
           <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-emerald-600 mx-auto mb-3"></div>
-          <span class="text-sm">正在計算【${g}年級全校歷屆校排大榜】（包含所有班級學生與各次段考真實校排）...</span>
+          <span class="text-sm">正在計算【${f}年級全校歷屆校排大榜】（包含所有班級學生與各次段考真實校排）...</span>
         </div>
-      `;const f=await P("getAdminGradeCohortData",{grade:g});if(c!==n)return;f.success?(y.innerHTML="",Le(y,{title:`${g}年級全校`,isGradeWide:!0,examList:f.examList,studentResults:f.studentResults,onPrint:()=>window.print()})):y.innerHTML=`<div class="p-8 bg-rose-50 border border-rose-200 text-rose-700 rounded-2xl text-center text-sm font-medium">${m(f.message||"無法載入全校校排資料")}</div>`;return}const p=i.find(g=>g.className===x);if(!p)return;const S=++n,o=document.createElement("div");o.className="admin-inherited-class",l.replaceChildren(o),e.querySelector("#admin-class-description").textContent=`${p.className}｜在校名冊 ${p.studentCount} 人｜導師：${p.teacherName||"尚未設定"}`,await me(o,a,{className:p.className,teacherName:p.teacherName}),S!==n&&o.remove()}function r(){const x=b.value,p=t.value,S=i.filter(g=>!p||g.className.startsWith(p+"年"));let o="";p?(o+='<optgroup label="🌟 全校年級綜合大榜">',o+=`<option value="cohort_grade_${p}">🏆【${p}年級全體・全校歷屆校排大榜】</option>`,o+="</optgroup>"):(o+='<optgroup label="🌟 全校年級綜合大榜">',o+='<option value="cohort_grade_9">🏆【九年級全體・全校歷屆校排大榜】</option>',o+='<option value="cohort_grade_8">🏆【八年級全體・全校歷屆校排大榜】</option>',o+='<option value="cohort_grade_7">🏆【七年級全體・全校歷屆校排大榜】</option>',o+="</optgroup>"),o+='<optgroup label="🏫 個別班級成績名冊與歷屆追蹤">',o+=S.map(g=>`<option value="${m(g.className)}">${m(g.className)}（${g.studentCount} 人｜導師: ${m(g.teacherName||"未設")}）</option>`).join(""),o+="</optgroup>",b.innerHTML=o,b.disabled=S.length===0,S.some(g=>g.className===x)?b.value=x:x&&x.startsWith("cohort_grade_")&&(b.value=p?`cohort_grade_${p}`:x),!b.value&&b.options.length>0&&(b.selectedIndex=0),b.value?s():(n++,l.innerHTML='<p class="admin-class-message">此年級尚無資料。</p>',e.querySelector("#admin-class-description").textContent="")}t.addEventListener("change",r),b.addEventListener("change",()=>void s()),r()}async function Q(e,a){e.innerHTML=`
+      `;const g=await D("getAdminGradeCohortData",{grade:f});if(c!==n)return;g.success?(y.innerHTML="",Ie(y,{title:`${f}年級全校`,isGradeWide:!0,examList:g.examList,studentResults:g.studentResults,onPrint:()=>window.print()})):y.innerHTML=`<div class="p-8 bg-rose-50 border border-rose-200 text-rose-700 rounded-2xl text-center text-sm font-medium">${m(g.message||"無法載入全校校排資料")}</div>`;return}const p=i.find(f=>f.className===x);if(!p)return;const S=++n,o=document.createElement("div");o.className="admin-inherited-class",r.replaceChildren(o),e.querySelector("#admin-class-description").textContent=`${p.className}｜在校名冊 ${p.studentCount} 人｜導師：${p.teacherName||"尚未設定"}`,await ge(o,t,{className:p.className,teacherName:p.teacherName}),S!==n&&o.remove()}function d(){const x=b.value,p=a.value,S=i.filter(f=>!p||f.className.startsWith(p+"年"));let o="";p?(o+='<optgroup label="🌟 全校年級綜合大榜">',o+=`<option value="cohort_grade_${p}">🏆【${p}年級全體・全校歷屆校排大榜】</option>`,o+="</optgroup>"):(o+='<optgroup label="🌟 全校年級綜合大榜">',o+='<option value="cohort_grade_9">🏆【九年級全體・全校歷屆校排大榜】</option>',o+='<option value="cohort_grade_8">🏆【八年級全體・全校歷屆校排大榜】</option>',o+='<option value="cohort_grade_7">🏆【七年級全體・全校歷屆校排大榜】</option>',o+="</optgroup>"),o+='<optgroup label="🏫 個別班級成績名冊與歷屆追蹤">',o+=S.map(f=>`<option value="${m(f.className)}">${m(f.className)}（${f.studentCount} 人｜導師: ${m(f.teacherName||"未設")}）</option>`).join(""),o+="</optgroup>",b.innerHTML=o,b.disabled=S.length===0,S.some(f=>f.className===x)?b.value=x:x&&x.startsWith("cohort_grade_")&&(b.value=p?`cohort_grade_${p}`:x),!b.value&&b.options.length>0&&(b.selectedIndex=0),b.value?s():(n++,r.innerHTML='<p class="admin-class-message">此年級尚無資料。</p>',e.querySelector("#admin-class-description").textContent="")}a.addEventListener("change",d),b.addEventListener("change",()=>void s()),d()}async function X(e,t){e.innerHTML=`
     <div class="flex items-center justify-center py-20 text-slate-500">
       <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-emerald-600 mr-3"></div>
       <span>正在讀取 Google Sheets 資料庫狀態...</span>
     </div>
-  `;const d=await P("getAdminOverview");if(!d.success||!d.stats){e.innerHTML=`<div class="admin-class-message"><h2>無法載入管理資料</h2><p>${m(d.message||"請稍後重新載入。")}</p><button type="button" id="btn-admin-retry">重新載入</button></div>`,e.querySelector("#btn-admin-retry")?.addEventListener("click",()=>Q(e,a));return}const i=d.stats,t=ae();function b(){e.innerHTML=`
+  `;const l=await D("getAdminOverview");if(!l.success||!l.stats){e.innerHTML=`<div class="admin-class-message"><h2>無法載入管理資料</h2><p>${m(l.message||"請稍後重新載入。")}</p><button type="button" id="btn-admin-retry">重新載入</button></div>`,e.querySelector("#btn-admin-retry")?.addEventListener("click",()=>X(e,t));return}const i=l.stats,a=le();function b(){e.innerHTML=`
       <!-- 管理者標題列 -->
       <div class="registrar-overview-toolbar portal-toolbar flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
         <div>
@@ -1339,7 +1339,7 @@
           <div>
             <h3 class="text-lg font-bold">Google Apps Script Web App 串接狀態</h3>
             <p class="text-slate-300 text-xs mt-1 font-mono break-all">
-              ${t?`已連線：${t}`:"目前處於：【本地示範模式】（可立即點選右側設定貼上您的 GAS 網址）"}
+              ${a?`已連線：${a}`:"目前處於：【本地示範模式】（可立即點選右側設定貼上您的 GAS 網址）"}
             </p>
           </div>
           <div class="flex flex-wrap items-center gap-2">
@@ -1357,13 +1357,13 @@
       </div>
       </div>
       <section id="admin-class-panel" class="admin-class-panel" hidden></section>
-    `;let p=!1;const S=e.querySelector("#admin-overview-panel"),o=e.querySelector("#admin-class-panel"),g=e.querySelector("#admin-tab-overview"),c=e.querySelector("#admin-tab-classes");function y(f){const $=f==="classes";S.hidden=$,o.hidden=!$,g.setAttribute("aria-pressed",String(!$)),c.setAttribute("aria-pressed",String($)),$&&!p&&(p=!0,Ae(o,a))}g.addEventListener("click",()=>y("overview")),c.addEventListener("click",()=>y("classes")),document.getElementById("btn-config-gas")?.addEventListener("click",n),document.getElementById("btn-test-gas")?.addEventListener("click",s),document.getElementById("btn-init-db-remote")?.addEventListener("click",r),document.getElementById("btn-autoresize-remote")?.addEventListener("click",l),document.getElementById("btn-open-gas-instructions")?.addEventListener("click",x)}async function l(){B("正在自動調整試算表各工作表欄寬...");const p=await P("autoResizeColumns");p.success?B(p.message||"🎉 所有工作表欄寬已全數調整至最佳寬度！"):B(p.message||"調整欄寬失敗","error")}function n(){const p=`
+    `;let p=!1;const S=e.querySelector("#admin-overview-panel"),o=e.querySelector("#admin-class-panel"),f=e.querySelector("#admin-tab-overview"),c=e.querySelector("#admin-tab-classes");function y(g){const $=g==="classes";S.hidden=$,o.hidden=!$,f.setAttribute("aria-pressed",String(!$)),c.setAttribute("aria-pressed",String($)),$&&!p&&(p=!0,Re(o,t))}f.addEventListener("click",()=>y("overview")),c.addEventListener("click",()=>y("classes")),document.getElementById("btn-config-gas")?.addEventListener("click",n),document.getElementById("btn-test-gas")?.addEventListener("click",s),document.getElementById("btn-init-db-remote")?.addEventListener("click",d),document.getElementById("btn-autoresize-remote")?.addEventListener("click",r),document.getElementById("btn-open-gas-instructions")?.addEventListener("click",x)}async function r(){I("正在自動調整試算表各工作表欄寬...");const p=await D("autoResizeColumns");p.success?I(p.message||"🎉 所有工作表欄寬已全數調整至最佳寬度！"):I(p.message||"調整欄寬失敗","error")}function n(){const p=`
       <div class="p-6">
         <h3 class="text-base font-bold text-slate-900 mb-2">設定 Google Apps Script Web App 網址</h3>
         <p class="text-xs text-slate-500 mb-4">
           請貼上您在 Google Apps Script 中點選「部署」➔「網頁應用程式」所取得的 URL（以 /exec 結尾）：
         </p>
-        <input type="url" id="input-gas-url" value="${m(ae())}" placeholder="https://script.google.com/macros/s/AKfycb.../exec" class="w-full px-3 py-2 border border-slate-300 rounded-xl text-xs font-mono mb-4 focus:ring-2 focus:ring-emerald-500 focus:outline-none" />
+        <input type="url" id="input-gas-url" value="${m(le())}" placeholder="https://script.google.com/macros/s/AKfycb.../exec" class="w-full px-3 py-2 border border-slate-300 rounded-xl text-xs font-mono mb-4 focus:ring-2 focus:ring-emerald-500 focus:outline-none" />
         <div class="flex justify-between items-center">
           <button id="btn-clear-gas-url" class="text-xs text-rose-600 hover:underline">清除網址 (切換為本地示範模式)</button>
           <div class="flex gap-2">
@@ -1372,7 +1372,7 @@
           </div>
         </div>
       </div>
-    `;oe(p,()=>{document.getElementById("btn-modal-cancel")?.addEventListener("click",_),document.getElementById("btn-clear-gas-url")?.addEventListener("click",()=>{ne(""),B("已切換為本地示範模式"),_(),Q(e,a)}),document.getElementById("btn-modal-save-gas")?.addEventListener("click",()=>{const S=document.getElementById("input-gas-url")?.value.trim();ne(S),B("GAS 網址已儲存！"),_(),Q(e,a)})})}async function s(){B("正在測試 GAS 後端連線...");const p=await P("ping");p.success?B(`✓ 連線成功！試算表：${p.spreadsheetName||"已連線"}`):B(`連線失敗：${p.message}`,"error")}async function r(){if(!confirm("確定要在 Google Sheets 中建立【學生名單】、【導師名單】、【管理者名單】以及【七年級成績資料庫】、【八年級成績資料庫】、【九年級成績資料庫】三個工作表嗎？"))return;B("正在傳送初始化指令至 Google Apps Script...");const p=await P("initDatabase");p.success?(B("🎉 Google Sheets 資料庫結構與七、八、九年級示範資料已順利建立！"),Q(e,a)):B(p.message||"初始化指令執行失敗","error")}function x(){oe(`
+    `;ee(p,()=>{document.getElementById("btn-modal-cancel")?.addEventListener("click",H),document.getElementById("btn-clear-gas-url")?.addEventListener("click",()=>{de(""),I("已切換為本地示範模式"),H(),X(e,t)}),document.getElementById("btn-modal-save-gas")?.addEventListener("click",()=>{const S=document.getElementById("input-gas-url")?.value.trim();de(S),I("GAS 網址已儲存！"),H(),X(e,t)})})}async function s(){I("正在測試 GAS 後端連線...");const p=await D("ping");p.success?I(`✓ 連線成功！試算表：${p.spreadsheetName||"已連線"}`):I(`連線失敗：${p.message}`,"error")}async function d(){if(!confirm("確定要在 Google Sheets 中建立【學生名單】、【導師名單】、【管理者名單】以及【七年級成績資料庫】、【八年級成績資料庫】、【九年級成績資料庫】三個工作表嗎？"))return;I("正在傳送初始化指令至 Google Apps Script...");const p=await D("initDatabase");p.success?(I("🎉 Google Sheets 資料庫結構與七、八、九年級示範資料已順利建立！"),X(e,t)):I(p.message||"初始化指令執行失敗","error")}function x(){ee(`
       <div class="p-6 max-h-[80vh] overflow-y-auto">
         <h3 class="text-base font-bold text-slate-900 mb-2">📖 Google Sheets ＋ GAS 快速部署 3 步驟</h3>
         <ol class="list-decimal pl-5 space-y-3 text-xs text-slate-700 leading-relaxed">
@@ -1390,7 +1390,7 @@
           <button id="btn-close-instructions" class="px-4 py-2 bg-slate-800 text-white rounded-xl text-xs font-semibold">我知道了</button>
         </div>
       </div>
-    `,()=>{document.getElementById("btn-close-instructions")?.addEventListener("click",_)})}b()}let F="student";function xe(){const e=document.getElementById("app-masthead");if(!e)return;const a=ue();e.innerHTML=`
+    `,()=>{document.getElementById("btn-close-instructions")?.addEventListener("click",H)})}b()}let _="student";const et=900*1e3;let re=null,Ae=0;function he(){re&&(clearTimeout(re),re=null),Y()&&(re=setTimeout(()=>{Y()&&(D("logout"),fe(),H(),I("🔒 為保護個人成績與校務資料安全，系統因閒置超過 15 分鐘已自動安全登出。","error"),J())},et))}function tt(){const e=()=>{const t=Date.now();t-Ae<5e3||(Ae=t,Y()&&he())};["mousemove","mousedown","keydown","touchstart","scroll"].forEach(t=>{window.addEventListener(t,e,{passive:!0})})}function ue(){const e=document.getElementById("app-masthead");if(!e)return;const t=Y();e.innerHTML=`
     <div class="school-masthead-inner">
       <!-- 學校校名與品牌 -->
       <div class="school-brand">
@@ -1406,16 +1406,21 @@
       <!-- 右側連線狀態與登入身分 -->
       <div class="school-account-tools">
         <!-- GAS 連線標章 -->
-        ${a?.role==="admin"?'<button id="btn-masthead-gas-status" class="school-settings-button" title="管理系統連線設定">連線設定</button>':'<span class="school-service-label">校務查詢服務</span>'}
+        ${t?.role==="admin"?'<button id="btn-masthead-gas-status" class="school-settings-button" title="管理系統連線設定">連線設定</button>':'<span class="school-service-label">校務查詢服務</span>'}
 
-        ${a?`
+        ${t?`
           <div class="school-session">
             <div class="school-session-name">
               <span>
-                ${a.role==="admin"?"管理者":a.role==="teacher"?"導師":"學生"}：
+                ${t.role==="admin"?"管理者":t.role==="teacher"?"導師":"學生"}：
               </span>
-              <span class="font-bold text-white">${m(a.displayName||a.account)}</span>
+              <span class="font-bold text-white">${m(t.displayName||t.account)}</span>
             </div>
+            ${t.role==="student"||t.role==="teacher"?`
+              <button id="btn-change-password" class="school-settings-button" title="修改個人登入密碼（SHA-256 加密保護）">
+                🔑 修改密碼
+              </button>
+            `:""}
             <button id="btn-logout" class="school-logout">
               登出
             </button>
@@ -1423,7 +1428,7 @@
         `:""}
       </div>
     </div>
-  `,document.getElementById("btn-masthead-gas-status")?.addEventListener("click",Ce),document.getElementById("btn-logout")?.addEventListener("click",()=>{P("logout"),ke(),B("您已安全登出系統。"),re()})}function pe(e){const d={student:{role:"student",title:"學生與家長登入",subtitle:"查詢個人段考成績與歷次段考紀錄。",accLabel:"學生學號（7 碼）",accPlaceholder:"請輸入 7 碼學生學號",pwdLabel:"驗證密碼（身分證後四碼 ＋ 出生月日共 8 碼）",pwdPlaceholder:"請輸入 8 碼登入密碼",help:"出生月日請使用四碼，不足兩位的月份與日期請補 0。若無法登入，請洽教務處註冊組協助確認。",defaultAcc:"",defaultPwd:""},teacher:{role:"teacher",title:"班級導師登入",subtitle:"查詢班級段考成績、各科分數區間與列印成績單。",accLabel:"教師帳號",accPlaceholder:"請輸入公務信箱前綴帳號",pwdLabel:"教師密碼",pwdPlaceholder:"請輸入教師密碼",help:"請使用學校提供的教師帳號。首次登入須依畫面指示變更密碼；忘記密碼請洽教務處註冊組。",defaultAcc:"",defaultPwd:""},admin:{role:"admin",title:"註冊組長登入",subtitle:"管理全校資料，並可檢視各班成績與使用導師列印功能。",accLabel:"管理者帳號",accPlaceholder:"請輸入管理員帳號（例如：admin）",pwdLabel:"管理員密碼",pwdPlaceholder:"請輸入管理員密碼",help:"本專區限授權人員使用。請於使用完畢後登出，避免在共用設備儲存登入資料。",defaultAcc:"",defaultPwd:""}}[F];e.innerHTML=`
+  `,document.getElementById("btn-masthead-gas-status")?.addEventListener("click",Me),document.getElementById("btn-change-password")?.addEventListener("click",()=>{t&&at(t)}),document.getElementById("btn-logout")?.addEventListener("click",()=>{D("logout"),fe(),he(),I("您已安全登出系統。"),J()})}function me(e){const l={student:{role:"student",title:"學生與家長登入",subtitle:"查詢個人段考成績與歷次段考紀錄。",accLabel:"學生學號（7 碼）",accPlaceholder:"請輸入 7 碼學生學號",pwdLabel:"驗證密碼（預設為身分證後四碼＋出生月日共 8 碼，或自訂密碼）",pwdPlaceholder:"請輸入登入密碼",help:"預設密碼之出生月日請使用四碼（如 0509）。登入後可點擊右上角「🔑 修改密碼」設定專屬加密密碼；若忘記密碼請洽教務處註冊組。",defaultAcc:"",defaultPwd:""},teacher:{role:"teacher",title:"班級導師登入",subtitle:"查詢班級段考成績、各科分數區間與列印成績單。",accLabel:"教師帳號",accPlaceholder:"請輸入公務信箱前綴帳號",pwdLabel:"教師密碼",pwdPlaceholder:"請輸入教師密碼",help:"請使用學校提供的教師帳號。首次登入須依畫面指示變更密碼；忘記密碼請洽教務處註冊組。",defaultAcc:"",defaultPwd:""},admin:{role:"admin",title:"註冊組長登入",subtitle:"管理全校資料，並可檢視各班成績與使用導師列印功能。",accLabel:"管理者帳號",accPlaceholder:"請輸入管理員帳號（例如：admin）",pwdLabel:"管理員密碼",pwdPlaceholder:"請輸入管理員密碼",help:"本專區限授權人員使用。請於使用完畢後登出，避免在共用設備儲存登入資料。",defaultAcc:"",defaultPwd:""}}[_];e.innerHTML=`
     <div class="school-login-layout">
       <section class="school-login-intro" aria-labelledby="login-intro-title">
         <p class="school-eyebrow">大溪國中・親師生服務</p>
@@ -1440,37 +1445,37 @@
       <section class="school-login-card" aria-labelledby="login-card-title">
         <!-- 身分切換標籤頁 (Tabs) -->
         <div class="school-role-switch" role="group" aria-label="選擇登入身分">
-          <button type="button" aria-pressed="${F==="student"}" class="role-tab-btn py-2.5 rounded-2xl text-xs sm:text-sm font-semibold transition ${F==="student"?"bg-white text-slate-900 shadow-sm":"text-slate-600 hover:text-slate-900"}" data-role="student">
+          <button type="button" aria-pressed="${_==="student"}" class="role-tab-btn py-2.5 rounded-2xl text-xs sm:text-sm font-semibold transition ${_==="student"?"bg-white text-slate-900 shadow-sm":"text-slate-600 hover:text-slate-900"}" data-role="student">
             學生／家長
           </button>
-          <button type="button" aria-pressed="${F==="teacher"}" class="role-tab-btn py-2.5 rounded-2xl text-xs sm:text-sm font-semibold transition ${F==="teacher"?"bg-white text-slate-900 shadow-sm":"text-slate-600 hover:text-slate-900"}" data-role="teacher">
+          <button type="button" aria-pressed="${_==="teacher"}" class="role-tab-btn py-2.5 rounded-2xl text-xs sm:text-sm font-semibold transition ${_==="teacher"?"bg-white text-slate-900 shadow-sm":"text-slate-600 hover:text-slate-900"}" data-role="teacher">
             班級導師
           </button>
-          <button type="button" aria-pressed="${F==="admin"}" class="role-tab-btn py-2.5 rounded-2xl text-xs sm:text-sm font-semibold transition ${F==="admin"?"bg-white text-slate-900 shadow-sm":"text-slate-600 hover:text-slate-900"}" data-role="admin">
+          <button type="button" aria-pressed="${_==="admin"}" class="role-tab-btn py-2.5 rounded-2xl text-xs sm:text-sm font-semibold transition ${_==="admin"?"bg-white text-slate-900 shadow-sm":"text-slate-600 hover:text-slate-900"}" data-role="admin">
             註冊組長
           </button>
         </div>
 
         <div class="school-login-fields">
           <div class="mb-6">
-            <h2 id="login-card-title" class="text-xl font-bold text-slate-900">${d.title}</h2>
-            <p class="text-xs text-slate-500 mt-1 leading-relaxed">${d.subtitle}</p>
+            <h2 id="login-card-title" class="text-xl font-bold text-slate-900">${l.title}</h2>
+            <p class="text-xs text-slate-500 mt-1 leading-relaxed">${l.subtitle}</p>
           </div>
 
           <!-- 登入表單 -->
           <form id="auth-login-form" class="space-y-4">
             <div>
-              <label for="login-account-id" class="block text-xs font-semibold text-slate-700 mb-1.5">${d.accLabel}</label>
-              <input type="text" id="login-account-id" autocomplete="username" ${F==="student"?'inputmode="numeric"':""} required value="${m(d.defaultAcc)}" placeholder="${m(d.accPlaceholder)}" class="w-full px-4 py-2.5 bg-slate-50 border border-slate-300 rounded-xl text-sm font-medium focus:bg-white focus:ring-2 focus:ring-emerald-500 focus:outline-none transition" />
+              <label for="login-account-id" class="block text-xs font-semibold text-slate-700 mb-1.5">${l.accLabel}</label>
+              <input type="text" id="login-account-id" autocomplete="username" ${_==="student"?'inputmode="numeric"':""} required value="${m(l.defaultAcc)}" placeholder="${m(l.accPlaceholder)}" class="w-full px-4 py-2.5 bg-slate-50 border border-slate-300 rounded-xl text-sm font-medium focus:bg-white focus:ring-2 focus:ring-emerald-500 focus:outline-none transition" />
             </div>
 
             <div>
-              <label for="login-password" class="block text-xs font-semibold text-slate-700 mb-1.5">${d.pwdLabel}</label>
-              <input type="password" id="login-password" autocomplete="current-password" aria-describedby="login-help" required value="${m(d.defaultPwd)}" placeholder="${m(d.pwdPlaceholder)}" class="w-full px-4 py-2.5 bg-slate-50 border border-slate-300 rounded-xl text-sm font-medium focus:bg-white focus:ring-2 focus:ring-emerald-500 focus:outline-none transition" />
+              <label for="login-password" class="block text-xs font-semibold text-slate-700 mb-1.5">${l.pwdLabel}</label>
+              <input type="password" id="login-password" autocomplete="current-password" aria-describedby="login-help" required value="${m(l.defaultPwd)}" placeholder="${m(l.pwdPlaceholder)}" class="w-full px-4 py-2.5 bg-slate-50 border border-slate-300 rounded-xl text-sm font-medium focus:bg-white focus:ring-2 focus:ring-emerald-500 focus:outline-none transition" />
             </div>
 
             <div id="login-help" class="school-login-help">
-              ${d.help}
+              ${l.help}
             </div>
 
             <button type="submit" id="btn-submit-login" class="w-full py-3 bg-[#0F2537] hover:bg-slate-800 text-white rounded-xl text-sm font-bold shadow-md hover:shadow-lg transition">
@@ -1484,7 +1489,7 @@
         </div>
       </section>
     </div>
-  `,e.querySelectorAll(".role-tab-btn").forEach(i=>{i.addEventListener("click",()=>{F=i.getAttribute("data-role"),pe(e)})}),document.getElementById("btn-open-gas-setup")?.addEventListener("click",Ce),document.getElementById("auth-login-form")?.addEventListener("submit",async i=>{i.preventDefault();const t=document.getElementById("login-account-id")?.value.trim(),b=document.getElementById("login-password")?.value.trim(),l=document.getElementById("btn-submit-login");if(!t||!b){B("請輸入帳號與密碼！","error");return}l&&(l.disabled=!0,l.textContent="正在驗證帳密...");const n=await P("login",{role:F,account:t,password:b});if(l&&(l.disabled=!1,l.textContent="驗證身分並進入系統"),!n.success){B(n.message||"登入失敗，請確認帳號密碼","error");return}if(n.role==="teacher"&&n.mustChangePassword){Qe(n.user.account,b,()=>{fe({role:"teacher",account:n.user.account,displayName:n.user.name,assignedClass:n.user.assignedClass,authToken:n.authToken}),B("密碼已成功變更！歡迎進入導師儀表板。"),re()},n.authToken);return}const s={role:n.role,account:n.user&&(n.user.account||n.user.studentId)||t,displayName:n.user&&(n.user.name||n.user.displayName)||t,authToken:n.authToken,studentId:n.role==="student"?n.user.studentId:void 0,assignedClass:n.role==="teacher"?n.user.assignedClass:void 0};fe(s),B(`歡迎回來，${s.displayName}！`),re()})}function Qe(e,a,d,i){const t=`
+  `,e.querySelectorAll(".role-tab-btn").forEach(i=>{i.addEventListener("click",()=>{_=i.getAttribute("data-role"),me(e)})}),document.getElementById("btn-open-gas-setup")?.addEventListener("click",Me),document.getElementById("auth-login-form")?.addEventListener("submit",async i=>{i.preventDefault();const a=document.getElementById("login-account-id")?.value.trim(),b=document.getElementById("login-password")?.value.trim(),r=document.getElementById("btn-submit-login");if(!a||!b){I("請輸入帳號與密碼！","error");return}r&&(r.disabled=!0,r.textContent="正在驗證帳密...");const n=await D("login",{role:_,account:a,password:b});if(r&&(r.disabled=!1,r.textContent="驗證身分並進入系統"),!n.success){I(n.message||"登入失敗，請確認帳號密碼","error");return}if(n.role==="teacher"&&n.mustChangePassword){st(n.user.account,b,()=>{ye({role:"teacher",account:n.user.account,displayName:n.user.name,assignedClass:n.user.assignedClass,authToken:n.authToken}),I("密碼已成功變更！歡迎進入導師儀表板。"),J()},n.authToken);return}const s={role:n.role,account:n.user&&(n.user.account||n.user.studentId)||a,displayName:n.user&&(n.user.name||n.user.displayName)||a,authToken:n.authToken,studentId:n.role==="student"?n.user.studentId:void 0,assignedClass:n.role==="teacher"?n.user.assignedClass:void 0};ye(s),I(`歡迎回來，${s.displayName}！`),J()})}function st(e,t,l,i){const a=`
     <div class="p-6">
       <div class="flex items-center gap-2 mb-3">
         <span class="text-xl">🔒</span>
@@ -1497,7 +1502,7 @@
       <form id="forced-pwd-form" class="space-y-3">
         <div>
           <label class="block text-xs font-semibold text-slate-700 mb-1">目前密碼</label>
-          <input type="password" id="forced-curr-pwd" required value="${m(a)}" class="w-full px-3 py-2 border border-slate-300 rounded-xl text-xs focus:ring-2 focus:ring-emerald-500 focus:outline-none" />
+          <input type="password" id="forced-curr-pwd" required value="${m(t)}" class="w-full px-3 py-2 border border-slate-300 rounded-xl text-xs focus:ring-2 focus:ring-emerald-500 focus:outline-none" />
         </div>
         <div>
           <label class="block text-xs font-semibold text-slate-700 mb-1">設定新密碼 (至少 6 碼)</label>
@@ -1512,7 +1517,43 @@
         </button>
       </form>
     </div>
-  `;oe(t,()=>{document.getElementById("forced-pwd-form")?.addEventListener("submit",async b=>{b.preventDefault();const l=document.getElementById("forced-curr-pwd")?.value.trim(),n=document.getElementById("forced-new-pwd")?.value.trim(),s=document.getElementById("forced-confirm-pwd")?.value.trim(),r=document.getElementById("btn-submit-forced-pwd");if(n!==s){B("兩次輸入的新密碼不一致！","error");return}if(n.length<6){B("新密碼長度請至少包含 6 個字元！","error");return}r&&(r.disabled=!0,r.textContent="正在寫入 Google Sheets...");const x=await P("changeTeacherPassword",{account:e,currentPassword:l,newPassword:n,authToken:i});x.success?(_(),typeof d=="function"&&d()):(B(x.message||"變更密碼失敗，請重試","error"),r&&(r.disabled=!1,r.textContent="確認變更新密碼並進入系統"))})})}function Ce(){const e=`
+  `;ee(a,()=>{document.getElementById("forced-pwd-form")?.addEventListener("submit",async b=>{b.preventDefault();const r=document.getElementById("forced-curr-pwd")?.value.trim(),n=document.getElementById("forced-new-pwd")?.value.trim(),s=document.getElementById("forced-confirm-pwd")?.value.trim(),d=document.getElementById("btn-submit-forced-pwd");if(n!==s){I("兩次輸入的新密碼不一致！","error");return}if(n.length<6){I("新密碼長度請至少包含 6 個字元！","error");return}d&&(d.disabled=!0,d.textContent="正在寫入 Google Sheets...");const x=await D("changeTeacherPassword",{account:e,currentPassword:r,newPassword:n,authToken:i});x.success?(H(),typeof l=="function"&&l()):(I(x.message||"變更密碼失敗，請重試","error"),d&&(d.disabled=!1,d.textContent="確認變更新密碼並進入系統"))})})}function at(e){const t=e.role==="student",l=t&&e.studentId||e.account,i=`
+    <div class="p-6">
+      <div class="flex items-center justify-between mb-3">
+        <div class="flex items-center gap-2">
+          <span class="text-xl">🔑</span>
+          <h3 class="text-base font-bold text-slate-900">修改個人登入密碼</h3>
+        </div>
+      </div>
+      <p class="text-xs text-slate-600 mb-4 leading-relaxed">
+        帳號：<b class="text-slate-800">${m(l)}（${m(e.displayName||"")}）</b><br/>
+        新密碼將透過 <b>SHA-256 單向加密雜湊</b> 寫入系統，防止他人以預設生日或身分證末碼查詢您的成績。若日後忘記密碼，可洽教務處註冊組協助重置。
+      </p>
+
+      <form id="self-pwd-form" class="space-y-3">
+        <div>
+          <label class="block text-xs font-semibold text-slate-700 mb-1">目前密碼</label>
+          <input type="password" id="self-curr-pwd" required placeholder="請輸入目前使用的登入密碼" class="w-full px-3 py-2 border border-slate-300 rounded-xl text-xs focus:ring-2 focus:ring-emerald-500 focus:outline-none" />
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-slate-700 mb-1">設定新密碼 (至少 6 碼)</label>
+          <input type="password" id="self-new-pwd" required placeholder="請輸入新密碼 (建議英數混合)" minlength="6" class="w-full px-3 py-2 border border-slate-300 rounded-xl text-xs focus:ring-2 focus:ring-emerald-500 focus:outline-none" />
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-slate-700 mb-1">再次確認新密碼</label>
+          <input type="password" id="self-confirm-pwd" required placeholder="請再次輸入新密碼" minlength="6" class="w-full px-3 py-2 border border-slate-300 rounded-xl text-xs focus:ring-2 focus:ring-emerald-500 focus:outline-none" />
+        </div>
+        <div class="flex justify-end gap-2 pt-2">
+          <button type="button" id="btn-cancel-self-pwd" class="px-3.5 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-xl text-xs font-semibold transition">
+            取消
+          </button>
+          <button type="submit" id="btn-submit-self-pwd" class="px-4 py-2 bg-emerald-700 hover:bg-emerald-800 text-white rounded-xl text-xs font-bold transition shadow-sm">
+            確認加密更新密碼
+          </button>
+        </div>
+      </form>
+    </div>
+  `;ee(i,()=>{document.getElementById("btn-cancel-self-pwd")?.addEventListener("click",H),document.getElementById("self-pwd-form")?.addEventListener("submit",async a=>{a.preventDefault();const b=document.getElementById("self-curr-pwd")?.value.trim(),r=document.getElementById("self-new-pwd")?.value.trim(),n=document.getElementById("self-confirm-pwd")?.value.trim(),s=document.getElementById("btn-submit-self-pwd");if(r!==n){I("兩次輸入的新密碼不一致！","error");return}if(r.length<6){I("新密碼長度請至少包含 6 個字元！","error");return}if(b===r){I("新密碼不可與目前密碼相同！","error");return}s&&(s.disabled=!0,s.textContent="正在加密寫入...");const x=await D(t?"changeStudentPassword":"changeTeacherPassword",{account:l,studentId:t?l:void 0,currentPassword:b,newPassword:r,authToken:e.authToken});x.success?(H(),I(x.message||"密碼已成功變更並完成加密保護！")):(I(x.message||"變更密碼失敗，請確認目前密碼是否正確","error"),s&&(s.disabled=!1,s.textContent="確認加密更新密碼"))})})}function Me(){const e=`
     <div class="p-6">
       <h3 class="text-base font-bold text-slate-900 mb-2">⚙️ Google Apps Script 試算表連線設定</h3>
       <p class="text-xs text-slate-500 mb-4 leading-relaxed">
@@ -1521,7 +1562,7 @@
 
       <div class="mb-4">
         <label class="block text-xs font-semibold text-slate-700 mb-1">Web App 部署網址 (以 /exec 結尾)</label>
-        <input type="url" id="modal-gas-input" value="${m(ae())}" placeholder="https://script.google.com/macros/s/AKfycb.../exec" class="w-full px-3 py-2 border border-slate-300 rounded-xl text-xs font-mono focus:ring-2 focus:ring-emerald-500 focus:outline-none" />
+        <input type="url" id="modal-gas-input" value="${m(le())}" placeholder="https://script.google.com/macros/s/AKfycb.../exec" class="w-full px-3 py-2 border border-slate-300 rounded-xl text-xs font-mono focus:ring-2 focus:ring-emerald-500 focus:outline-none" />
       </div>
 
       <div class="flex justify-between items-center text-xs">
@@ -1538,4 +1579,4 @@
         </div>
       </div>
     </div>
-  `;oe(e,()=>{document.getElementById("btn-modal-close")?.addEventListener("click",_),document.getElementById("btn-modal-clear-gas")?.addEventListener("click",()=>{ne(""),B("已切換為本地示範模式"),_(),xe()}),document.getElementById("btn-modal-save")?.addEventListener("click",()=>{const a=document.getElementById("modal-gas-input")?.value.trim();ne(a),B("GAS 連線網址已更新！"),_(),xe()})})}function re(){xe();const e=document.getElementById("app-root");if(!e)return;const a=ue();if(e.dataset.view=a?.role||"login",e.classList.toggle("school-portal-root",!!a),!a){pe(e);return}a.role==="student"?Ge(e,a):a.role==="teacher"?me(e,a):a.role==="admin"?Q(e,a):(ke(),pe(e))}window.addEventListener("DOMContentLoaded",()=>{re()});
+  `;ee(e,()=>{document.getElementById("btn-modal-close")?.addEventListener("click",H),document.getElementById("btn-modal-clear-gas")?.addEventListener("click",()=>{de(""),I("已切換為本地示範模式"),H(),ue()}),document.getElementById("btn-modal-save")?.addEventListener("click",()=>{const t=document.getElementById("modal-gas-input")?.value.trim();de(t),I("GAS 連線網址已更新！"),H(),ue()})})}function J(){ue(),he();const e=document.getElementById("app-root");if(!e)return;const t=Y();if(e.dataset.view=t?.role||"login",e.classList.toggle("school-portal-root",!!t),!t){me(e);return}t.role==="student"?Ue(e,t):t.role==="teacher"?ge(e,t):t.role==="admin"?X(e,t):(fe(),me(e))}tt();document.readyState==="loading"?window.addEventListener("DOMContentLoaded",()=>{J()}):J();
