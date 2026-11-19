@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>市立大溪國民中學・歷屆段考成績查詢系統</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Noto+Sans+TC:wght@400;500;600;700&family=Noto+Serif+TC:wght@600;700&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                50: '#f0f7ff',
+                100: '#e0effe',
+                500: '#0284c7',
+                600: '#0369a1',
+                700: '#075985',
+                800: '#0c4a6e',
+                900: '#0f2537'
+              },
+              academic: {
+                navy: '#0F2537',
+                teal: '#0D7A5F',
+                gold: '#D97706',
+                ruby: '#C81E1E'
+              }
+            },
+            fontFamily: {
+              sans: ['Plus Jakarta Sans', 'Noto Sans TC', 'sans-serif'],
+              serif: ['Noto Serif TC', 'serif'],
+              mono: ['JetBrains Mono', 'monospace']
+            }
+          }
+        }
+      }
+    </script>
+    <!-- Chart.js CDN for Radar & Trend Visualizations -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="module" crossorigin src="./assets/index-BcF2aT5V.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-BuCCUZ8w.css">
+  </head>
+  <body class="bg-slate-50 text-slate-800 font-sans antialiased min-h-screen flex flex-col">
+    <!-- 頂部校務系統橫幅 -->
+    <header class="app-masthead sticky top-0 z-40 bg-[#0F2537] text-white border-b-4 border-emerald-600 shadow-md" id="app-masthead"></header>
+    
+    <section id="system-notice" class="system-notice" aria-labelledby="system-notice-title">
+      <div class="system-notice-inner">
+        <div class="notice-badge-container">
+          <span class="notice-label">
+            <span aria-hidden="true">📢</span> 重要公告
+          </span>
+        </div>
+        <div class="notice-copy">
+          <h2 id="system-notice-title" class="notice-title">系統開發測試中</h2>
+          <p class="notice-text">本系統由本校<strong class="notice-tag notice-tag-indigo">教務處註冊組獨立開發</strong>，目前尚在<strong class="notice-tag notice-tag-amber">測試與功能調整階段</strong>。系統成績與分析資訊<strong class="notice-tag notice-tag-sky">僅供查詢及學習參考</strong>，<strong class="notice-tag notice-tag-rose">正式成績以學校公告及核定紀錄為準</strong>。如有登入、資料或操作疑問，請洽<strong class="notice-tag notice-tag-emerald">教務處註冊組</strong>。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 核心頁面主容器 -->
+    <main class="flex-1 max-w-[1600px] w-full mx-auto p-3 sm:p-4 md:p-6" id="app-root"></main>
+
+    <footer class="school-footer">
+      <span>桃園市立大溪國民中學<span class="footer-divider">／</span>教務處註冊組</span>
+      <span>使用完畢請登出，並妥善保管您的帳號與密碼。</span>
+    </footer>
+
+    <!-- Modal 彈跳視窗掛載點 -->
+    <div id="modal-root"></div>
+
+    <!-- 浮動提示 Toast 掛載點 -->
+    <div class="fixed bottom-5 right-5 z-50 flex flex-col gap-2 max-w-sm pointer-events-none" id="toast-root" aria-live="polite"></div>
+
+  </body>
+</html>
